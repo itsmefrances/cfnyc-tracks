@@ -301,7 +301,7 @@ function renderWeek(){
     const chips=[...avail.map(t=>`<button class="chip ${pick===t?'on':''}" style="--cc:${tc(t)}" data-d="${d}" data-t="${t}" title="${esc(week.tracks[t].name)}">${SHORT[t]}</button>`),
       `<button class="chip rest ${pick==='rest'?'on':''}" data-d="${d}" data-t="rest">Rest</button>`].join('');
     const body=avail.length
-      ?`<div class="cards">${avail.map(t=>cardHTML(t,dayOf(t,d),d)).join('')}${pick==='rest'&&mode==='mine'?`<div class="rest">Rest day</div>`:''}</div>`
+      ?`<div class="cards">${[...avail].sort((a,b)=>(b===pick)-(a===pick)).map(t=>cardHTML(t,dayOf(t,d),d)).join('')}${pick==='rest'&&mode==='mine'?`<div class="rest">Rest day</div>`:''}</div>`
       :`<div class="rest">${mode==='mine'?'Rest day':'No programming published.'}</div>`;
     return `<div class="day" style="--tc:${pick==='rest'?'var(--t-rest)':tc(pick)}">
       <div class="hd"><b>${full}</b><span class="d">${fmtDate(dateFor(d))}</span></div>
