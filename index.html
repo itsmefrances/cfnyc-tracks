@@ -10,6 +10,8 @@
   --bg:#f4f6f9; --surface:#ffffff; --card2:#f8fafc; --text:#1a202c; --muted:#5f6b7a; --light:#a0aec0; --border:#e2e8f0;
   --accent:#0891b2; --ann-bg:#fffbeb; --ann-border:#f6e05e; --ann-title:#92400e;
   --t-crossfit:#0891b2; --t-athx:#c2410c; --t-strength:#6d28d9; --t-oly:#15803d; --t-rest:#94a3b8;
+  --q-power:#2a78d6; --q-strength:#eb6834; --q-hypertrophy:#1baf7a; --q-skill:#eda100;
+  --q-aerobic:#e87ba4; --q-threshold:#008300; --q-vo2:#4a3aa7; --q-hiit:#e34948; --q-sprint:#2a78d6;
   --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
   color-scheme:light;
 }
@@ -18,6 +20,8 @@
     --bg:#111315; --surface:#1a1d21; --card2:#22262c; --text:#e6e9ee; --muted:#a3adba; --light:#6b7482; --border:#2c323a;
     --accent:#0e9fb8; --ann-bg:#2a2410; --ann-border:#8a6d1a; --ann-title:#f2c14e;
     --t-crossfit:#0e9fb8; --t-athx:#e06f22; --t-strength:#8b5cf6; --t-oly:#2fae5a; --t-rest:#5b6472;
+    --q-power:#3987e5; --q-strength:#d95926; --q-hypertrophy:#199e70; --q-skill:#c98500;
+    --q-aerobic:#d55181; --q-threshold:#008300; --q-vo2:#9085e9; --q-hiit:#e66767; --q-sprint:#3987e5;
     --shadow:0 1px 2px rgba(0,0,0,.4);
     color-scheme:dark;
   }
@@ -26,6 +30,8 @@
   --bg:#111315; --surface:#1a1d21; --card2:#22262c; --text:#e6e9ee; --muted:#a3adba; --light:#6b7482; --border:#2c323a;
   --accent:#0e9fb8; --ann-bg:#2a2410; --ann-border:#8a6d1a; --ann-title:#f2c14e;
   --t-crossfit:#0e9fb8; --t-athx:#e06f22; --t-strength:#8b5cf6; --t-oly:#2fae5a; --t-rest:#5b6472;
+  --q-power:#3987e5; --q-strength:#d95926; --q-hypertrophy:#199e70; --q-skill:#c98500;
+  --q-aerobic:#d55181; --q-threshold:#008300; --q-vo2:#9085e9; --q-hiit:#e66767; --q-sprint:#3987e5;
   --shadow:0 1px 2px rgba(0,0,0,.4);
   color-scheme:dark;
 }
@@ -102,12 +108,44 @@ h2 span{text-transform:none;letter-spacing:0;font-weight:500;margin-left:8px}
 .sec li.h{font-weight:600}
 .tags{display:flex;flex-wrap:wrap;gap:4px}
 .tag{font-size:10.5px;padding:1px 6px;border-radius:5px;background:var(--surface);border:1px solid var(--border);color:var(--muted)}
-.notes{font-size:12px;color:var(--muted);line-height:1.45;border-top:1px solid var(--border);padding-top:6px;margin-top:auto}
-.notes summary{cursor:pointer;font-weight:600;color:var(--text);font-size:12px;list-style:none;display:flex;align-items:center;gap:6px}
-.notes summary::-webkit-details-marker{display:none}
-.notes summary::before{content:"▸";font-size:11px;color:var(--muted);transition:transform .15s}
-.notes[open] summary::before{transform:rotate(90deg)}
-.notes p{margin:6px 0 2px}
+.notesbar{border-top:1px solid var(--border);padding-top:8px;margin-top:auto}
+.notesbtn{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--text);display:inline-flex;align-items:center;gap:6px}
+.notesbtn:hover{border-color:var(--tc);color:var(--tc)}
+.notesbtn small{font-weight:500;color:var(--muted)}
+
+/* popup */
+dialog.modal{border:1px solid var(--border);border-radius:14px;padding:0;max-width:720px;width:calc(100% - 32px);background:var(--surface);color:var(--text);box-shadow:0 20px 50px rgba(0,0,0,.25)}
+dialog.modal::backdrop{background:rgba(0,0,0,.45)}
+.modal .mh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:16px 20px 10px;border-bottom:1px solid var(--border)}
+.modal .mh .k{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--tc,var(--accent))}
+.modal .mh h3{margin:2px 0 0;font-size:16px}
+.modal .mh button{border:1px solid var(--border);background:var(--card2);border-radius:8px;padding:4px 9px;font-size:13px}
+.modal .mb{padding:14px 20px 20px;max-height:70vh;overflow:auto;font-size:14px;line-height:1.55}
+.modal .mb p{margin:0 0 12px}
+.modal .mb p:last-child{margin-bottom:0}
+
+/* week stimulus */
+.stim{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:12px 16px 14px;margin-top:12px}
+.stim .head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline;margin-bottom:10px}
+.stim .head b{font-size:13px}
+.stim .head span{font-size:12px;color:var(--muted)}
+.stim-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px 24px}
+@media (max-width:900px){.stim-grid{grid-template-columns:1fr}}
+.stim h4{margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.stim h4 em{font-style:normal;font-weight:600;color:var(--text);text-transform:none;letter-spacing:0}
+.bar{display:flex;height:14px;border-radius:4px;overflow:hidden;gap:2px;background:var(--card2)}
+.bar i{display:block;height:100%;background:var(--c)}
+.bar i:first-child{border-radius:4px 0 0 4px}.bar i:last-child{border-radius:0 4px 4px 0}
+.keys{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:7px;font-size:12px;color:var(--muted)}
+.keys span{display:inline-flex;align-items:center;gap:5px;cursor:default}
+.keys i{width:9px;height:9px;border-radius:2px;background:var(--c)}
+.keys b{color:var(--text);font-weight:600}
+.regs{display:grid;grid-template-columns:auto 1fr auto;gap:4px 8px;align-items:center;font-size:12px}
+.regs .n{color:var(--text);white-space:nowrap}
+.regs .r{height:10px;border-radius:3px;background:var(--card2);overflow:hidden}
+.regs .r i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.regs .v{color:var(--muted);font-variant-numeric:tabular-nums}
+.stim .none{font-size:12px;color:var(--light);font-style:italic}
 .rest{color:var(--muted);font-size:13px;padding:10px 14px 14px}
 .empty{color:var(--light);font-style:italic}
 
@@ -147,6 +185,7 @@ footer{margin-top:28px;color:var(--light);font-size:12px;display:flex;gap:14px;f
     <h2>Your week <span id="pickSummary"></span></h2>
     <div class="strip" id="strip"></div>
     <div class="legend" id="legend"></div>
+    <div class="stim" id="stim"></div>
   </section>
 
   <section>
@@ -165,6 +204,7 @@ footer{margin-top:28px;color:var(--light);font-size:12px;display:flex;gap:14px;f
   </footer>
 </div>
 <div class="toast" id="toast"></div>
+<dialog class="modal" id="modal"><div class="mh"><div><div class="k" id="mk"></div><h3 id="mt"></h3></div><button id="mclose" type="button">Close ✕</button></div><div class="mb" id="mb"></div></dialog>
 
 <script>
 (function(){
@@ -196,7 +236,7 @@ function dateFor(d){
   const i=DAYS.findIndex(x=>x[0]===d);const dt=new Date(week.week_of+'T12:00:00');dt.setDate(dt.getDate()+i);return dt.toISOString().slice(0,10);
 }
 
-function render(){ renderHeader(); renderAnn(); renderStrip(); renderDays(); renderCycle(); }
+function render(){ renderHeader(); renderAnn(); renderStrip(); renderStim(); renderDays(); renderCycle(); }
 
 function renderHeader(){
   const c=week.cycle;
@@ -224,8 +264,13 @@ function cardHTML(t,w,d){
     ${mins?`<div class="meta">≈${mins} min of programmed work</div>`:''}
     ${(w.sections||[]).map(s=>`<div class="sec"><div class="lb"><span>${esc(s.label)}</span>${s.est_minutes?`<em>≈${s.est_minutes}′</em>`:''}</div><ul>${(s.lines||[]).map(l=>`<li class="${/:$/.test(l)?'h':''}">${esc(l)}</li>`).join('')}</ul></div>`).join('')}
     ${(w.tags||[]).length?`<div class="tags">${w.tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}
-    ${w.coach_notes?`<details class="notes"><summary>Coach notes</summary><p>${esc(w.coach_notes)}</p></details>`:''}
+    ${w.coach_notes?`<div class="notesbar"><button class="notesbtn" data-notes="${t}|${d}">📝 Coach notes <small>· read full write-up</small></button></div>`:''}
   </div>`;
+}
+function paragraphs(txt){return String(txt).trim().split(/\n\s*\n/).map(p=>`<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join('')}
+function openModal(kicker,title,text,color){
+  const m=$('#modal');$('#mk').textContent=kicker;$('#mt').textContent=title;$('#mb').innerHTML=paragraphs(text);
+  m.style.setProperty('--tc',color||'var(--accent)');m.showModal();$('#mb').scrollTop=0;
 }
 function renderDays(){
   $('#days').innerHTML=DAYS.map(([d,lab,full])=>{
@@ -241,11 +286,39 @@ function renderDays(){
     </div>`;
   }).join('');
   $('#days').querySelectorAll('.chip,.pickbtn').forEach(b=>b.addEventListener('click',()=>setPick(b.dataset.d,b.dataset.t)));
+  $('#days').querySelectorAll('.notesbtn').forEach(b=>b.addEventListener('click',()=>{const [t,d]=b.dataset.notes.split('|');const w=dayOf(t,d);const full=DAYS.find(x=>x[0]===d)[2];
+    openModal(`${trackName(t)} · ${full} ${fmtDate(dateFor(d))}`,w.title,w.coach_notes,tc(t))}));
+}
+
+/* ---- week stimulus (from picks) ---- */
+const LIFT=[['power','Power','Olympic lifts, jumps, throws — force produced fast'],['strength','Strength','Heavy work ≤6 reps, RM tests, cluster sets'],['hypertrophy','Hypertrophy','8–15 reps, tempo work, accessories'],['skill','Skill','Gymnastics / skill practice']];
+const COND=[['aerobic','Aerobic','Steady or long mixed-modal ≥20 min, runs, race-style hybrids'],['threshold','Threshold','Sustained hard 8–20 min pieces'],['vo2','VO2','Hard repeats of 2–5 min with rest'],['hiit','HIIT','Short intervals under ~2:30 with rest'],['sprint','Sprint / top-end','Max efforts under 60 s, full recovery']];
+const REGION_ORDER=['quads','posterior chain','upper push','upper pull','core','arms','full body'];
+function renderStim(){
+  const lift={},cond={},reg={};let liftT=0,condT=0,untagged=0;
+  for(const [d] of DAYS){const p=picks[d];if(p==='rest')continue;const w=dayOf(p,d);if(!w)continue;
+    for(const s of w.sections||[]){const st=s.stimulus;if(!st||!st.length){untagged+=+s.est_minutes||0;continue}
+      for(const x of st){const m=+x.minutes||0;const q=x.quality;
+        if(LIFT.some(l=>l[0]===q)){lift[q]=(lift[q]||0)+m;liftT+=m;const rs=x.regions||[];for(const r of rs)reg[r]=(reg[r]||0)+m/rs.length}
+        else if(COND.some(c=>c[0]===q)){cond[q]=(cond[q]||0)+m;condT+=m}}}}
+  const tot=liftT+condT;
+  const barOf=(defs,vals,T)=>{const items=defs.filter(([k])=>vals[k]);if(!items.length)return `<div class="none">Nothing picked yet.</div>`;
+    return `<div class="bar">${items.map(([k])=>`<i style="--c:var(--q-${k});flex:${vals[k]}" title="${k}"></i>`).join('')}</div>
+    <div class="keys">${items.map(([k,n,def])=>`<span title="${esc(def)}"><i style="--c:var(--q-${k})"></i><b>${n}</b> ${Math.round(vals[k]/T*100)}% · ≈${Math.round(vals[k])}′</span>`).join('')}</div>`};
+  const regs=REGION_ORDER.filter(r=>reg[r]).concat(Object.keys(reg).filter(r=>!REGION_ORDER.includes(r)));const rmax=Math.max(1,...regs.map(r=>reg[r]));
+  const regHTML=regs.length?`<div class="regs">${regs.map(r=>`<span class="n">${esc(r)}</span><span class="r"><i style="width:${Math.round(reg[r]/rmax*100)}%"></i></span><span class="v">≈${Math.round(reg[r])}′</span>`).join('')}</div>`:`<div class="none">No lifting picked.</div>`;
+  $('#stim').innerHTML=`<div class="head"><b>Week stimulus</b><span>from your picks · ≈${Math.round(tot)} min programmed${tot?` · lifting ${Math.round(liftT/tot*100)}% / conditioning ${Math.round(condT/tot*100)}%`:''}${untagged?` · ${untagged}′ mobility/other not counted`:''}</span></div>
+    <div class="stim-grid">
+      <div><h4>Lifting <em>≈${Math.round(liftT)}′</em></h4>${barOf(LIFT,lift,liftT||1)}</div>
+      <div><h4>Conditioning <em>≈${Math.round(condT)}′</em></h4>${barOf(COND,cond,condT||1)}</div>
+      <div><h4>Lifting by body region <em>min, split across regions</em></h4>${regHTML}</div>
+    </div>`;
 }
 function renderCycle(){
   const c=week.cycle;
   const notes=TRACK_ORDER.filter(t=>week.tracks[t]?.note&&!(c&&t===c.track)).map(t=>`<p><b style="color:${tc(t)}">${esc(week.tracks[t].name)}:</b> ${esc(week.tracks[t].note)}</p>`).join('');
-  $('#cycle').innerHTML=(c?`<h3>${esc(trackName(c.track))} — ${esc(c.name)} (week ${c.week}/${c.of})</h3><ul>${(c.focus||[]).map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:'<h3>Programming notes</h3>')+(notes||(c?'':'<p class="empty">No notes this week.</p>'));
+  $('#cycle').innerHTML=(c?`<h3>${esc(trackName(c.track))} — ${esc(c.name)} (week ${c.week}/${c.of})</h3><ul>${(c.focus||[]).map(f=>`<li>${esc(f)}</li>`).join('')}</ul>${c.full_text?`<p><button class="notesbtn" id="cycleBtn" style="--tc:${tc(c.track)}">📝 Read the full cycle write-up</button></p>`:''}`:'<h3>Programming notes</h3>')+(notes||(c?'':'<p class="empty">No notes this week.</p>'));
+  const cb=$('#cycleBtn');if(cb)cb.addEventListener('click',()=>openModal(`${trackName(c.track)} · week ${c.week} of ${c.of}`,c.name,c.full_text,tc(c.track)));
 }
 
 function weekText(){
@@ -271,6 +344,8 @@ async function init(){
     for(const w of weeks){const mon=new Date(w.week_of+'T00:00:00');if(mon-now<7*864e5){pick=w;break}}
     sel.value=pick.file;
     sel.addEventListener('change',()=>loadWeek(sel.value));
+    $('#mclose').addEventListener('click',()=>$('#modal').close());
+    $('#modal').addEventListener('click',e=>{if(e.target===$('#modal'))$('#modal').close()});
     $('#btnReset').addEventListener('click',()=>{for(const [d] of DAYS)picks[d]=defaultPick(d);savePicks();render();toast('Picks reset')});
     $('#btnCopy').addEventListener('click',async()=>{const t=weekText();try{await navigator.clipboard.writeText(t);toast('Week copied')}catch(e){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Week copied')}});
     await loadWeek(pick.file);
