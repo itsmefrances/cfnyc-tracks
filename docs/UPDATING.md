@@ -23,7 +23,7 @@
     "strength":  { "name": "Strength",               "note": "", "days": { "thu": DAY } },
     "oly":       { "name": "Olympic Weightlifting",  "note": "", "days": { "wed": DAY } }
   },
-  "announcements": [ { "title", "detail" } ]
+  "announcements": [ { "title", "detail", "full_text" } ]   // full_text = that announcement's newsletter section, verbatim
 }
 ```
 
