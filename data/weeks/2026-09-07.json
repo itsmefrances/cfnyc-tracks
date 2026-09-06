@@ -12,12 +12,8 @@
     "name": "New 6-week cycle",
     "week": 1,
     "of": 6,
-    "focus": [
-      "Cluster back squats (intra-set rest to preserve bar speed)",
-      "Power snatch exposure",
-      "Pulling + muscle-up skill progression",
-      "Tuesdays: more strength, shorter/punchier conditioning"
-    ]
+    "focus": ["Cluster back squats (intra-set rest to preserve bar speed)", "Power snatch exposure", "Pulling + muscle-up skill progression", "Tuesdays: more strength, shorter/punchier conditioning"],
+    "full_text": "NEW CYCLE, NEW 6 WEEK EXPERIMENT IN BECOMING HARDER TO KILL\n\nThis one has a few distinct focuses, and if you're someone who likes knowing why we keep making you do the same thing every week with tiny changes, welcome. This section is for you.\n\nThe big strength focus: back squats, but make them clusters. Rather than grinding through every rep continuously, we'll use short bouts of rest inside the set. Those little breaks aren't us being nice. Cluster sets can help preserve bar speed and power as fatigue accumulates, meaning more of your reps actually look like the strong, intentional reps we're trying to train—not the final squat where your soul briefly leaves your body. Research generally finds that cluster-style sets reduce velocity and power loss compared with traditional continuous sets.\n\nOver six weeks, the goal is to accumulate high-quality strength work while progressively giving your body more to adapt to. And fun nerd fact: a 2026 study comparing six weeks of cluster and traditional back-squat training found similar improvements in strength and endurance, while the cluster group maintained better bar velocity and experienced less acute fatigue during training. Tiny rests. Legitimate science. We love to see it.\n\nWe're also spending time with the power snatch. The clue is very much in the name here: power. Olympic lifting asks you to produce force quickly, then coordinate a whole bunch of moving pieces before gravity notices what you're doing. Repeated exposure gives you time to refine those positions and timing instead of relearning the movement every few months. The goal isn't just eventually putting more weight overhead—it's making the whole thing feel more automatic along the way.\n\nThere's also a bigger emphasis on pulling and muscle-up skill work. And before anyone who doesn't have a muscle-up skips this paragraph: especially you. Skills like muscle-ups aren't magically unlocked the day you become \"strong enough.\" They're a combination of pulling strength, body control, timing, coordination and lots of appropriately scaled practice. Wherever you're starting—ring rows, pull-ups, chest-to-bar, transitions, or full muscle-ups—there's something to build.\n\nAnd finally, Tuesdays are getting a little makeover. You asked for more strength, we listened. Tuesdays will now give us more room to work on strength before moving into shorter, punchier conditioning instead of always asking you to settle in for the long haul.\n\nThat matters too. Fitness isn't just one energy system. Sometimes we want you learning to sustain work for 20 minutes. Sometimes we want you producing a lot of power for considerably less time and discovering that seven minutes can, in fact, feel longer than 20.\n\nDifferent stimulus. Different adaptation. Same suspicious amount of sweating.\n\nSo that's our next six weeks: squat stronger, move the bar faster, build your pulling skills, and get comfortable working at a few different speeds.\n\nPick something you want to improve and pay attention to it now. We'll check back in six weeks.\n\nSame humans. Slightly upgraded operating systems."
   },
   "tracks": {
     "crossfit": {
@@ -28,126 +24,215 @@
           "date": "2026-09-07",
           "title": "Power snatch + 4 × 2:30 AMRAP",
           "sections": [
-            {"label": "Strength", "est_minutes": 20, "lines": [
-              "A1. Power Snatch — 4 sets of 2, building",
-              "A2. Feet-Elevated Parallette Push Up — 4 sets of 8–12"
-            ]},
-            {"label": "Conditioning", "est_minutes": 13, "lines": [
-              "4 Rounds, 2:30 AMRAP each:",
-              "20 Alternating Dumbbell Snatch (50/35)",
-              "40 Double Unders",
-              "Handstand Push Ups with remaining time",
-              "1:00 rest between rounds"
-            ]}
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": ["A1. Power Snatch — 4 sets of 2, building", "A2. Feet-Elevated Parallette Push Up — 4 sets of 8–12"],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": ["full body"],
+                  "minutes": 12
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push"],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 13,
+              "lines": ["4 Rounds, 2:30 AMRAP each:", "20 Alternating Dumbbell Snatch (50/35)", "40 Double Unders", "Handstand Push Ups with remaining time", "1:00 rest between rounds"],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 13
+                }
+              ]
+            }
           ],
-          "coach_notes": "Snatches: fast, not just heavy — crisp extension, decisive pull under, catch high. In the AMRAP the HSPU are the score; keep double unders ~30s, keep DB snatches moving, arrive at the wall with shoulders left. Aim for repeatable output across all four rounds.",
+          "coach_notes": "We're kicking off the new cycle with power snatches + feet-elevated push-ups. For the snatches, think fast, not just heavy. Power is force produced quickly, so the goal is crisp extension, a decisive pull under the bar, and catching it high—not turning every rep into an accidental squat snatch because ambition got involved.\n\nThen: four 2:30 intervals of DB snatches, double unders, and whatever time remains for handstand push-ups.\n\nThe trick? The HSPU are the score, but getting there recklessly is not the strategy. Keep the double unders around 30 seconds, keep the DB snatches moving, and arrive at the wall with enough shoulders left to actually do something useful.\n\nYou get a full minute between rounds, so aim for repeatable output—not one heroic opening round followed by three formal apologies.",
           "tags": ["barbell", "dumbbell", "gymnastics", "jump rope"]
         },
         "tue": {
           "date": "2026-09-08",
           "title": "Cluster back squat + 8-min AMRAP",
           "sections": [
-            {"label": "Strength", "est_minutes": 25, "lines": [
-              "A. Cluster Back Squat — 5 sets of 2-2-1, building",
-              "B. Pendlay Row — 4 sets of 6–8, building"
-            ]},
-            {"label": "Conditioning", "est_minutes": 8, "lines": [
-              "8 minute AMRAP:",
-              "8 Toes to Bar",
-              "6 Front Squats (95/65, 115/75)",
-              "4 Burpees Over Bar"
-            ]}
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": ["A. Cluster Back Squat — 5 sets of 2-2-1, building", "B. Pendlay Row — 4 sets of 6–8, building"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["quads"],
+                  "minutes": 15
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper pull"],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 8,
+              "lines": ["8 minute AMRAP:", "8 Toes to Bar", "6 Front Squats (95/65, 115/75)", "4 Burpees Over Bar"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 8
+                }
+              ]
+            }
           ],
-          "coach_notes": "2-2-1 = five reps per set with short intra-set breaks to reset and brace. Eight minutes: too long to sprint, too short to settle. Fittest athletes can chase 10 rounds; pick variations that keep you moving.",
+          "coach_notes": "Cluster squats have arrived. Today's 2-2-1 means you'll complete five total reps per set, but with little intra-set breaks that let you reset, brace, and attack the next mini-set with more quality than you might have grinding through five straight.\n\nThen we balance all that squatting with Pendlay rows before moving into our new Tuesday specialty: short and spicy.\n\nEight minutes.\n\nEight minutes is an interesting little purgatory: too long to truly sprint, short enough that you absolutely cannot get comfortable. The goal is a pace that feels slightly unreasonable but somehow sustainable from the beginning.\n\nOur fittest athletes can chase 10 rounds. Everyone else: choose variations that let you keep moving and see how much work you can fit into eight very long minutes.\n\nThe workout is short. Your feelings about it may last longer.",
           "tags": ["barbell", "gymnastics"]
         },
         "wed": {
           "date": "2026-09-09",
           "title": "4 × 10:00 HYROX-style pieces",
           "sections": [
-            {"label": "Part A — 10:00", "est_minutes": 10, "lines": [
-              "200/250m SkiErg",
-              "25 Wall Balls @ 14/20 lb",
-              "400/500m SkiErg",
-              "50 Wall Balls @ 10/14 lb",
-              "Max Distance SkiErg"
-            ]},
-            {"label": "Part B — 10:00", "est_minutes": 10, "lines": [
-              "200/250m Row",
-              "25 Burpees",
-              "400/500m Row",
-              "50 Half Burpees",
-              "Max Distance Row"
-            ]},
-            {"label": "Part C — 10:00", "est_minutes": 10, "lines": [
-              "25m Sled Pull",
-              "25 Sandbag Reverse Lunges @ 20/30 kg",
-              "50m Sled Pull",
-              "50 Sandbag Reverse Lunges @ 10/20 kg",
-              "Max Distance Sled Push"
-            ]},
-            {"label": "Part D — 10:00", "est_minutes": 10, "lines": [
-              "18/24 Bike Calories",
-              "25 Double KB Deadlifts @ 2×20 / 2×35 lb",
-              "36/48 Bike Calories",
-              "50 DB Hang Power Snatch @ 20/35 lb",
-              "Max Bike Calories"
-            ]}
+            {
+              "label": "Part A — 10:00",
+              "est_minutes": 10,
+              "lines": ["200/250m SkiErg", "25 Wall Balls @ 14/20 lb", "400/500m SkiErg", "50 Wall Balls @ 10/14 lb", "Max Distance SkiErg"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Part B — 10:00",
+              "est_minutes": 10,
+              "lines": ["200/250m Row", "25 Burpees", "400/500m Row", "50 Half Burpees", "Max Distance Row"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Part C — 10:00",
+              "est_minutes": 10,
+              "lines": ["25m Sled Pull", "25 Sandbag Reverse Lunges @ 20/30 kg", "50m Sled Pull", "50 Sandbag Reverse Lunges @ 10/20 kg", "Max Distance Sled Push"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Part D — 10:00",
+              "est_minutes": 10,
+              "lines": ["18/24 Bike Calories", "25 Double KB Deadlifts @ 2×20 / 2×35 lb", "36/48 Bike Calories", "50 DB Hang Power Snatch @ 20/35 lb", "Max Bike Calories"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            }
           ],
-          "coach_notes": "Each piece: buy-in, more buy-in, then use whatever time remains for max distance/calories. Decide how much to spend on the buy-in to earn the max window. 2:00 rest between parts — recover aggressively.",
+          "coach_notes": "Four 10-minute pieces today, and each follows the same sneaky little formula: do some work, do more work, then use whatever time remains to accumulate distance or calories.\n\nThe interesting part is deciding how much you're willing to spend to earn more time at the end. Move too casually through the buy-in and there's very little max-effort window left. Attack it like the building is on fire and you may arrive there with absolutely nothing to give.\n\nThat balance is useful HYROX practice. Racing isn't about being maximal everywhere; it's about knowing where you can push without borrowing too heavily from Future You.\n\nYou get two minutes between parts. Recover aggressively, then do it again.\n\nFour opportunities to make excellent decisions while increasingly tired.",
           "tags": ["ski", "row", "bike", "sled", "sandbag", "kettlebell", "dumbbell", "wall ball"]
         },
         "thu": {
           "date": "2026-09-10",
           "title": "RDL + pull skill, then row + 100 RKBS",
           "sections": [
-            {"label": "Strength", "est_minutes": 25, "lines": [
-              "A1. Romanian Deadlift — 4 sets of 6–8, building",
-              "A2. Pull-up / C2B / Bar Muscle-Up Practice — 4 sets"
-            ]},
-            {"label": "Conditioning", "est_minutes": 15, "lines": [
-              "For Time:",
-              "2,000 / 1,600m Row",
-              "100 Russian KB Swings (24/16)"
-            ]}
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": ["A1. Romanian Deadlift — 4 sets of 6–8, building", "A2. Pull-up / C2B / Bar Muscle-Up Practice — 4 sets"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["posterior chain"],
+                  "minutes": 13
+                },
+                {
+                  "quality": "skill",
+                  "regions": ["upper pull"],
+                  "minutes": 12
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 15,
+              "lines": ["For Time:", "2,000 / 1,600m Row", "100 Russian KB Swings (24/16)"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 15
+                }
+              ]
+            }
           ],
-          "coach_notes": "Skill sets: work wherever you currently live on the pull-up → C2B → bar muscle-up spectrum; quality reps. Then settle into a strong row, relax the grip, and plan the swing sets before your forearms decide for you.",
+          "coach_notes": "We're hinging with Romanian deadlifts today, then spending four sets working wherever you currently live on the pull-up → chest-to-bar → bar muscle-up spectrum.\n\nAnd we really mean wherever you currently live. Skill practice works because of quality repetition. Your nervous system is learning timing and coordination every time you practice, whether today's rep is a kip swing, a strong pull-up, a transition drill, or a full muscle-up.\n\nThen we remove basically all the fancy stuff:\n\n2,000/1,600m row + 100 Russian kettlebell swings.\n\nThat's it. Suspiciously simple.\n\nAnd simple conditioning has a beautiful way of revealing your actual fitness because there isn't much skill complexity to hide behind. Settle into a strong row, relax your grip, and have a plan for those swings before your forearms begin making decisions on your behalf.\n\nNot glamorous. Extremely effective.",
           "tags": ["barbell", "gymnastics", "row", "kettlebell"]
         },
         "fri": {
           "date": "2026-09-11",
           "title": "Tempo cyclist squat + strict press, E2M × 9",
           "sections": [
-            {"label": "Strength", "est_minutes": 20, "lines": [
-              "A1. Goblet Cyclist Squat — 3 sets of 10–12 @ 31X1 tempo",
-              "A2. Strict Press — 3 sets of 8–10, building"
-            ]},
-            {"label": "Conditioning", "est_minutes": 18, "lines": [
-              "Every 2 minutes for 9 Rounds:",
-              "5 Hang Power Clean (95/65 → 115/75 → 135/95) (Rx+ 115/75 → 135/95 → 155/105)",
-              "5 Shoulder to Overhead",
-              "5 Push Ups (Rx+ Ring Dip)",
-              "15 Air Squats",
-              "Increase weight every 3 rounds"
-            ]}
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": ["A1. Goblet Cyclist Squat — 3 sets of 10–12 @ 31X1 tempo", "A2. Strict Press — 3 sets of 8–10, building"],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["quads"],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push"],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 18,
+              "lines": ["Every 2 minutes for 9 Rounds:", "5 Hang Power Clean (95/65 → 115/75 → 135/95) (Rx+ 115/75 → 135/95 → 155/105)", "5 Shoulder to Overhead", "5 Push Ups (Rx+ Ring Dip)", "15 Air Squats", "Increase weight every 3 rounds"],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 18
+                }
+              ]
+            }
           ],
-          "coach_notes": "31X1 = 3s down, 1s pause at bottom, stand with intent, reset at top. Rest is whatever you earn — efficient rounds give close to 1:1 work:rest. First three rounds unbroken and controlled; stay tidy as the bar gets heavier.",
+          "coach_notes": "First, tempo cyclist squats + strict press. The 31X1 tempo means three seconds down, one second at the bottom, stand with intent, reset at the top. Slowing the eccentric gives you more time under tension and, perhaps more importantly, nowhere to hide from your positions.\n\nThen every two minutes for nine rounds:\n\n5 hang power cleans\n5 shoulder-to-overhead\n5 push-ups / ring dips\n15 air squats\n\n…and the barbell gets heavier every three rounds.\n\nThe beautiful part is that your rest is whatever you earn. Move efficiently and you'll have close to a 1:1 work-to-rest ratio. Take unnecessary breaks and suddenly two minutes becomes an alarmingly short period of time.\n\nThe first three rounds should be unbroken and controlled. As the bar gets heavier, stay tidy rather than turning every clean into a small personal crisis.\n\nWork. Rest. Add weight. Repeat.",
           "tags": ["barbell", "dumbbell", "gymnastics", "bodyweight"]
         },
         "sat": {
           "date": "2026-09-12",
           "title": "Run → work → run → work → run (hybrid, for time)",
           "sections": [
-            {"label": "Conditioning", "est_minutes": 60, "lines": [
-              "For Time:",
-              "1.5 mile run",
-              "then 2 rounds: 25m Sled Push (5/3, 7/5 plates) · 25 Burpees · 25 Tuck Ups · 250m Ski",
-              "then 1 mile run",
-              "then 2 rounds: 25 KB Deadlifts (2×24/16 kg, 2×32/24 kg) · 25 Sandbag Reverse Lunges (20/10, 30/20 kg) · 25 AbMat Sit-ups · 250m Row",
-              "then 1.5 mile run"
-            ]}
+            {
+              "label": "Conditioning",
+              "est_minutes": 60,
+              "lines": ["For Time:", "1.5 mile run", "then 2 rounds: 25m Sled Push (5/3, 7/5 plates) · 25 Burpees · 25 Tuck Ups · 250m Ski", "then 1 mile run", "then 2 rounds: 25 KB Deadlifts (2×24/16 kg, 2×32/24 kg) · 25 Sandbag Reverse Lunges (20/10, 30/20 kg) · 25 AbMat Sit-ups · 250m Row", "then 1.5 mile run"],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 60
+                }
+              ]
+            }
           ],
-          "coach_notes": "Four miles of prescribed running. Gear-shifting practice: leave each station and start running at a controlled pace before you feel recovered. Respect the opening run — start boring, stay consistent, get dangerous later.",
+          "coach_notes": "Saturday is giving us run → work → run → work → run, which is perhaps the purest expression of hybrid training imaginable.\n\nYou'll open with a 1.5-mile run, hit two rounds of sled pushes, burpees, tuck-ups and SkiErg, run another mile, then tackle KB deadlifts, sandbag lunges, sit-ups and rowing before finishing with another 1.5 miles.\n\nSo yes: today is about fitness. But it's also about gear shifting.\n\nOne of the most useful HYROX skills is learning to leave a station and run well before you feel fully recovered. Instead of standing around waiting for your heart rate to receive the memo, start running at a controlled pace and let the first few minutes become part of your recovery.\n\nAnd please respect that opening run. There are approximately seventeen opportunities afterward to regret getting excited.\n\nStart boring. Stay consistent. Get dangerous later.\n\nTechnically four miles of prescribed running, but emotionally? At least five.",
           "tags": ["run", "sled", "ski", "row", "kettlebell", "sandbag", "bodyweight"]
         }
       }
@@ -160,63 +245,83 @@
           "date": "2026-09-08",
           "title": "ATHX 75 — test week",
           "sections": [
-            {"label": "ATHX Strength (9–10 RPE)", "est_minutes": 20, "lines": [
-              "Min 1–6: 1RM Strict Press",
-              "Min 7–12: 3RM Back Squat",
-              "Min 13–20: 5RM Deadlift"
-            ]},
-            {"label": "ATHX MetCon / Endurance", "est_minutes": 24, "lines": [
-              "2 Rounds of 6 × E2MOM:",
-              "Station 1: 20/15 Ski Calories",
-              "Station 2: 20 Single-Arm Alternating Ground-to-Overhead (35/20) [Pro 50/30]",
-              "Station 3: Accumulate 1:00 Sandbag Bearhug Hold (30/20) [Pro 50/30]",
-              "Station 4: 20 Box Jump Overs (24/20) [Pro 30/24]",
-              "Station 5: 16 Plate-Elevated Dual DB Reverse Lunges (35/20) [Pro 50/25]",
-              "Station 6: 16–12 Burpee Tuck Jumps"
-            ]},
-            {"label": "ATHX Flow (Recovery)", "est_minutes": 8, "lines": [
-              "2 Rounds:",
-              "0:30/side Overhead Tricep Stretch",
-              "0:30/side Spiderman Stretch with Thoracic Rotations",
-              "1:00 Downward-Facing Dog with Calf Cycling",
-              "1:00 Child's Pose (Left, Middle, Right)"
-            ]}
+            {
+              "label": "ATHX Strength (9–10 RPE)",
+              "est_minutes": 20,
+              "lines": ["Min 1–6: 1RM Strict Press", "Min 7–12: 3RM Back Squat", "Min 13–20: 5RM Deadlift"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["upper push", "quads", "posterior chain"],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "ATHX MetCon / Endurance",
+              "est_minutes": 24,
+              "lines": ["2 Rounds of 6 × E2MOM:", "Station 1: 20/15 Ski Calories", "Station 2: 20 Single-Arm Alternating Ground-to-Overhead (35/20) [Pro 50/30]", "Station 3: Accumulate 1:00 Sandbag Bearhug Hold (30/20) [Pro 50/30]", "Station 4: 20 Box Jump Overs (24/20) [Pro 30/24]", "Station 5: 16 Plate-Elevated Dual DB Reverse Lunges (35/20) [Pro 50/25]", "Station 6: 16–12 Burpee Tuck Jumps"],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 24
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": ["2 Rounds:", "0:30/side Overhead Tricep Stretch", "0:30/side Spiderman Stretch with Thoracic Rotations", "1:00 Downward-Facing Dog with Calf Cycling", "1:00 Child's Pose (Left, Middle, Right)"]
+            }
           ],
-          "coach_notes": "Specificity block: race-specific movements, transitions, pacing, compromised running, and holding output after fatigue.",
+          "coach_notes": "OKAY, ATHX CREW: WE'RE GETTING SPECIFIC.\n\nWith fall races getting closer, we're officially moving into race-prep programming. Up until now, we've been building the pieces: strength, endurance, power, work capacity, and the deeply important skill of continuing to make reasonable decisions while tired.\n\nNow we start putting those pieces together in ways that look and feel a little more like race day.\n\nThat means you'll see more work around race-specific movements, transitions, pacing, compromised running/endurance, and maintaining output after fatigue has already entered the chat. Because being strong is useful. Having an engine is useful. The actual ATHX challenge is being able to access both when your legs have recently filed a complaint.\n\nThere's a fun training principle here called specificity: as competition gets closer, training should increasingly resemble the demands you're preparing for. We still want to build fitness, but now we're also practicing how to use that fitness—when to push, when to settle, how quickly to transition, and what pace you can actually repeat rather than the pace your ego suggested in minute two.\n\nAnd if you're not racing? This is still an excellent block of hybrid training. Race prep doesn't mean you need a bib number to benefit from it. You're getting strong, powerful, aerobically fitter, and better at moving between very different demands without completely falling apart.\n\nThe fitness is built. Now we practice deploying it. Race season loading.\n\nATHX PROGRAMMING:\n\nIt's test week! Just over one month to go before the ATHX Competitions in Miami (10/10/26) and Houston (10/17/26)! Therefore, this week will feature workouts designed to closely mimic the competition movements scaled down to fit the 75-minute and 90-minute windows of our Tuesday and Saturday classes, respectively. Special shout out to those already signed up—and if you haven't and are interested in doing so, please check out the link in the newsletter to get involved in the US-based events and rep CrossFit NYC!",
           "tags": ["barbell", "ski", "dumbbell", "sandbag", "box", "bodyweight"]
         },
         "sat": {
           "date": "2026-09-12",
           "title": "ATHX 90 — test week",
           "sections": [
-            {"label": "ATHX Strength (9–10 RPE)", "est_minutes": 20, "lines": [
-              "Min 1–6: 1RM Strict Press",
-              "Min 7–12: 3RM Back Squat",
-              "Min 13–20: 5RM Deadlift"
-            ]},
-            {"label": "ATHX Endurance", "est_minutes": 15, "lines": [
-              "15:00 AMRAP:",
-              "500m Run",
-              "750m Row"
-            ]},
-            {"label": "ATHX Flow (Recovery)", "est_minutes": 8, "lines": [
-              "2 Rounds:",
-              "0:30/side Standing Quad Stretch",
-              "1:00 Dynamic Yogi Squat with Hip Raises",
-              "1:00 Dive Bombers → Scorpion Flow",
-              "0:30/side Lying Supine Knee Hugs"
-            ]},
-            {"label": "ATHX MetCon", "est_minutes": 10, "lines": [
-              "10:00 AMRAP:",
-              "15/10 Ski Calories",
-              "18 Single-Arm Alternating Ground-to-Overhead (35/20)",
-              "20m Sandbag Carry (30/20) [Pro 50/30]",
-              "15 Box Jump Overs (24/20) [Pro 30/24]",
-              "20m Dual DB Walking Lunges (35/20) [Pro 50/25]",
-              "20m Burpee Broad Jumps"
-            ]}
+            {
+              "label": "ATHX Strength (9–10 RPE)",
+              "est_minutes": 20,
+              "lines": ["Min 1–6: 1RM Strict Press", "Min 7–12: 3RM Back Squat", "Min 13–20: 5RM Deadlift"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["upper push", "quads", "posterior chain"],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "ATHX Endurance",
+              "est_minutes": 15,
+              "lines": ["15:00 AMRAP:", "500m Run", "750m Row"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 15
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": ["2 Rounds:", "0:30/side Standing Quad Stretch", "1:00 Dynamic Yogi Squat with Hip Raises", "1:00 Dive Bombers → Scorpion Flow", "0:30/side Lying Supine Knee Hugs"]
+            },
+            {
+              "label": "ATHX MetCon",
+              "est_minutes": 10,
+              "lines": ["10:00 AMRAP:", "15/10 Ski Calories", "18 Single-Arm Alternating Ground-to-Overhead (35/20)", "20m Sandbag Carry (30/20) [Pro 50/30]", "15 Box Jump Overs (24/20) [Pro 30/24]", "20m Dual DB Walking Lunges (35/20) [Pro 50/25]", "20m Burpee Broad Jumps"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            }
           ],
-          "coach_notes": "Same strength tests as Tuesday, then run/row endurance and a race-station MetCon.",
+          "coach_notes": "OKAY, ATHX CREW: WE'RE GETTING SPECIFIC.\n\nWith fall races getting closer, we're officially moving into race-prep programming. Up until now, we've been building the pieces: strength, endurance, power, work capacity, and the deeply important skill of continuing to make reasonable decisions while tired.\n\nNow we start putting those pieces together in ways that look and feel a little more like race day.\n\nThat means you'll see more work around race-specific movements, transitions, pacing, compromised running/endurance, and maintaining output after fatigue has already entered the chat. Because being strong is useful. Having an engine is useful. The actual ATHX challenge is being able to access both when your legs have recently filed a complaint.\n\nThere's a fun training principle here called specificity: as competition gets closer, training should increasingly resemble the demands you're preparing for. We still want to build fitness, but now we're also practicing how to use that fitness—when to push, when to settle, how quickly to transition, and what pace you can actually repeat rather than the pace your ego suggested in minute two.\n\nAnd if you're not racing? This is still an excellent block of hybrid training. Race prep doesn't mean you need a bib number to benefit from it. You're getting strong, powerful, aerobically fitter, and better at moving between very different demands without completely falling apart.\n\nThe fitness is built. Now we practice deploying it. Race season loading.\n\nATHX PROGRAMMING:\n\nIt's test week! Just over one month to go before the ATHX Competitions in Miami (10/10/26) and Houston (10/17/26)! Therefore, this week will feature workouts designed to closely mimic the competition movements scaled down to fit the 75-minute and 90-minute windows of our Tuesday and Saturday classes, respectively. Special shout out to those already signed up—and if you haven't and are interested in doing so, please check out the link in the newsletter to get involved in the US-based events and rep CrossFit NYC!",
           "tags": ["barbell", "run", "row", "ski", "dumbbell", "sandbag", "box", "bodyweight"]
         }
       }
@@ -229,22 +334,47 @@
           "date": "2026-09-10",
           "title": "Deadlift — heavy 5 + back-off",
           "sections": [
-            {"label": "Main Lift", "est_minutes": 25, "lines": [
-              "Deadlift — build to a heavy 5; back off to 80% for 2 sets × 5"
-            ]},
-            {"label": "Successory — 3 × 10–14", "est_minutes": 20, "lines": [
-              "Strict Press",
-              "DB Row",
-              "Side Bends"
-            ]},
-            {"label": "Open Gym", "est_minutes": 40, "lines": [
-              "Back or Front Squat — 5 × 5",
-              "DB/KB Seesaw Press — 5 × 6–10 reps/arm",
-              "Barbell Row — 5 × 6–10",
-              "Good Mornings — 4 × 6–8",
-              "Bicep Curls — 3 × 10",
-              "Tricep Extensions — 3 × 10"
-            ]}
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": ["Deadlift — build to a heavy 5; back off to 80% for 2 sets × 5"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["posterior chain"],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory — 3 × 10–14",
+              "est_minutes": 20,
+              "lines": ["Strict Press", "DB Row", "Side Bends"],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push", "upper pull", "core"],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "Open Gym",
+              "est_minutes": 40,
+              "lines": ["Back or Front Squat — 5 × 5", "DB/KB Seesaw Press — 5 × 6–10 reps/arm", "Barbell Row — 5 × 6–10", "Good Mornings — 4 × 6–8", "Bicep Curls — 3 × 10", "Tricep Extensions — 3 × 10"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["quads"],
+                  "minutes": 12
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push", "upper pull", "posterior chain", "arms"],
+                  "minutes": 28
+                }
+              ]
+            }
           ],
           "coach_notes": "",
           "tags": ["barbell", "dumbbell", "kettlebell"]
@@ -259,11 +389,28 @@
           "date": "2026-09-09",
           "title": "Snatch w/ pause at knee",
           "sections": [
-            {"label": "Olympic Weightlifting WOD", "est_minutes": 60, "lines": [
-              "Snatch with pause at knee — 4 × 3, 4 × 2, 4 × 1",
-              "Snatch Pull — 5 × 3",
-              "Behind-the-Neck Strict Press — 4 × 8–12"
-            ]}
+            {
+              "label": "Olympic Weightlifting WOD",
+              "est_minutes": 60,
+              "lines": ["Snatch with pause at knee — 4 × 3, 4 × 2, 4 × 1", "Snatch Pull — 5 × 3", "Behind-the-Neck Strict Press — 4 × 8–12"],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": ["full body"],
+                  "minutes": 40
+                },
+                {
+                  "quality": "strength",
+                  "regions": ["posterior chain"],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push"],
+                  "minutes": 10
+                }
+              ]
+            }
           ],
           "coach_notes": "",
           "tags": ["barbell"]
@@ -272,10 +419,25 @@
     }
   },
   "announcements": [
-    {"title": "HYROX Simulation — Sat Sep 12", "detail": "CFNYC Upper West Side. $20 for members (+1 class credit for pack members). Email the Front Desk to register. Open to everyone."},
-    {"title": "Flatiron Friday schedule shift — from Fri Sep 11", "detail": "28th Street: 4:00 PM WOD → 4:15 PM; 5:15 PM WOD → 5:30 PM."},
-    {"title": "2027 CrossFit Open dates", "detail": "27.1 Feb 18 · 27.2 Feb 25 · 27.3 Mar 4."},
-    {"title": "Halloween In-House Throwdown", "detail": "Teams of two, end of October. Full details in next week's newsletter."},
-    {"title": "CFNYC tee pre-order closes Mon Sep 7", "detail": "Last call for the new shirt."}
+    {
+      "title": "HYROX Simulation — Sat Sep 12",
+      "detail": "CFNYC Upper West Side. $20 for members (+1 class credit for pack members). Email the Front Desk to register. Open to everyone."
+    },
+    {
+      "title": "Flatiron Friday schedule shift — from Fri Sep 11",
+      "detail": "28th Street: 4:00 PM WOD → 4:15 PM; 5:15 PM WOD → 5:30 PM."
+    },
+    {
+      "title": "2027 CrossFit Open dates",
+      "detail": "27.1 Feb 18 · 27.2 Feb 25 · 27.3 Mar 4."
+    },
+    {
+      "title": "Halloween In-House Throwdown",
+      "detail": "Teams of two, end of October. Full details in next week's newsletter."
+    },
+    {
+      "title": "CFNYC tee pre-order closes Mon Sep 7",
+      "detail": "Last call for the new shirt."
+    }
   ]
 }
