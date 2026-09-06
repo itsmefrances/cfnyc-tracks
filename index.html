@@ -11,7 +11,7 @@
 :root{
   --bg:#fff; --panel:#f5f5f5; --card:#fff; --card2:#f0f0f0; --line:#e2e2e2; --line2:#cfcfcf; --text:#111; --muted:#4a4a4a; --dim:#8a8a8a;
   --red:#e4260c; --red-dk:#b81e09; --black:#111;
-  --t-crossfit:#e4260c; --t-athx:#1d5fd1; --t-strength:#15803d; --t-oly:#6d28d9; --t-rest:#9a9a9a;
+  --t-crossfit:#e4260c; --t-athx:#1d5fd1; --t-strength:#15803d; --t-oly:#6d28d9; --t-rest:#9a9a9a; --t-custom:#444;
   --q-power:#2a78d6; --q-strength:#eb6834; --q-hypertrophy:#1baf7a; --q-skill:#eda100;
   --q-aerobic:#e87ba4; --q-threshold:#008300; --q-vo2:#4a3aa7; --q-hiit:#e34948; --q-sprint:#2a78d6;
   --head:"Lexend Giga",system-ui,sans-serif; --body:"Space Grotesk",system-ui,-apple-system,sans-serif;
@@ -80,6 +80,8 @@ h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:700;letter
 .grp .gl{display:flex;justify-content:space-between;gap:8px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden}
 .grp .gl em{font-style:normal;color:var(--dim);font-weight:600;letter-spacing:0;text-transform:none}
 .grp.s .gl{color:var(--red)}
+.grp.x .gl{color:#666}
+.nbar i.x{background:#777}
 .nbar{display:flex;height:28px;gap:2px;background:var(--card2)}
 .nbar i{display:flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;background:var(--c);min-width:0}
 .nbar i span{overflow:hidden;text-overflow:clip}
@@ -106,7 +108,7 @@ h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:700;letter
   .ovr .gl{display:flex;justify-content:space-between;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:4px}
   .ovr .obar{display:flex;height:26px;gap:2px;background:var(--card2)}
   .ovr .obar i{display:flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;min-width:0}
-  .ovr .obar i.s{background:var(--red)}.ovr .obar i.c{background:var(--black)}
+  .ovr .obar i.s{background:var(--red)}.ovr .obar i.c{background:var(--black)}.ovr .obar i.x{background:#777}
   .nest{flex-direction:column;gap:12px}
   .grp{flex:none!important;width:100%}
   .grp .gl{white-space:normal}
@@ -134,6 +136,9 @@ h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:700;letter
 .chip:hover{border-color:var(--cc);color:var(--cc)}
 .chip.on{background:var(--cc);border-color:var(--cc);color:#fff}
 .chip.rest.on{background:var(--t-rest);border-color:var(--t-rest)}
+.chip.custom.on{background:var(--t-custom);border-color:var(--t-custom)}
+.card.custom{background:var(--panel);border-style:dashed}
+.card.custom .note{font-size:12px;color:var(--muted);line-height:1.4}
 .cards{display:flex;flex-direction:column;gap:8px;padding:0 8px 10px}
 .card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--tc);padding:9px 9px 8px;display:flex;flex-direction:column;gap:7px;min-width:0}
 .card.on{border-color:var(--tc);box-shadow:0 0 0 1px var(--tc)}
@@ -217,7 +222,8 @@ footer{margin-top:28px;color:var(--dim);font-size:12px;display:flex;gap:14px;fle
 (function(){
 const DAYS=[['mon','Mon','Monday'],['tue','Tue','Tuesday'],['wed','Wed','Wednesday'],['thu','Thu','Thursday'],['fri','Fri','Friday'],['sat','Sat','Saturday'],['sun','Sun','Sunday']];
 const TRACK_ORDER=['crossfit','athx','strength','oly'];
-const SHORT={crossfit:'CrossFit',athx:'ATHX',strength:'Strength',oly:'Oly',rest:'Rest'};
+const SHORT={crossfit:'CrossFit',athx:'ATHX',strength:'Strength',oly:'Oly',rest:'Rest',custom:'Custom'};
+const CUSTOM_MIN=45; // estimated minutes for a custom session
 let index=null, week=null, picks={}, mode='all';
 
 const $=s=>document.querySelector(s);
@@ -233,11 +239,11 @@ function loadPicks(){try{const s=localStorage.getItem(storeKey());picks=s?JSON.p
 }
 function savePicks(){try{localStorage.setItem(storeKey(),JSON.stringify(picks))}catch(e){}}
 function available(d){return TRACK_ORDER.filter(t=>week.tracks[t]&&week.tracks[t].days&&week.tracks[t].days[d])}
-function valid(d,t){return t==='rest'||available(d).includes(t)}
+function valid(d,t){return t==='rest'||t==='custom'||available(d).includes(t)}
 function defaultPick(d){const a=available(d);return a.includes('crossfit')?'crossfit':(a[0]||'rest')}
 function setPick(d,t){picks[d]=t;savePicks();render()}
 function dayOf(t,d){return week.tracks[t]?.days?.[d]}
-function trackName(t){return t==='rest'?'Rest':(week.tracks[t]?.name||t)}
+function trackName(t){return t==='rest'?'Rest':t==='custom'?'Custom':(week.tracks[t]?.name||t)}
 function minutes(w){return (w?.sections||[]).reduce((s,x)=>s+(+x.est_minutes||0),0)}
 function dateFor(d){
   for(const t of TRACK_ORDER){const w=dayOf(t,d);if(w?.date)return w.date}
@@ -253,7 +259,7 @@ function render(){ renderHeader(); renderCycle(); renderAnn(); renderSum(stats()
 
 function renderHeader(){
   $('#sub').textContent=week.label;
-  $('#legend').innerHTML=TRACK_ORDER.filter(t=>week.tracks[t]).map(t=>`<span><i style="background:${tc(t)}"></i>${esc(week.tracks[t].name)}</span>`).join('')+`<span><i style="background:var(--t-rest)"></i>Rest</span>`;
+  $('#legend').innerHTML=TRACK_ORDER.filter(t=>week.tracks[t]).map(t=>`<span><i style="background:${tc(t)}"></i>${esc(week.tracks[t].name)}</span>`).join('')+`<span><i style="background:var(--t-custom)"></i>Custom (your own session)</span><span><i style="background:var(--t-rest)"></i>Rest</span>`;
   $('#srcLine').textContent=`Source: "${week.source?.subject||'newsletter'}" received ${week.source?.received?new Date(week.source.received).toLocaleString():''}`;
   const counts={};for(const [d] of DAYS){counts[picks[d]]=(counts[picks[d]]||0)+1}
   $('#pickSummary').textContent=Object.entries(counts).filter(([k])=>k!=='rest').map(([k,v])=>`${SHORT[k]} ×${v}`).join(' · ')+(counts.rest?` · Rest ×${counts.rest}`:'');
@@ -279,30 +285,32 @@ const LIFT=[['power','Power','Olympic lifts, jumps, throws — force produced fa
 const COND=[['aerobic','Low intensity','Steady or long mixed-modal ≥20 min, runs, race-style hybrids'],['threshold','Threshold','Sustained hard 8–20 min pieces'],['vo2','VO2','Hard repeats of 2–5 min with rest'],['hiit','HIIT','Short intervals under ~2:30 with rest'],['sprint','Sprint','Max efforts under 60 s, full recovery']];
 const REGION_ORDER=['quads','posterior chain','upper push','upper pull','core','arms','full body'];
 function stats(){
-  const lift={},cond={},reg={};let liftT=0,condT=0,untagged=0,days=0;
-  for(const [d] of DAYS){const p=picks[d];if(p==='rest')continue;const w=dayOf(p,d);if(!w)continue;days++;
+  const lift={},cond={},reg={};let liftT=0,condT=0,untagged=0,days=0,customDays=0;
+  for(const [d] of DAYS){const p=picks[d];if(p==='rest')continue;if(p==='custom'){days++;customDays++;continue}const w=dayOf(p,d);if(!w)continue;days++;
     for(const s of w.sections||[]){const st=s.stimulus;if(!st||!st.length){untagged+=+s.est_minutes||0;continue}
       for(const x of st){const m=+x.minutes||0;const q=x.quality;
         if(LIFT.some(l=>l[0]===q)){lift[q]=(lift[q]||0)+m;liftT+=m;const rs=x.regions||[];for(const r of rs)reg[r]=(reg[r]||0)+m/rs.length}
         else if(COND.some(c=>c[0]===q)){cond[q]=(cond[q]||0)+m;condT+=m}}}}
-  return {lift,cond,reg,liftT,condT,untagged,days,tot:liftT+condT};
+  const customT=customDays*CUSTOM_MIN;
+  return {lift,cond,reg,liftT,condT,untagged,days,customDays,customT,tot:liftT+condT+customT};
 }
 function renderSum(s){
-  const {lift,cond,reg,liftT,condT,untagged,tot,days}=s;
+  const {lift,cond,reg,liftT,condT,untagged,tot,days,customDays,customT}=s;
   const regs=REGION_ORDER.filter(r=>reg[r]).concat(Object.keys(reg).filter(r=>!REGION_ORDER.includes(r))).sort((a,b)=>reg[b]-reg[a]);const rmax=Math.max(1,...regs.map(r=>reg[r]));
   const seg=(defs,vals)=>defs.filter(([k])=>vals[k]).map(([k,n])=>`<i style="--c:var(--q-${k});flex:${vals[k]}" title="${n} ≈${Math.round(vals[k])} min"><span>${pct(vals[k],tot)>=7?`${n} · ${Math.round(vals[k])} min`:''}</span></i>`).join('');
   const keys=(defs,vals,T)=>defs.filter(([k])=>vals[k]).map(([k,n,def])=>`<span title="${esc(def)}"><i style="--c:var(--q-${k})"></i><b>${n}</b> ${pct(vals[k],T)}% · ${Math.round(vals[k])} min</span>`).join('');
   $('#sum').innerHTML=`
     <div class="stats">
       <span><b>${days}</b>training days <span class="u">of 7</span></span><span class="sep">|</span>
-      <span><b>≈${Math.round(tot)} min</b>programmed work${untagged?` <span class="u">(+${untagged} min mobility, not counted)</span>`:''}</span><span class="sep">|</span>
-      <span><b>${pct(liftT,tot)}% / ${pct(condT,tot)}%</b>strength / conditioning <span class="u">of minutes</span></span><span class="sep">|</span>
+      <span><b>≈${Math.round(tot)} min</b>training time${customT?` <span class="u">(incl. ${customDays} custom day${customDays>1?'s':''} @ ≈${CUSTOM_MIN} min)</span>`:''}${untagged?` <span class="u">(+${untagged} min mobility, not counted)</span>`:''}</span><span class="sep">|</span>
+      <span><b>${pct(liftT,tot)}% / ${pct(condT,tot)}%${customT?` / ${pct(customT,tot)}%`:''}</b>strength / conditioning${customT?' / custom':''} <span class="u">of minutes${customT?` · custom ≈${CUSTOM_MIN} min/day est.`:''}</span></span><span class="sep">|</span>
       <span><b>${pct(lift.strength||0,liftT)}% / ${pct(lift.hypertrophy||0,liftT)}%</b>raw strength / hypertrophy <span class="u">of lifting minutes (rest = power + skill)</span></span>
     </div>
-    ${tot?`<div class="ovr"><div class="gl"><span style="color:var(--red)">Strength ${pct(liftT,tot)}%</span><span>Conditioning ${pct(condT,tot)}%</span></div><div class="obar">${liftT?`<i class="s" style="flex:${liftT}">${Math.round(liftT)} min</i>`:''}${condT?`<i class="c" style="flex:${condT}">${Math.round(condT)} min</i>`:''}</div></div>`:''}
+    ${tot?`<div class="ovr"><div class="gl"><span style="color:var(--red)">Strength ${pct(liftT,tot)}%</span><span>Conditioning ${pct(condT,tot)}%${customT?` · Custom ${pct(customT,tot)}%`:''}</span></div><div class="obar">${liftT?`<i class="s" style="flex:${liftT}">${Math.round(liftT)} min</i>`:''}${condT?`<i class="c" style="flex:${condT}">${Math.round(condT)} min</i>`:''}${customT?`<i class="x" style="flex:${customT}">≈${customT} min</i>`:''}</div></div>`:''}
     ${tot?`<div class="nest">
       ${liftT?`<div class="grp s" style="flex:${liftT}"><div class="gl"><span>Strength ${pct(liftT,tot)}% of week</span><em>≈${Math.round(liftT)} min</em></div><div class="nbar">${seg(LIFT,lift)}</div><div class="keys">${keys(LIFT,lift,liftT)}</div></div>`:''}
       ${condT?`<div class="grp c" style="flex:${condT}"><div class="gl"><span>Conditioning ${pct(condT,tot)}% of week</span><em>≈${Math.round(condT)} min</em></div><div class="nbar">${seg(COND,cond)}</div><div class="keys">${keys(COND,cond,condT)}</div></div>`:''}
+      ${customT?`<div class="grp x" style="flex:${customT};min-width:120px"><div class="gl"><span>Custom ${pct(customT,tot)}%</span><em>≈${customT} min</em></div><div class="nbar"><i class="x" style="flex:1" title="Custom sessions — content unknown"><span>${customDays} day${customDays>1?'s':''}</span></i></div><div class="keys"><span><i style="--c:#777"></i><b>Your own session</b> est. ${CUSTOM_MIN} min/day · not in breakdowns</span></div></div>`:''}
     </div>`:`<div class="none">Nothing picked yet — choose a class under each day below.</div>`}
     <div class="regs"><span class="lbl">Muscles worked <span style="font-weight:500;text-transform:none;letter-spacing:0">· lifting minutes by region</span></span>${regs.length?regs.map(r=>`<span class="r"><i style="--w:${Math.round(reg[r]/rmax*100)}%"></i><b>${esc(r)}</b><span class="v">${Math.round(reg[r])} min</span></span>`).join(''):'<span class="none">no lifting picked</span>'}</div>`;
 }
@@ -324,13 +332,15 @@ function renderWeek(){
   wk.innerHTML=DAYS.map(([d,lab,full])=>{
     const avail=available(d), pick=picks[d];
     const chips=[...avail.map(t=>`<button class="chip ${pick===t?'on':''}" style="--cc:${tc(t)}" data-d="${d}" data-t="${t}" title="${esc(week.tracks[t].name)}">${SHORT[t]}</button>`),
+      `<button class="chip custom ${pick==='custom'?'on':''}" data-d="${d}" data-t="custom" title="Your own session — counted as custom time only">Custom</button>`,
       `<button class="chip rest ${pick==='rest'?'on':''}" data-d="${d}" data-t="rest">Rest</button>`].join('');
-    const body=avail.length
-      ?`<div class="cards">${[...avail].sort((a,b)=>(b===pick)-(a===pick)).map(t=>cardHTML(t,dayOf(t,d),d)).join('')}${pick==='rest'&&mode==='mine'?`<div class="rest">Rest day</div>`:''}</div>`
+    const customCard=pick==='custom'?`<div class="card custom on" style="--tc:var(--t-custom)"><div class="top"><span class="track">Custom</span><span class="mark">✓ Mine</span></div><div class="title">Your own session</div><div class="note">Open gym, a class elsewhere, a run, a rest-and-mobility day — whatever you're doing. Counted as ≈${CUSTOM_MIN} min of custom time; not included in the strength / conditioning breakdowns.</div></div>`:'';
+    const body=avail.length||customCard
+      ?`<div class="cards">${customCard}${[...avail].sort((a,b)=>(b===pick)-(a===pick)).map(t=>cardHTML(t,dayOf(t,d),d)).join('')}${pick==='rest'&&mode==='mine'?`<div class="rest">Rest day</div>`:''}</div>`
       :`<div class="rest">${mode==='mine'?'Rest day':'No programming published.'}</div>`;
     return `<div class="day" style="--tc:${pick==='rest'?'var(--t-rest)':tc(pick)}">
       <div class="hd"><b>${full}</b><span class="d">${fmtDate(dateFor(d))}</span></div>
-      <div class="picklbl">${avail.length?'Pick your class':'&nbsp;'}</div>
+      <div class="picklbl">Pick your class</div>
       <div class="chips">${chips}</div>
       ${body}
     </div>`;
@@ -343,7 +353,7 @@ function renderWeek(){
 function weekText(){
   const out=[`${week.label} — my week`,''];
   for(const [d,lab] of DAYS){const p=picks[d];const w=p!=='rest'?dayOf(p,d):null;
-    out.push(`${lab} ${fmtDate(dateFor(d))} — ${w?trackName(p)+': '+w.title:'Rest'}`);
+    out.push(`${lab} ${fmtDate(dateFor(d))} — ${w?trackName(p)+': '+w.title:(p==='custom'?'Custom: your own session':'Rest')}`);
     if(w){for(const s of w.sections||[]){out.push(`  ${s.label}${s.est_minutes?` (≈${s.est_minutes} min)`:''}`);for(const l of s.lines||[])out.push(`    ${l}`)}}
     out.push('')}
   return out.join('\n');
