@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CFNYC Tracks</title>
-<meta name="description" content="CrossFit NYC weekly programming by track — pick a track per day and see your week.">
+<meta name="description" content="CrossFit NYC weekly programming by track — see every workout, pick one per day, and get your week.">
 <style>
 :root{
   --bg:#f4f6f9; --surface:#ffffff; --card2:#f8fafc; --text:#1a202c; --muted:#5f6b7a; --light:#a0aec0; --border:#e2e8f0;
-  --accent:#0891b2;
+  --accent:#0891b2; --ann-bg:#fffbeb; --ann-border:#f6e05e; --ann-title:#92400e;
   --t-crossfit:#0891b2; --t-athx:#c2410c; --t-strength:#6d28d9; --t-oly:#15803d; --t-rest:#94a3b8;
   --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);
   color-scheme:light;
@@ -16,7 +16,7 @@
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
     --bg:#111315; --surface:#1a1d21; --card2:#22262c; --text:#e6e9ee; --muted:#a3adba; --light:#6b7482; --border:#2c323a;
-    --accent:#0e9fb8;
+    --accent:#0e9fb8; --ann-bg:#2a2410; --ann-border:#8a6d1a; --ann-title:#f2c14e;
     --t-crossfit:#0e9fb8; --t-athx:#e06f22; --t-strength:#8b5cf6; --t-oly:#2fae5a; --t-rest:#5b6472;
     --shadow:0 1px 2px rgba(0,0,0,.4);
     color-scheme:dark;
@@ -24,16 +24,17 @@
 }
 :root[data-theme="dark"]{
   --bg:#111315; --surface:#1a1d21; --card2:#22262c; --text:#e6e9ee; --muted:#a3adba; --light:#6b7482; --border:#2c323a;
-  --accent:#0e9fb8;
+  --accent:#0e9fb8; --ann-bg:#2a2410; --ann-border:#8a6d1a; --ann-title:#f2c14e;
   --t-crossfit:#0e9fb8; --t-athx:#e06f22; --t-strength:#8b5cf6; --t-oly:#2fae5a; --t-rest:#5b6472;
   --shadow:0 1px 2px rgba(0,0,0,.4);
   color-scheme:dark;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif}
 a{color:var(--accent)}
 .wrap{max-width:1400px;margin:0 auto;padding:20px 20px 60px}
-header.top{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}
+header.top{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
 h1{font-size:22px;margin:0;letter-spacing:-.01em}
 h1 small{font-weight:500;color:var(--muted);font-size:13px;margin-left:8px}
 .sub{color:var(--muted);font-size:13px;margin-top:4px}
@@ -44,88 +45,84 @@ button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .pill{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600;border:1px solid var(--border);background:var(--card2);color:var(--muted)}
 .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
 section{margin-top:22px}
-h2{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px;font-weight:700}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px;font-weight:700}
 h2 span{text-transform:none;letter-spacing:0;font-weight:500;margin-left:8px}
-.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-bottom:10px}
+
+/* announcements banner */
+.ann{background:var(--ann-bg);border:1px solid var(--ann-border);border-radius:12px;padding:12px 16px 6px;margin-top:6px}
+.ann h2{color:var(--ann-title);margin-bottom:8px}
+.ann-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 18px}
+.ann-item{padding:4px 0 8px;font-size:12.5px;line-height:1.35}
+.ann-item b{display:block;font-size:13px;color:var(--text)}
+.ann-item span{color:var(--muted)}
+
+/* your week strip */
+.strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+@media (max-width:900px){.strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:560px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--tc,var(--t-rest));border-radius:10px;padding:8px 10px;cursor:pointer;min-width:0;box-shadow:var(--shadow);text-decoration:none;color:inherit;display:block}
+.tile:hover{border-color:var(--tc,var(--light))}
+.tile .d{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.tile .d b{color:var(--text)}
+.tile .tr{font-size:11px;font-weight:700;color:var(--tc,var(--muted));margin-top:3px;text-transform:uppercase;letter-spacing:.04em}
+.tile .t{font-size:12.5px;font-weight:600;line-height:1.3;margin-top:2px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:10px 0 0}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 
-/* week grid */
-.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
-@media (max-width:1100px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}}
-@media (max-width:760px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:480px){.week{grid-template-columns:1fr}}
-.day{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0;border-top:4px solid var(--tc,var(--t-rest))}
-.day .hd{padding:10px 12px 6px;display:flex;justify-content:space-between;align-items:baseline}
-.day .hd b{font-size:14px}
-.day .hd .d{color:var(--muted);font-size:12px}
-.chips{display:flex;flex-wrap:wrap;gap:5px;padding:0 12px 10px}
-.chip{border:1px solid var(--border);background:var(--card2);color:var(--muted);border-radius:999px;padding:3px 9px;font-size:11.5px;font-weight:600;cursor:pointer;line-height:1.3}
+/* day rows */
+.day{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);margin-top:12px;scroll-margin-top:12px}
+.day .hd{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border)}
+.day .hd .name{font-size:15px;font-weight:700;min-width:90px}
+.day .hd .name span{color:var(--muted);font-weight:500;font-size:12.5px;margin-left:6px}
+.day .hd .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--border);background:var(--card2);color:var(--muted);border-radius:999px;padding:4px 11px;font-size:12px;font-weight:600;cursor:pointer;line-height:1.3}
 .chip:hover{border-color:var(--cc)}
 .chip.on{background:var(--cc);border-color:var(--cc);color:#fff}
 .chip.rest.on{background:var(--t-rest);border-color:var(--t-rest)}
-.card{padding:0 12px 12px;flex:1;display:flex;flex-direction:column;gap:8px}
-.card .title{font-weight:700;font-size:13.5px;line-height:1.3}
-.card .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:11.5px}
-.sec{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 9px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;padding:12px 14px 14px;align-items:start}
+.cards.n1{grid-template-columns:minmax(280px,720px)}
+.card{border:1px solid var(--border);border-radius:10px;background:var(--card2);padding:10px 12px;display:flex;flex-direction:column;gap:8px;min-width:0;position:relative;border-top:4px solid var(--tc)}
+.card.on{background:var(--surface);border-color:var(--tc);box-shadow:0 0 0 2px color-mix(in srgb,var(--tc) 35%,transparent)}
+.card.dim{opacity:.85}
+.card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.card .track{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--tc)}
+.card .mark{font-size:11px;font-weight:700;color:var(--tc);white-space:nowrap}
+.card .pickbtn{font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid var(--tc);color:var(--tc);background:transparent}
+.card .pickbtn:hover{background:var(--tc);color:#fff}
+.card .title{font-weight:700;font-size:14px;line-height:1.3}
+.card .meta{color:var(--muted);font-size:11.5px}
+.sec{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 9px}
+.card.on .sec{background:var(--card2)}
 .sec .lb{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--tc);display:flex;justify-content:space-between}
 .sec .lb em{font-style:normal;color:var(--muted);font-weight:500;letter-spacing:0;text-transform:none}
 .sec ul{margin:5px 0 0;padding-left:0;list-style:none;font-size:12.5px}
 .sec li{padding:1.5px 0;border-bottom:1px dashed var(--border)}
 .sec li:last-child{border-bottom:0}
 .sec li.h{font-weight:600}
-.notes{font-size:12px;color:var(--muted);line-height:1.4}
-.notes summary{cursor:pointer;font-weight:600;color:var(--text);font-size:12px}
-.notes p{margin:6px 0 0}
 .tags{display:flex;flex-wrap:wrap;gap:4px}
-.tag{font-size:10.5px;padding:1px 6px;border-radius:5px;background:var(--card2);border:1px solid var(--border);color:var(--muted)}
-.rest{color:var(--muted);font-size:13px;padding:6px 12px 14px}
+.tag{font-size:10.5px;padding:1px 6px;border-radius:5px;background:var(--surface);border:1px solid var(--border);color:var(--muted)}
+.notes{font-size:12px;color:var(--muted);line-height:1.45;border-top:1px solid var(--border);padding-top:6px;margin-top:auto}
+.notes summary{cursor:pointer;font-weight:600;color:var(--text);font-size:12px;list-style:none;display:flex;align-items:center;gap:6px}
+.notes summary::-webkit-details-marker{display:none}
+.notes summary::before{content:"▸";font-size:11px;color:var(--muted);transition:transform .15s}
+.notes[open] summary::before{transform:rotate(90deg)}
+.notes p{margin:6px 0 2px}
+.rest{color:var(--muted);font-size:13px;padding:10px 14px 14px}
 .empty{color:var(--light);font-style:italic}
 
-/* stat tiles + chart */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:12px}
-.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
-.stat .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
-.stat .v{font-size:22px;font-weight:700;letter-spacing:-.02em;margin-top:2px}
-.stat .v small{font-size:12px;color:var(--muted);font-weight:500;margin-left:4px}
-.chartbox{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
-.chartbox svg{width:100%;height:auto;display:block}
-.chartbox text{fill:var(--muted);font-size:11px}
-.chartbox text.val{fill:var(--text);font-weight:600}
-.chartbox .grid{stroke:var(--border);stroke-width:1}
-.chartbox .bar{cursor:pointer}
-.tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:12px;box-shadow:var(--shadow);z-index:20;display:none;max-width:260px}
-.tip b{display:block;margin-bottom:2px}
-
-/* comparison grid */
-.cmp{overflow-x:auto;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow)}
-table.cmp-t{border-collapse:collapse;width:100%;min-width:820px}
-.cmp-t th,.cmp-t td{border-bottom:1px solid var(--border);padding:8px 10px;vertical-align:top;text-align:left;font-size:12.5px}
-.cmp-t th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:700;background:var(--card2)}
-.cmp-t td.tr{white-space:nowrap;font-weight:700;border-left:4px solid var(--tc)}
-.cmp-t td.tr small{display:block;color:var(--muted);font-weight:500;font-size:11px;white-space:normal;max-width:160px}
-.cell{cursor:pointer;border-radius:7px;padding:6px 8px;border:1px solid transparent;transition:border-color .1s}
-.cell:hover{border-color:var(--tc);background:var(--card2)}
-.cell.on{border-color:var(--tc);background:color-mix(in srgb,var(--tc) 12%,var(--surface))}
-.cell .t{font-weight:600}
-.cell .m{color:var(--muted);font-size:11px}
-.cell .tk{margin-top:3px}
-.nil{color:var(--light)}
-
-/* side panels */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:800px){.two{grid-template-columns:1fr}}
+/* cycle panel */
 .panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
 .panel h3{margin:0 0 8px;font-size:14px}
 .panel ul{margin:0;padding-left:18px}
 .panel li{margin:4px 0;font-size:13px}
-.ann b{display:block;font-size:13px}
-.ann p{margin:2px 0 8px;color:var(--muted);font-size:12.5px}
+.panel p{margin:8px 0 0;font-size:12.5px}
 footer{margin-top:28px;color:var(--light);font-size:12px;display:flex;gap:14px;flex-wrap:wrap}
 .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
 @media print{
-  body{background:#fff}.controls,.chips,.cmp,footer,.toast,#tip{display:none!important}
-  .week{grid-template-columns:repeat(3,1fr)}.day{break-inside:avoid;box-shadow:none}
+  body{background:#fff}.controls,.chips,.pickbtn,footer,.toast{display:none!important}
+  .day{break-inside:avoid;box-shadow:none}.card{break-inside:avoid}
 }
 </style>
 </head>
@@ -140,30 +137,25 @@ footer{margin-top:28px;color:var(--light);font-size:12px;display:flex;gap:14px;f
       <label for="weekSel" class="sub">Week</label>
       <select id="weekSel"></select>
       <button id="btnReset" title="Reset every day to the default track (CrossFit where available)">Reset picks</button>
-      <button id="btnCopy" class="primary" title="Copy the selected week as plain text">Copy week as text</button>
+      <button id="btnCopy" class="primary" title="Copy your week as plain text">Copy my week</button>
     </div>
   </header>
 
+  <div class="ann" id="ann" hidden></div>
+
   <section>
-    <h2>My week <span id="pickSummary"></span></h2>
+    <h2>Your week <span id="pickSummary"></span></h2>
+    <div class="strip" id="strip"></div>
     <div class="legend" id="legend"></div>
-    <div class="week" id="week"></div>
   </section>
 
   <section>
-    <h2>Week load <span>estimated minutes of programmed work per day, by session block · hover a bar</span></h2>
-    <div class="stats" id="stats"></div>
-    <div class="chartbox" id="chart"></div>
+    <h2>All workouts <span>every track, every day — pick one per day at the top of each day</span></h2>
+    <div id="days"></div>
   </section>
 
   <section>
-    <h2>All tracks this week <span>click any cell to use it for that day</span></h2>
-    <div class="cmp"><table class="cmp-t" id="cmp"></table></div>
-  </section>
-
-  <section class="two">
     <div class="panel" id="cycle"></div>
-    <div class="panel" id="ann"></div>
   </section>
 
   <footer>
@@ -172,12 +164,11 @@ footer{margin-top:28px;color:var(--light);font-size:12px;display:flex;gap:14px;f
     <a href="data/index.json">data</a>
   </footer>
 </div>
-<div class="tip" id="tip"></div>
 <div class="toast" id="toast"></div>
 
 <script>
 (function(){
-const DAYS=[['mon','Mon'],['tue','Tue'],['wed','Wed'],['thu','Thu'],['fri','Fri'],['sat','Sat'],['sun','Sun']];
+const DAYS=[['mon','Mon','Monday'],['tue','Tue','Tuesday'],['wed','Wed','Wednesday'],['thu','Thu','Thursday'],['fri','Fri','Friday'],['sat','Sat','Saturday'],['sun','Sun','Sunday']];
 const TRACK_ORDER=['crossfit','athx','strength','oly'];
 const SHORT={crossfit:'CrossFit',athx:'ATHX',strength:'Strength',oly:'Oly',rest:'Rest'};
 let index=null, week=null, picks={};
@@ -198,100 +189,69 @@ function valid(d,t){return t==='rest'||available(d).includes(t)}
 function defaultPick(d){const a=available(d);return a.includes('crossfit')?'crossfit':(a[0]||'rest')}
 function setPick(d,t){picks[d]=t;savePicks();render()}
 function dayOf(t,d){return week.tracks[t]?.days?.[d]}
+function trackName(t){return t==='rest'?'Rest':(week.tracks[t]?.name||t)}
 function minutes(w){return (w?.sections||[]).reduce((s,x)=>s+(+x.est_minutes||0),0)}
-function dateFor(d){ // any track's date for that day, else compute from week_of
+function dateFor(d){
   for(const t of TRACK_ORDER){const w=dayOf(t,d);if(w?.date)return w.date}
   const i=DAYS.findIndex(x=>x[0]===d);const dt=new Date(week.week_of+'T12:00:00');dt.setDate(dt.getDate()+i);return dt.toISOString().slice(0,10);
 }
 
-function render(){
-  renderHeader(); renderWeek(); renderStats(); renderChart(); renderCmp(); renderPanels();
-}
+function render(){ renderHeader(); renderAnn(); renderStrip(); renderDays(); renderCycle(); }
+
 function renderHeader(){
   const c=week.cycle;
-  $('#sub').innerHTML=`${esc(week.label)} · ${c?`<span class="pill"><span class="dot" style="background:${tc(c.track)}"></span>${esc(week.tracks[c.track]?.name||c.track)} ${esc(c.name)} — week ${c.week} of ${c.of}</span>`:''}`;
+  $('#sub').innerHTML=`${esc(week.label)}${c?` · <span class="pill"><span class="dot" style="background:${tc(c.track)}"></span>${esc(trackName(c.track))} ${esc(c.name)} — week ${c.week} of ${c.of}</span>`:''}`;
   $('#legend').innerHTML=TRACK_ORDER.filter(t=>week.tracks[t]).map(t=>`<span><i style="background:${tc(t)}"></i>${esc(week.tracks[t].name)}</span>`).join('')+`<span><i style="background:var(--t-rest)"></i>Rest</span>`;
   $('#srcLine').textContent=`Source: "${week.source?.subject||'newsletter'}" received ${week.source?.received?new Date(week.source.received).toLocaleString():''}`;
   const counts={};for(const [d] of DAYS){counts[picks[d]]=(counts[picks[d]]||0)+1}
   $('#pickSummary').textContent=Object.entries(counts).filter(([k])=>k!=='rest').map(([k,v])=>`${SHORT[k]} ×${v}`).join(' · ')+(counts.rest?` · Rest ×${counts.rest}`:'');
 }
-function workoutHTML(t,w,d){
-  const mins=minutes(w);
-  return `<div class="card" style="--tc:${tc(t)}">
+function renderAnn(){
+  const a=week.announcements||[];const el=$('#ann');
+  if(!a.length){el.hidden=true;return}
+  el.hidden=false;
+  el.innerHTML=`<h2>This week at CFNYC</h2><div class="ann-grid">${a.map(x=>`<div class="ann-item"><b>${esc(x.title)}</b><span>${esc(x.detail)}</span></div>`).join('')}</div>`;
+}
+function renderStrip(){
+  $('#strip').innerHTML=DAYS.map(([d,lab])=>{const p=picks[d];const w=p!=='rest'?dayOf(p,d):null;
+    return `<a class="tile" href="#day-${d}" style="--tc:${p==='rest'?'var(--t-rest)':tc(p)}"><div class="d"><b>${lab}</b><span>${fmtDate(dateFor(d))}</span></div><div class="tr">${esc(trackName(p))}</div><div class="t">${w?esc(w.title):(available(d).length?'Rest day':'—')}</div></a>`}).join('');
+}
+function cardHTML(t,w,d){
+  const on=picks[d]===t, mins=minutes(w);
+  return `<div class="card ${on?'on':'dim'}" style="--tc:${tc(t)}">
+    <div class="top"><span class="track">${esc(week.tracks[t].name)}</span>${on?`<span class="mark">✓ Your pick</span>`:`<button class="pickbtn" data-d="${d}" data-t="${t}">Pick</button>`}</div>
     <div class="title">${esc(w.title||'')}</div>
-    <div class="meta"><span class="pill" style="border-color:${tc(t)};color:${tc(t)}">${esc(week.tracks[t].name)}</span>${mins?`<span>≈${mins} min</span>`:''}</div>
+    ${mins?`<div class="meta">≈${mins} min of programmed work</div>`:''}
     ${(w.sections||[]).map(s=>`<div class="sec"><div class="lb"><span>${esc(s.label)}</span>${s.est_minutes?`<em>≈${s.est_minutes}′</em>`:''}</div><ul>${(s.lines||[]).map(l=>`<li class="${/:$/.test(l)?'h':''}">${esc(l)}</li>`).join('')}</ul></div>`).join('')}
-    ${w.coach_notes?`<details class="notes"><summary>Coach notes</summary><p>${esc(w.coach_notes)}</p></details>`:''}
     ${(w.tags||[]).length?`<div class="tags">${w.tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div>`:''}
+    ${w.coach_notes?`<details class="notes"><summary>Coach notes</summary><p>${esc(w.coach_notes)}</p></details>`:''}
   </div>`;
 }
-function renderWeek(){
-  $('#week').innerHTML=DAYS.map(([d,lab])=>{
-    const avail=available(d), pick=picks[d], w=pick!=='rest'?dayOf(pick,d):null;
-    const chips=[...avail.map(t=>`<button class="chip ${pick===t?'on':''}" style="--cc:${tc(t)}" data-d="${d}" data-t="${t}">${SHORT[t]}</button>`),
+function renderDays(){
+  $('#days').innerHTML=DAYS.map(([d,lab,full])=>{
+    const avail=available(d), pick=picks[d];
+    const chips=[...avail.map(t=>`<button class="chip ${pick===t?'on':''}" style="--cc:${tc(t)}" data-d="${d}" data-t="${t}">${esc(week.tracks[t].name)}</button>`),
       `<button class="chip rest ${pick==='rest'?'on':''}" data-d="${d}" data-t="rest">Rest</button>`].join('');
-    return `<div class="day" style="--tc:${pick==='rest'?'var(--t-rest)':tc(pick)}">
-      <div class="hd"><b>${lab}</b><span class="d">${fmtDate(dateFor(d))}</span></div>
-      <div class="chips">${chips}</div>
-      ${w?workoutHTML(pick,w,d):`<div class="rest">${avail.length?'Rest day':'No programming published for this day.'}</div>`}
+    const body=avail.length
+      ?`<div class="cards ${avail.length===1?'n1':''}">${avail.map(t=>cardHTML(t,dayOf(t,d),d)).join('')}</div>`
+      :`<div class="rest">No programming published for ${full}.</div>`;
+    return `<div class="day" id="day-${d}">
+      <div class="hd"><div class="name">${full}<span>${fmtDate(dateFor(d))}</span></div><span class="lbl">My pick</span><div class="chips">${chips}</div></div>
+      ${body}
     </div>`;
   }).join('');
-  $('#week').querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>setPick(b.dataset.d,b.dataset.t)));
+  $('#days').querySelectorAll('.chip,.pickbtn').forEach(b=>b.addEventListener('click',()=>setPick(b.dataset.d,b.dataset.t)));
 }
-function renderStats(){
-  let total=0,days=0,strength=0,cond=0;const tagSet=new Set();
-  for(const [d] of DAYS){const p=picks[d];if(p==='rest')continue;const w=dayOf(p,d);if(!w)continue;days++;
-    for(const s of w.sections||[]){const m=+s.est_minutes||0;total+=m;(/strength|lift|successory|open gym/i.test(s.label)?strength+=m:cond+=m)}
-    (w.tags||[]).forEach(x=>tagSet.add(x))}
-  $('#stats').innerHTML=`
-    <div class="stat"><div class="k">Training days</div><div class="v">${days}<small>of 7</small></div></div>
-    <div class="stat"><div class="k">Programmed work</div><div class="v">≈${total}<small>min</small></div></div>
-    <div class="stat"><div class="k">Strength / lifting</div><div class="v">≈${strength}<small>min</small></div></div>
-    <div class="stat"><div class="k">Conditioning</div><div class="v">≈${cond}<small>min</small></div></div>
-    <div class="stat"><div class="k">Modalities</div><div class="v">${tagSet.size}<small>distinct</small></div></div>`;
-}
-function renderChart(){
-  const W=900,H=220,pl=36,pr=12,pt=16,pb=28;const iw=W-pl-pr,ih=H-pt-pb;
-  const rows=DAYS.slice(0,6).map(([d,lab])=>{const p=picks[d];const w=p!=='rest'?dayOf(p,d):null;return {d,lab,t:p,w,secs:(w?.sections||[]).map(s=>({label:s.label,m:+s.est_minutes||0})),total:minutes(w)}});
-  const max=Math.max(60,...rows.map(r=>r.total));const step=max>90?30:15;const ymax=Math.ceil(max/step)*step;
-  const y=v=>pt+ih-(v/ymax)*ih;const bw=iw/rows.length;const barw=Math.min(64,bw*0.55);
-  let g='';for(let v=0;v<=ymax;v+=step){g+=`<line class="grid" x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}"/><text x="${pl-6}" y="${y(v)+4}" text-anchor="end">${v}</text>`}
-  let bars='';rows.forEach((r,i)=>{const x=pl+bw*i+(bw-barw)/2;let acc=0;
-    r.secs.forEach((s,j)=>{const y0=y(acc+s.m),h=y(acc)-y(acc+s.m);const last=j===r.secs.length-1;
-      const op=1-j*0.18;
-      bars+=`<rect class="bar" x="${x}" y="${y0}" width="${barw}" height="${Math.max(0,h-2)}" rx="${last?4:0}" fill="${tc(r.t)}" fill-opacity="${Math.max(.45,op)}" data-i="${i}" data-j="${j}"/>`;
-      acc+=s.m});
-    if(r.total)bars+=`<text class="val" x="${x+barw/2}" y="${y(r.total)-5}" text-anchor="middle">${r.total}</text>`;
-    bars+=`<text x="${x+barw/2}" y="${H-8}" text-anchor="middle">${r.lab}${r.t!=='rest'?' · '+SHORT[r.t]:''}</text>`;
-  });
-  $('#chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Estimated minutes per day">${g}${bars}</svg>`;
-  const tip=$('#tip');
-  $('#chart').querySelectorAll('.bar').forEach(b=>{
-    const r=rows[+b.dataset.i],s=r.secs[+b.dataset.j];
-    b.addEventListener('mousemove',e=>{tip.style.display='block';tip.style.left=(e.clientX+12)+'px';tip.style.top=(e.clientY+12)+'px';tip.innerHTML=`<b>${r.lab} · ${esc(week.tracks[r.t].name)}</b>${esc(s.label)}: ≈${s.m} min<br><span style="color:var(--muted)">Day total ≈${r.total} min</span>`});
-    b.addEventListener('mouseleave',()=>tip.style.display='none');
-  });
-}
-function renderCmp(){
-  const head=`<tr><th style="width:190px">Track</th>${DAYS.slice(0,6).map(([,l])=>`<th>${l}</th>`).join('')}</tr>`;
-  const body=TRACK_ORDER.filter(t=>week.tracks[t]).map(t=>{const tr=week.tracks[t];
-    return `<tr><td class="tr" style="--tc:${tc(t)}">${esc(tr.name)}<small>${esc(tr.note||'')}</small></td>`+DAYS.slice(0,6).map(([d])=>{const w=tr.days?.[d];
-      if(!w)return `<td><span class="nil">—</span></td>`;const on=picks[d]===t;
-      return `<td><div class="cell ${on?'on':''}" style="--tc:${tc(t)}" data-d="${d}" data-t="${t}" title="Use ${esc(tr.name)} on ${d}"><div class="t">${esc(w.title)}</div><div class="m">${(w.sections||[]).map(s=>s.label.split(' —')[0]).join(' · ')}${minutes(w)?` · ≈${minutes(w)}′`:''}</div></div></td>`}).join('')+'</tr>'}).join('');
-  $('#cmp').innerHTML=head+body;
-  $('#cmp').querySelectorAll('.cell').forEach(c=>c.addEventListener('click',()=>setPick(c.dataset.d,c.dataset.t)));
-}
-function renderPanels(){
+function renderCycle(){
   const c=week.cycle;
-  $('#cycle').innerHTML=c?`<h3>${esc(week.tracks[c.track]?.name||c.track)} — ${esc(c.name)} (week ${c.week}/${c.of})</h3><ul>${(c.focus||[]).map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
-    ${TRACK_ORDER.filter(t=>t!==c.track&&week.tracks[t]?.note).map(t=>`<p style="margin:10px 0 0;font-size:12.5px"><b style="color:${tc(t)}">${esc(week.tracks[t].name)}:</b> ${esc(week.tracks[t].note)}</p>`).join('')}`:'<h3>Cycle</h3><p class="empty">No cycle notes this week.</p>';
-  $('#ann').innerHTML=`<h3>Announcements</h3>`+((week.announcements||[]).map(a=>`<div class="ann"><b>${esc(a.title)}</b><p>${esc(a.detail)}</p></div>`).join('')||'<p class="empty">None.</p>');
+  const notes=TRACK_ORDER.filter(t=>week.tracks[t]?.note&&!(c&&t===c.track)).map(t=>`<p><b style="color:${tc(t)}">${esc(week.tracks[t].name)}:</b> ${esc(week.tracks[t].note)}</p>`).join('');
+  $('#cycle').innerHTML=(c?`<h3>${esc(trackName(c.track))} — ${esc(c.name)} (week ${c.week}/${c.of})</h3><ul>${(c.focus||[]).map(f=>`<li>${esc(f)}</li>`).join('')}</ul>`:'<h3>Programming notes</h3>')+(notes||(c?'':'<p class="empty">No notes this week.</p>'));
 }
 
 function weekText(){
   const out=[`${week.label} — my week`,''];
   for(const [d,lab] of DAYS){const p=picks[d];const w=p!=='rest'?dayOf(p,d):null;
-    out.push(`${lab} ${fmtDate(dateFor(d))} — ${w?week.tracks[p].name+': '+w.title:'Rest'}`);
+    out.push(`${lab} ${fmtDate(dateFor(d))} — ${w?trackName(p)+': '+w.title:'Rest'}`);
     if(w){for(const s of w.sections||[]){out.push(`  ${s.label}${s.est_minutes?` (≈${s.est_minutes} min)`:''}`);for(const l of s.lines||[])out.push(`    ${l}`)} if(w.coach_notes)out.push(`  Notes: ${w.coach_notes}`)}
     out.push('')}
   return out.join('\n');
@@ -300,15 +260,13 @@ function weekText(){
 async function loadWeek(file){
   const r=await fetch('data/'+file,{cache:'no-store'});if(!r.ok)throw new Error('week fetch '+r.status);
   week=await r.json();loadPicks();render();
-  try{localStorage.setItem('cfnyc-last-week',week.week_of)}catch(e){}
 }
 async function init(){
   try{
     const r=await fetch('data/index.json',{cache:'no-store'});if(!r.ok)throw new Error('index fetch '+r.status);
     index=await r.json();
     const weeks=[...index.weeks].sort((a,b)=>b.week_of.localeCompare(a.week_of));
-    const sel=$('#weekSel');sel.innerHTML=weeks.map(w=>`<option value="${esc(w.file)}" data-w="${w.week_of}">${esc(w.label)}</option>`).join('');
-    // Show the current/upcoming week by default: latest week whose Monday is <= next Monday
+    const sel=$('#weekSel');sel.innerHTML=weeks.map(w=>`<option value="${esc(w.file)}">${esc(w.label)}</option>`).join('');
     const now=new Date();let pick=weeks[0];
     for(const w of weeks){const mon=new Date(w.week_of+'T00:00:00');if(mon-now<7*864e5){pick=w;break}}
     sel.value=pick.file;
