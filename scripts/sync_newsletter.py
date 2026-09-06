@@ -35,6 +35,8 @@ SCHEMA_FILE = ROOT / "docs" / "UPDATING.md"
 
 TRACKS = ["crossfit", "athx", "strength", "oly"]
 DAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat"]
+QUALITIES = {"power", "strength", "hypertrophy", "skill", "aerobic", "threshold", "vo2", "hiit", "sprint"}
+REGIONS = {"quads", "posterior chain", "upper push", "upper pull", "core", "arms", "full body"}
 MONTHS = {m.lower(): i for i, m in enumerate(
     ["January", "February", "March", "April", "May", "June", "July", "August",
      "September", "October", "November", "December"], start=1)}
@@ -201,6 +203,12 @@ def validate(week: dict, week_of: dt.date) -> list[str]:
                     errs.append(f"{t}.{d}: section missing label/lines")
                 if not isinstance(s.get("est_minutes", 0), (int, float)):
                     errs.append(f"{t}.{d}: est_minutes not numeric")
+                for st in s.get("stimulus") or []:
+                    if st.get("quality") not in QUALITIES:
+                        errs.append(f"{t}.{d}: unknown stimulus quality {st.get('quality')!r}")
+                    for r in st.get("regions") or []:
+                        if r not in REGIONS:
+                            log(f"WARNING: {t}.{d}: unknown region {r!r}")
             w.setdefault("coach_notes", "")
             w.setdefault("tags", [])
     week.setdefault("announcements", [])
