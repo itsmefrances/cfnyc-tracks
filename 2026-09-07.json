@@ -1,0 +1,281 @@
+{
+  "week_of": "2026-09-07",
+  "label": "Week of Sep 7, 2026",
+  "source": {
+    "subject": "Crossfit NYC Newsletter",
+    "sender": "newsletter@crossfitnyc.com",
+    "received": "2026-09-06T16:06:02Z",
+    "gmail_message_id": "1a077783ba6024d5"
+  },
+  "cycle": {
+    "track": "crossfit",
+    "name": "New 6-week cycle",
+    "week": 1,
+    "of": 6,
+    "focus": [
+      "Cluster back squats (intra-set rest to preserve bar speed)",
+      "Power snatch exposure",
+      "Pulling + muscle-up skill progression",
+      "Tuesdays: more strength, shorter/punchier conditioning"
+    ]
+  },
+  "tracks": {
+    "crossfit": {
+      "name": "CrossFit",
+      "note": "Week 1 of 6. Squat stronger, move the bar faster, build pulling skills, work at a few different speeds.",
+      "days": {
+        "mon": {
+          "date": "2026-09-07",
+          "title": "Power snatch + 4 × 2:30 AMRAP",
+          "sections": [
+            {"label": "Strength", "est_minutes": 20, "lines": [
+              "A1. Power Snatch — 4 sets of 2, building",
+              "A2. Feet-Elevated Parallette Push Up — 4 sets of 8–12"
+            ]},
+            {"label": "Conditioning", "est_minutes": 13, "lines": [
+              "4 Rounds, 2:30 AMRAP each:",
+              "20 Alternating Dumbbell Snatch (50/35)",
+              "40 Double Unders",
+              "Handstand Push Ups with remaining time",
+              "1:00 rest between rounds"
+            ]}
+          ],
+          "coach_notes": "Snatches: fast, not just heavy — crisp extension, decisive pull under, catch high. In the AMRAP the HSPU are the score; keep double unders ~30s, keep DB snatches moving, arrive at the wall with shoulders left. Aim for repeatable output across all four rounds.",
+          "tags": ["barbell", "dumbbell", "gymnastics", "jump rope"]
+        },
+        "tue": {
+          "date": "2026-09-08",
+          "title": "Cluster back squat + 8-min AMRAP",
+          "sections": [
+            {"label": "Strength", "est_minutes": 25, "lines": [
+              "A. Cluster Back Squat — 5 sets of 2-2-1, building",
+              "B. Pendlay Row — 4 sets of 6–8, building"
+            ]},
+            {"label": "Conditioning", "est_minutes": 8, "lines": [
+              "8 minute AMRAP:",
+              "8 Toes to Bar",
+              "6 Front Squats (95/65, 115/75)",
+              "4 Burpees Over Bar"
+            ]}
+          ],
+          "coach_notes": "2-2-1 = five reps per set with short intra-set breaks to reset and brace. Eight minutes: too long to sprint, too short to settle. Fittest athletes can chase 10 rounds; pick variations that keep you moving.",
+          "tags": ["barbell", "gymnastics"]
+        },
+        "wed": {
+          "date": "2026-09-09",
+          "title": "4 × 10:00 HYROX-style pieces",
+          "sections": [
+            {"label": "Part A — 10:00", "est_minutes": 10, "lines": [
+              "200/250m SkiErg",
+              "25 Wall Balls @ 14/20 lb",
+              "400/500m SkiErg",
+              "50 Wall Balls @ 10/14 lb",
+              "Max Distance SkiErg"
+            ]},
+            {"label": "Part B — 10:00", "est_minutes": 10, "lines": [
+              "200/250m Row",
+              "25 Burpees",
+              "400/500m Row",
+              "50 Half Burpees",
+              "Max Distance Row"
+            ]},
+            {"label": "Part C — 10:00", "est_minutes": 10, "lines": [
+              "25m Sled Pull",
+              "25 Sandbag Reverse Lunges @ 20/30 kg",
+              "50m Sled Pull",
+              "50 Sandbag Reverse Lunges @ 10/20 kg",
+              "Max Distance Sled Push"
+            ]},
+            {"label": "Part D — 10:00", "est_minutes": 10, "lines": [
+              "18/24 Bike Calories",
+              "25 Double KB Deadlifts @ 2×20 / 2×35 lb",
+              "36/48 Bike Calories",
+              "50 DB Hang Power Snatch @ 20/35 lb",
+              "Max Bike Calories"
+            ]}
+          ],
+          "coach_notes": "Each piece: buy-in, more buy-in, then use whatever time remains for max distance/calories. Decide how much to spend on the buy-in to earn the max window. 2:00 rest between parts — recover aggressively.",
+          "tags": ["ski", "row", "bike", "sled", "sandbag", "kettlebell", "dumbbell", "wall ball"]
+        },
+        "thu": {
+          "date": "2026-09-10",
+          "title": "RDL + pull skill, then row + 100 RKBS",
+          "sections": [
+            {"label": "Strength", "est_minutes": 25, "lines": [
+              "A1. Romanian Deadlift — 4 sets of 6–8, building",
+              "A2. Pull-up / C2B / Bar Muscle-Up Practice — 4 sets"
+            ]},
+            {"label": "Conditioning", "est_minutes": 15, "lines": [
+              "For Time:",
+              "2,000 / 1,600m Row",
+              "100 Russian KB Swings (24/16)"
+            ]}
+          ],
+          "coach_notes": "Skill sets: work wherever you currently live on the pull-up → C2B → bar muscle-up spectrum; quality reps. Then settle into a strong row, relax the grip, and plan the swing sets before your forearms decide for you.",
+          "tags": ["barbell", "gymnastics", "row", "kettlebell"]
+        },
+        "fri": {
+          "date": "2026-09-11",
+          "title": "Tempo cyclist squat + strict press, E2M × 9",
+          "sections": [
+            {"label": "Strength", "est_minutes": 20, "lines": [
+              "A1. Goblet Cyclist Squat — 3 sets of 10–12 @ 31X1 tempo",
+              "A2. Strict Press — 3 sets of 8–10, building"
+            ]},
+            {"label": "Conditioning", "est_minutes": 18, "lines": [
+              "Every 2 minutes for 9 Rounds:",
+              "5 Hang Power Clean (95/65 → 115/75 → 135/95) (Rx+ 115/75 → 135/95 → 155/105)",
+              "5 Shoulder to Overhead",
+              "5 Push Ups (Rx+ Ring Dip)",
+              "15 Air Squats",
+              "Increase weight every 3 rounds"
+            ]}
+          ],
+          "coach_notes": "31X1 = 3s down, 1s pause at bottom, stand with intent, reset at top. Rest is whatever you earn — efficient rounds give close to 1:1 work:rest. First three rounds unbroken and controlled; stay tidy as the bar gets heavier.",
+          "tags": ["barbell", "dumbbell", "gymnastics", "bodyweight"]
+        },
+        "sat": {
+          "date": "2026-09-12",
+          "title": "Run → work → run → work → run (hybrid, for time)",
+          "sections": [
+            {"label": "Conditioning", "est_minutes": 60, "lines": [
+              "For Time:",
+              "1.5 mile run",
+              "then 2 rounds: 25m Sled Push (5/3, 7/5 plates) · 25 Burpees · 25 Tuck Ups · 250m Ski",
+              "then 1 mile run",
+              "then 2 rounds: 25 KB Deadlifts (2×24/16 kg, 2×32/24 kg) · 25 Sandbag Reverse Lunges (20/10, 30/20 kg) · 25 AbMat Sit-ups · 250m Row",
+              "then 1.5 mile run"
+            ]}
+          ],
+          "coach_notes": "Four miles of prescribed running. Gear-shifting practice: leave each station and start running at a controlled pace before you feel recovered. Respect the opening run — start boring, stay consistent, get dangerous later.",
+          "tags": ["run", "sled", "ski", "row", "kettlebell", "sandbag", "bodyweight"]
+        }
+      }
+    },
+    "athx": {
+      "name": "ATHX",
+      "note": "Test week — race-prep programming begins. Workouts mimic competition movements scaled to the 75-min (Tue) and 90-min (Sat) windows. ATHX Miami 10/10/26, Houston 10/17/26.",
+      "days": {
+        "tue": {
+          "date": "2026-09-08",
+          "title": "ATHX 75 — test week",
+          "sections": [
+            {"label": "ATHX Strength (9–10 RPE)", "est_minutes": 20, "lines": [
+              "Min 1–6: 1RM Strict Press",
+              "Min 7–12: 3RM Back Squat",
+              "Min 13–20: 5RM Deadlift"
+            ]},
+            {"label": "ATHX MetCon / Endurance", "est_minutes": 24, "lines": [
+              "2 Rounds of 6 × E2MOM:",
+              "Station 1: 20/15 Ski Calories",
+              "Station 2: 20 Single-Arm Alternating Ground-to-Overhead (35/20) [Pro 50/30]",
+              "Station 3: Accumulate 1:00 Sandbag Bearhug Hold (30/20) [Pro 50/30]",
+              "Station 4: 20 Box Jump Overs (24/20) [Pro 30/24]",
+              "Station 5: 16 Plate-Elevated Dual DB Reverse Lunges (35/20) [Pro 50/25]",
+              "Station 6: 16–12 Burpee Tuck Jumps"
+            ]},
+            {"label": "ATHX Flow (Recovery)", "est_minutes": 8, "lines": [
+              "2 Rounds:",
+              "0:30/side Overhead Tricep Stretch",
+              "0:30/side Spiderman Stretch with Thoracic Rotations",
+              "1:00 Downward-Facing Dog with Calf Cycling",
+              "1:00 Child's Pose (Left, Middle, Right)"
+            ]}
+          ],
+          "coach_notes": "Specificity block: race-specific movements, transitions, pacing, compromised running, and holding output after fatigue.",
+          "tags": ["barbell", "ski", "dumbbell", "sandbag", "box", "bodyweight"]
+        },
+        "sat": {
+          "date": "2026-09-12",
+          "title": "ATHX 90 — test week",
+          "sections": [
+            {"label": "ATHX Strength (9–10 RPE)", "est_minutes": 20, "lines": [
+              "Min 1–6: 1RM Strict Press",
+              "Min 7–12: 3RM Back Squat",
+              "Min 13–20: 5RM Deadlift"
+            ]},
+            {"label": "ATHX Endurance", "est_minutes": 15, "lines": [
+              "15:00 AMRAP:",
+              "500m Run",
+              "750m Row"
+            ]},
+            {"label": "ATHX Flow (Recovery)", "est_minutes": 8, "lines": [
+              "2 Rounds:",
+              "0:30/side Standing Quad Stretch",
+              "1:00 Dynamic Yogi Squat with Hip Raises",
+              "1:00 Dive Bombers → Scorpion Flow",
+              "0:30/side Lying Supine Knee Hugs"
+            ]},
+            {"label": "ATHX MetCon", "est_minutes": 10, "lines": [
+              "10:00 AMRAP:",
+              "15/10 Ski Calories",
+              "18 Single-Arm Alternating Ground-to-Overhead (35/20)",
+              "20m Sandbag Carry (30/20) [Pro 50/30]",
+              "15 Box Jump Overs (24/20) [Pro 30/24]",
+              "20m Dual DB Walking Lunges (35/20) [Pro 50/25]",
+              "20m Burpee Broad Jumps"
+            ]}
+          ],
+          "coach_notes": "Same strength tests as Tuesday, then run/row endurance and a race-station MetCon.",
+          "tags": ["barbell", "run", "row", "ski", "dumbbell", "sandbag", "box", "bodyweight"]
+        }
+      }
+    },
+    "strength": {
+      "name": "Strength",
+      "note": "Week 6.",
+      "days": {
+        "thu": {
+          "date": "2026-09-10",
+          "title": "Deadlift — heavy 5 + back-off",
+          "sections": [
+            {"label": "Main Lift", "est_minutes": 25, "lines": [
+              "Deadlift — build to a heavy 5; back off to 80% for 2 sets × 5"
+            ]},
+            {"label": "Successory — 3 × 10–14", "est_minutes": 20, "lines": [
+              "Strict Press",
+              "DB Row",
+              "Side Bends"
+            ]},
+            {"label": "Open Gym", "est_minutes": 40, "lines": [
+              "Back or Front Squat — 5 × 5",
+              "DB/KB Seesaw Press — 5 × 6–10 reps/arm",
+              "Barbell Row — 5 × 6–10",
+              "Good Mornings — 4 × 6–8",
+              "Bicep Curls — 3 × 10",
+              "Tricep Extensions — 3 × 10"
+            ]}
+          ],
+          "coach_notes": "",
+          "tags": ["barbell", "dumbbell", "kettlebell"]
+        }
+      }
+    },
+    "oly": {
+      "name": "Olympic Weightlifting",
+      "note": "",
+      "days": {
+        "wed": {
+          "date": "2026-09-09",
+          "title": "Snatch w/ pause at knee",
+          "sections": [
+            {"label": "Olympic Weightlifting WOD", "est_minutes": 60, "lines": [
+              "Snatch with pause at knee — 4 × 3, 4 × 2, 4 × 1",
+              "Snatch Pull — 5 × 3",
+              "Behind-the-Neck Strict Press — 4 × 8–12"
+            ]}
+          ],
+          "coach_notes": "",
+          "tags": ["barbell"]
+        }
+      }
+    }
+  },
+  "announcements": [
+    {"title": "HYROX Simulation — Sat Sep 12", "detail": "CFNYC Upper West Side. $20 for members (+1 class credit for pack members). Email the Front Desk to register. Open to everyone."},
+    {"title": "Flatiron Friday schedule shift — from Fri Sep 11", "detail": "28th Street: 4:00 PM WOD → 4:15 PM; 5:15 PM WOD → 5:30 PM."},
+    {"title": "2027 CrossFit Open dates", "detail": "27.1 Feb 18 · 27.2 Feb 25 · 27.3 Mar 4."},
+    {"title": "Halloween In-House Throwdown", "detail": "Teams of two, end of October. Full details in next week's newsletter."},
+    {"title": "CFNYC tee pre-order closes Mon Sep 7", "detail": "Last call for the new shirt."}
+  ]
+}

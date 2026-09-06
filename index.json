@@ -1,0 +1,6 @@
+{
+  "updated": "2026-09-06T17:00:00Z",
+  "weeks": [
+    {"week_of": "2026-09-07", "label": "Week of Sep 7, 2026", "file": "weeks/2026-09-07.json", "tracks": ["crossfit", "athx", "strength", "oly"]}
+  ]
+}
