@@ -94,6 +94,30 @@ h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:700;letter
 .regs .r i::after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--black)}
 .regs .r b{color:var(--text);font-weight:600}
 .none{font-size:12px;color:var(--dim);font-style:italic}
+.ovr{display:none}
+.stats .u{font-size:11px;color:var(--dim)}
+@media (max-width:760px){
+  .sum{padding:10px 12px 12px}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+  .stats>span{display:flex;flex-direction:column;background:var(--panel);padding:8px 10px;font-size:11.5px;line-height:1.3}
+  .stats b{font-size:18px;margin:0 0 2px}
+  .stats .sep{display:none}
+  .ovr{display:block;margin-bottom:12px}
+  .ovr .gl{display:flex;justify-content:space-between;font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;margin-bottom:4px}
+  .ovr .obar{display:flex;height:26px;gap:2px;background:var(--card2)}
+  .ovr .obar i{display:flex;align-items:center;justify-content:center;font-style:normal;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;min-width:0}
+  .ovr .obar i.s{background:var(--red)}.ovr .obar i.c{background:var(--black)}
+  .nest{flex-direction:column;gap:12px}
+  .grp{flex:none!important;width:100%}
+  .grp .gl{white-space:normal}
+  .keys{gap:4px 14px}
+  .regs{display:grid;grid-template-columns:1fr;gap:5px;padding-top:10px}
+  .regs .lbl{margin-bottom:2px}
+  .regs .r{display:grid;grid-template-columns:105px 1fr 52px;align-items:center;gap:8px}
+  .regs .r i{width:100%;height:9px}
+  .regs .r b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .regs .r .v{text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+}
 
 /* week grid */
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:start;margin-top:8px}
@@ -266,20 +290,21 @@ function stats(){
 function renderSum(s){
   const {lift,cond,reg,liftT,condT,untagged,tot,days}=s;
   const regs=REGION_ORDER.filter(r=>reg[r]).concat(Object.keys(reg).filter(r=>!REGION_ORDER.includes(r))).sort((a,b)=>reg[b]-reg[a]);const rmax=Math.max(1,...regs.map(r=>reg[r]));
-  const seg=(defs,vals)=>defs.filter(([k])=>vals[k]).map(([k,n])=>`<i style="--c:var(--q-${k});flex:${vals[k]}" title="${n} ≈${Math.round(vals[k])} min"><span>${pct(vals[k],tot)>=7?`${n} ${pct(vals[k],tot)}%`:''}</span></i>`).join('');
-  const keys=(defs,vals,T)=>defs.filter(([k])=>vals[k]).map(([k,n,def])=>`<span title="${esc(def)}"><i style="--c:var(--q-${k})"></i><b>${n}</b> ${pct(vals[k],T)}% · ${Math.round(vals[k])}′</span>`).join('');
+  const seg=(defs,vals)=>defs.filter(([k])=>vals[k]).map(([k,n])=>`<i style="--c:var(--q-${k});flex:${vals[k]}" title="${n} ≈${Math.round(vals[k])} min"><span>${pct(vals[k],tot)>=7?`${n} · ${Math.round(vals[k])} min`:''}</span></i>`).join('');
+  const keys=(defs,vals,T)=>defs.filter(([k])=>vals[k]).map(([k,n,def])=>`<span title="${esc(def)}"><i style="--c:var(--q-${k})"></i><b>${n}</b> ${pct(vals[k],T)}% · ${Math.round(vals[k])} min</span>`).join('');
   $('#sum').innerHTML=`
     <div class="stats">
-      <span><b>${days}</b>training days</span><span class="sep">|</span>
-      <span><b>≈${Math.round(tot)}</b>min programmed${untagged?` <span style="color:var(--dim)">(+${untagged}′ mobility, not counted)</span>`:''}</span><span class="sep">|</span>
-      <span><b>${pct(liftT,tot)} / ${pct(condT,tot)}</b>strength / conditioning</span><span class="sep">|</span>
-      <span><b>${pct(lift.strength||0,liftT)} / ${pct(lift.hypertrophy||0,liftT)}</b>raw strength / hypertrophy</span>
+      <span><b>${days}</b>training days <span class="u">of 7</span></span><span class="sep">|</span>
+      <span><b>≈${Math.round(tot)} min</b>programmed work${untagged?` <span class="u">(+${untagged} min mobility, not counted)</span>`:''}</span><span class="sep">|</span>
+      <span><b>${pct(liftT,tot)}% / ${pct(condT,tot)}%</b>strength / conditioning <span class="u">of minutes</span></span><span class="sep">|</span>
+      <span><b>${pct(lift.strength||0,liftT)}% / ${pct(lift.hypertrophy||0,liftT)}%</b>raw strength / hypertrophy <span class="u">of lifting minutes (rest = power + skill)</span></span>
     </div>
+    ${tot?`<div class="ovr"><div class="gl"><span style="color:var(--red)">Strength ${pct(liftT,tot)}%</span><span>Conditioning ${pct(condT,tot)}%</span></div><div class="obar">${liftT?`<i class="s" style="flex:${liftT}">${Math.round(liftT)} min</i>`:''}${condT?`<i class="c" style="flex:${condT}">${Math.round(condT)} min</i>`:''}</div></div>`:''}
     ${tot?`<div class="nest">
-      ${liftT?`<div class="grp s" style="flex:${liftT}"><div class="gl"><span>Strength ${pct(liftT,tot)}%</span><em>≈${Math.round(liftT)}′</em></div><div class="nbar">${seg(LIFT,lift)}</div><div class="keys">${keys(LIFT,lift,liftT)}</div></div>`:''}
-      ${condT?`<div class="grp c" style="flex:${condT}"><div class="gl"><span>Conditioning ${pct(condT,tot)}%</span><em>≈${Math.round(condT)}′</em></div><div class="nbar">${seg(COND,cond)}</div><div class="keys">${keys(COND,cond,condT)}</div></div>`:''}
+      ${liftT?`<div class="grp s" style="flex:${liftT}"><div class="gl"><span>Strength ${pct(liftT,tot)}% of week</span><em>≈${Math.round(liftT)} min</em></div><div class="nbar">${seg(LIFT,lift)}</div><div class="keys">${keys(LIFT,lift,liftT)}</div></div>`:''}
+      ${condT?`<div class="grp c" style="flex:${condT}"><div class="gl"><span>Conditioning ${pct(condT,tot)}% of week</span><em>≈${Math.round(condT)} min</em></div><div class="nbar">${seg(COND,cond)}</div><div class="keys">${keys(COND,cond,condT)}</div></div>`:''}
     </div>`:`<div class="none">Nothing picked yet — choose a class under each day below.</div>`}
-    <div class="regs"><span class="lbl">Muscles worked</span>${regs.length?regs.map(r=>`<span class="r"><i style="--w:${Math.round(reg[r]/rmax*100)}%"></i><b>${esc(r)}</b> ${Math.round(reg[r])}′</span>`).join(''):'<span class="none">no lifting picked</span>'}</div>`;
+    <div class="regs"><span class="lbl">Muscles worked <span style="font-weight:500;text-transform:none;letter-spacing:0">· lifting minutes by region</span></span>${regs.length?regs.map(r=>`<span class="r"><i style="--w:${Math.round(reg[r]/rmax*100)}%"></i><b>${esc(r)}</b><span class="v">${Math.round(reg[r])} min</span></span>`).join(''):'<span class="none">no lifting picked</span>'}</div>`;
 }
 
 /* ---- week grid ---- */
