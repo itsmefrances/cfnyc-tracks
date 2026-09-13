@@ -2,13 +2,21 @@ name: Sync newsletter → data
 
 on:
   schedule:
-    # Newsletter lands ~12:00 pm New York time on Sundays.
-    # 16:45 UTC = 12:45 pm EDT; 17:45 UTC = 12:45 pm EST. Both fire year-round; the script is idempotent.
-    - cron: "45 16 * * 0"
-    - cron: "45 17 * * 0"
-    # Late-newsletter safety net: 3:45 pm and 7:45 pm New York (approx).
-    - cron: "45 19 * * 0"
-    - cron: "45 23 * * 0"
+    # Newsletter usually lands 12:06 pm New York time on Sundays (occasionally 12:36–1:41 pm; once 4:36 pm).
+    # Runs at 12:10, 12:15, 12:30, 1:00 pm and 4:00 pm New York. GitHub cron is UTC and has no DST,
+    # so each time is listed twice (EDT = UTC-4, EST = UTC-5); the script is idempotent, extra fires are no-ops.
+    # --- EDT (Mar–Nov) ---
+    - cron: "10 16 * * 0"   # 12:10 pm
+    - cron: "15 16 * * 0"   # 12:15 pm
+    - cron: "30 16 * * 0"   # 12:30 pm
+    - cron: "0 17 * * 0"    #  1:00 pm
+    - cron: "0 20 * * 0"    #  4:00 pm
+    # --- EST (Nov–Mar) ---
+    - cron: "10 17 * * 0"   # 12:10 pm
+    - cron: "15 17 * * 0"   # 12:15 pm
+    - cron: "30 17 * * 0"   # 12:30 pm
+    - cron: "0 18 * * 0"    #  1:00 pm
+    - cron: "0 21 * * 0"    #  4:00 pm
   workflow_dispatch:
     inputs:
       dry_run:
