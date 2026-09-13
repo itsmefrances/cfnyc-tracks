@@ -61,8 +61,15 @@ def fetch_newsletter() -> dict:
         return {"text": text, "subject": "Crossfit NYC Newsletter (local file)", "message_id": "",
                 "received": dt.datetime.now(dt.timezone.utc).isoformat()}
 
-    user = os.environ["GMAIL_USER"]
-    pw = os.environ["GMAIL_APP_PASSWORD"]
+    user = os.environ.get("GMAIL_USER", "").strip()
+    pw = os.environ.get("GMAIL_APP_PASSWORD", "").replace(" ", "").strip()
+    missing = [k for k, v in (("GMAIL_USER", user), ("GMAIL_APP_PASSWORD", pw)) if not v]
+    if missing:
+        sys.exit(f"Repository secret(s) not set: {', '.join(missing)}. "
+                 "Add them under Settings → Secrets and variables → Actions, then re-run.")
+    if not os.environ.get("ANTHROPIC_API_KEY", "").strip():
+        sys.exit("Repository secret not set: ANTHROPIC_API_KEY. "
+                 "Add it under Settings → Secrets and variables → Actions, then re-run.")
     sender = os.environ.get("NEWSLETTER_FROM", "newsletter@crossfitnyc.com")
     lookback = int(os.environ.get("LOOKBACK_DAYS", "3"))
     since = (dt.date.today() - dt.timedelta(days=lookback)).strftime("%d-%b-%Y")
