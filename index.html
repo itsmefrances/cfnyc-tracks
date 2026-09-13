@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CFNYC Tracks</title>
 <meta name="description" content="CrossFit NYC weekly programming by track — see every workout, build your week, see what it adds up to.">
+<meta http-equiv="Cache-Control" content="no-cache">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -33,6 +34,9 @@ h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:700;letter
 .logo h1{font-size:22px;margin:0}
 .logo h1 span{color:var(--red)}
 .meta{font-size:12.5px;color:var(--muted)}
+.meta .upd{color:var(--dim);margin-left:8px}
+.meta .upd button{color:var(--red);font-weight:600;margin-left:4px}
+.meta .upd button:hover{color:var(--black)}
 .tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .btn{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:-.01em;padding:8px 12px;border:1px solid var(--black);color:var(--black);background:#fff}
 .btn:hover{background:var(--black);color:#fff}
@@ -224,7 +228,8 @@ const DAYS=[['mon','Mon','Monday'],['tue','Tue','Tuesday'],['wed','Wed','Wednesd
 const TRACK_ORDER=['crossfit','athx','strength','oly'];
 const SHORT={crossfit:'CrossFit',athx:'ATHX',strength:'Strength',oly:'Oly',rest:'Rest',custom:'Custom'};
 const CUSTOM_MIN=45; // estimated minutes for a custom session
-let index=null, week=null, picks={}, mode='all';
+let index=null, week=null, picks={}, mode='all', lastLoad=0, currentFile=null, userChoseWeek=false;
+const fetchJSON=async p=>{const r=await fetch(`data/${p}?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw new Error(`${p} ${r.status}`);return r.json()};
 
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -258,7 +263,8 @@ function openModal(kicker,title,text,color,lead){
 function render(){ renderHeader(); renderCycle(); renderAnn(); renderSum(stats()); renderWeek(); }
 
 function renderHeader(){
-  $('#sub').textContent=week.label;
+  $('#sub').innerHTML=`${esc(week.label)}<span class="upd">· updated ${new Date(lastLoad).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'})}<button id="btnRefresh" title="Re-fetch the latest programming">Refresh</button></span>`;
+  $('#btnRefresh').addEventListener('click',()=>refresh(true));
   $('#legend').innerHTML=TRACK_ORDER.filter(t=>week.tracks[t]).map(t=>`<span><i style="background:${tc(t)}"></i>${esc(week.tracks[t].name)}</span>`).join('')+`<span><i style="background:var(--t-custom)"></i>Custom (your own session)</span><span><i style="background:var(--t-rest)"></i>Rest</span>`;
   $('#srcLine').textContent=`Source: "${week.source?.subject||'newsletter'}" received ${week.source?.received?new Date(week.source.received).toLocaleString():''}`;
   const counts={};for(const [d] of DAYS){counts[picks[d]]=(counts[picks[d]]||0)+1}
@@ -360,19 +366,34 @@ function weekText(){
 }
 
 async function loadWeek(file){
-  const r=await fetch('data/'+file,{cache:'no-store'});if(!r.ok)throw new Error('week fetch '+r.status);
-  week=await r.json();loadPicks();render();
+  week=await fetchJSON(file);currentFile=file;lastLoad=Date.now();loadPicks();render();
+}
+function defaultWeek(weeks){const now=new Date();for(const w of weeks){const mon=new Date(w.week_of+'T00:00:00');if(mon-now<7*864e5)return w}return weeks[0]}
+async function loadIndex(){
+  index=await fetchJSON('index.json');
+  const weeks=[...index.weeks].sort((a,b)=>b.week_of.localeCompare(a.week_of));
+  const sel=$('#weekSel');const prev=sel.value;sel.innerHTML=weeks.map(w=>`<option value="${esc(w.file)}">${esc(w.label)}</option>`).join('');
+  return {weeks,prev};
+}
+async function refresh(manual){
+  try{
+    const {weeks,prev}=await loadIndex();const sel=$('#weekSel');const def=defaultWeek(weeks);
+    // Stay on a week the user picked by hand (if it still exists); otherwise follow the newest week.
+    const target=(userChoseWeek&&weeks.some(w=>w.file===prev))?prev:def.file;
+    sel.value=target;await loadWeek(target);if(manual)toast('Programming refreshed');
+  }catch(e){console.error(e);if(manual)toast('Refresh failed — try again')}
 }
 async function init(){
   try{
-    const r=await fetch('data/index.json',{cache:'no-store'});if(!r.ok)throw new Error('index fetch '+r.status);
-    index=await r.json();
-    const weeks=[...index.weeks].sort((a,b)=>b.week_of.localeCompare(a.week_of));
-    const sel=$('#weekSel');sel.innerHTML=weeks.map(w=>`<option value="${esc(w.file)}">${esc(w.label)}</option>`).join('');
-    const now=new Date();let pick=weeks[0];
-    for(const w of weeks){const mon=new Date(w.week_of+'T00:00:00');if(mon-now<7*864e5){pick=w;break}}
+    const {weeks}=await loadIndex();
+    const sel=$('#weekSel');const pick=defaultWeek(weeks);
     sel.value=pick.file;
-    sel.addEventListener('change',()=>loadWeek(sel.value));
+    sel.addEventListener('change',()=>{userChoseWeek=true;loadWeek(sel.value)});
+    // Auto-refresh whenever the page is (re)opened, re-focused, or restored from the back/forward cache.
+    const maybeRefresh=()=>{if(document.visibilityState==='visible'&&Date.now()-lastLoad>30000)refresh(false)};
+    document.addEventListener('visibilitychange',maybeRefresh);
+    window.addEventListener('focus',maybeRefresh);
+    window.addEventListener('pageshow',e=>{if(e.persisted)refresh(false)});
     try{mode=localStorage.getItem('cfnyc-mode')||'all'}catch(e){}
     $('#modeSeg').querySelectorAll('button').forEach(b=>{b.classList.toggle('on',b.dataset.mode===mode);b.addEventListener('click',()=>{mode=b.dataset.mode;try{localStorage.setItem('cfnyc-mode',mode)}catch(e){}
       $('#modeSeg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));renderWeek()})});
