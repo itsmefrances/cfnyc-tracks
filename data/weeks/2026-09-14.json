@@ -1,0 +1,442 @@
+{
+  "week_of": "2026-09-14",
+  "label": "Week of Sep 14, 2026",
+  "source": {
+    "subject": "Crossfit NYC Newsletter",
+    "sender": "newsletter@crossfitnyc.com",
+    "received": "2026-09-13T16:06:07Z",
+    "gmail_message_id": "1a09b84d29d2e7c6"
+  },
+  "cycle": {
+    "track": "crossfit",
+    "name": "New 6-week cycle",
+    "week": 2,
+    "of": 6,
+    "focus": ["Power snatches move from doubles to triples", "Cluster back squats, round two", "Continued pulling / muscle-up practice", "Saturday HYROX run → station → run experiment"],
+    "full_text": "This week felt a little different in New York.\n\nFriday marked 25 years since September 11, and there are certain days when this enormous city somehow feels very small. A day to remember the people we lost, the people who ran toward danger, and the resilience and very particular kind of community that has defined New York in the years since.\n\nShowing up for one another feels like a pretty good note to carry into a new week.\n\nAnd because New York contains multitudes, the city also spent the week absolutely losing its mind over tennis. The US Open has been chaos in the best possible way—five-hour matches, huge upsets, an all-American men's semifinal, and Ben Shelton casually knocking out Carlos Alcaraz at 3:33 IN THE MORNING with a 146-mph ace. Apparently nobody in Queens believes in bedtime.\n\nMeanwhile, back inside CFNYC, we have our own little athletic dramas unfolding.\n\nCrossFit heads into Week 2 of our new cycle: more power snatch reps, another date with cluster squats, continued pulling practice, and a Saturday HYROX session that would very much like to know how well you can run after doing race-volume stations.\n\nATHX is firmly in fall race-prep territory, practicing the very useful skill of moving between strength, endurance and MetCon without losing the plot. And Strength rolls into Week 7 with heavy triples—squat Monday, bench Thursday—while Oly puts the clean, push press and jerk together.\n\nSome of us are starting new cycles. Some are deep into them. Some are getting ready to race. Everyone is building toward something.\n\nCome train. Learn something. Cheer for somebody. Add another good rep to the pile.\n\nLet's have a week."
+  },
+  "tracks": {
+    "crossfit": {
+      "name": "CrossFit",
+      "note": "Week 2 of 6: more power snatch reps, another date with cluster squats, continued pulling practice, and a Saturday HYROX session testing how well you run after race-volume stations.",
+      "days": {
+        "mon": {
+          "date": "2026-09-14",
+          "title": "Power snatch triples + 8 rounds for time",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": ["A1. Power Snatch — 4 sets of 3, building", "A2. Feet-Elevated Parallette Push Up — 4 sets of 8–12"],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": ["full body"],
+                  "minutes": 12
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push"],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 11,
+              "lines": ["8 Rounds For Time:", "5 Deadlift (185/125, 225/155)", "7 Push Up", "30 Double Under"],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 11
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Week 2 means our power snatches go from doubles to triples. It's only one extra rep, but that extra rep asks you to maintain the same speed and positions for a little longer. The goal is still power—three crisp reps, not two beautiful snatches followed by one barbell-related negotiation.\n\nThen we have eight rounds where small sets are sneaky. Nothing here looks particularly intimidating on its own, which means the temptation is to come out very hot. But this is meant to stay aerobic and continuously moving for roughly 10–12 minutes for most of us.\n\nChoose a deadlift you can keep unbroken—or 3/2 when needed—and scale the push-ups so seven doesn't slowly become a three-act production. The double unders should feel like a quick reset before you pick the bar back up.\n\nThe goal isn't huge bursts of effort. It's tiny amounts of work with almost no wasted time between them.",
+          "tags": ["barbell", "gymnastics", "jump rope", "bodyweight"]
+        },
+        "tue": {
+          "date": "2026-09-15",
+          "title": "Cluster back squat + 2 × 4-min AMRAP",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": ["A. Cluster Back Squat — 5 sets of 2-2-1, building", "B. Pendlay Row — 3 sets of 8 across, then 1 max-effort set with 20% less"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["quads"],
+                  "minutes": 15
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper pull"],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 10,
+              "lines": ["2 Rounds, 4 minute AMRAP each:", "15 Hang Squat Clean (95/65, 115/75)", "15 Pull Up (Rx+ C2B)", "Calorie Row with remaining time", "2 minute rest between rounds"],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 10
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Cluster squats, round two. Same 2-2-1 structure as last week, another opportunity to get comfortable using those little intra-set rests to reset your brace and keep the quality of all five reps high.\n\nThen Pendlay rows get a fun little twist: three sets of eight across, followed by a max-effort set with 20% less weight. Think of it as heavy work first, then a lighter back-off set that lets us accumulate more quality pulling volume after the hard stuff is done.\n\nAnd then we race the clock.\n\nThe row is where you score, so the first 30 reps are essentially your buy-in. Ideally, you're arriving at the erg with 1:30–2:00 to actually work.\n\nThat means your scaling matters. Hang squat cleans should be unbroken or 8/7; pull-ups can comfortably be 5/5/5. If either movement turns into extended staring, we have accidentally made a different workout.\n\nGet through the work efficiently, then make the rower regret meeting you.",
+          "tags": ["barbell", "gymnastics", "row"]
+        },
+        "wed": {
+          "date": "2026-09-16",
+          "title": "One long list, for time (HYROX-style)",
+          "sections": [
+            {
+              "label": "Conditioning",
+              "est_minutes": 45,
+              "lines": ["For Time:", "50 Burpees", "1200/1500m Row", "50m Sled Push @ 3/5 plates", "50 Russian Kettlebell Swings @ 16/24 kg", "50 Leg Raises", "1200/1500m SkiErg", "50 AbMat Sit-Ups", "120 sec Farmer Carry/Hold @ 2×16 / 2×24 kg", "50 Sandbag Reverse Lunges @ 10/20 kg", "1200/1500m Row", "50 Wall Balls @ 10/14 lb"],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 45
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Today is one long, glorious list.\n\nThere is no complicated strategy here—but there is a very important one: do not confuse \"for time\" with \"as fast as humanly possible from rep one.\"\n\nLong efforts reward athletes who understand sustainable output. Your aerobic system is doing the heavy lifting here, and the goal is to keep producing work without accumulating so much fatigue at any one station that you need a congressional recess before moving on.\n\nSo break things before they break you. Keep transitions purposeful. Let the machines settle you rather than destroy you. And remember that there are 50 wall balls waiting at the very end, quietly minding their business while you make decisions they will eventually hold you accountable for.\n\nThis one is less about winning a station and more about never really stopping.\n\nA very long list. One item at a time. See you on the other side.",
+          "tags": ["bodyweight", "row", "sled", "kettlebell", "ski", "sandbag", "wall ball"]
+        },
+        "thu": {
+          "date": "2026-09-17",
+          "title": "RDL + pull skill, partner 14 rounds",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": ["A1. Romanian Deadlift — 4 sets of 6–8, building", "A2. Pull-up / C2B / Bar Muscle-Up Practice — 4 sets"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["posterior chain"],
+                  "minutes": 13
+                },
+                {
+                  "quality": "skill",
+                  "regions": ["upper pull"],
+                  "minutes": 12
+                }
+              ]
+            },
+            {
+              "label": "Partner Conditioning",
+              "est_minutes": 14,
+              "lines": ["14 Rounds For Time (alternate rounds with a partner):", "7 Dual Dumbbell Power Clean (2×50 / 2×35)", "7 Burpee Box Jump Over (24/20)"],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 14
+                }
+              ]
+            }
+          ],
+          "coach_notes": "We're back to Romanian deadlifts + pulling skill practice to start. Keep building those RDLs while owning the hinge, then use your four pulling sets for your current project: kipping mechanics, pull-ups, chest-to-bar, transitions, or full bar muscle-ups.\n\nThen grab a friend. This is classic you-go-I-go conditioning, which changes the game a little. Your partner's working minute becomes your recovery minute, meaning you have permission to push considerably harder than you would if you were responsible for all 14 rounds yourself.\n\nAim for roughly one minute per round. Move hard, tag out, then actually recover: breathe, shake out your arms, and get ready to go again.\n\nAnd because friendship apparently wasn't competitive enough already, you are now directly responsible for how long your partner gets to rest. Choose wisely.",
+          "tags": ["barbell", "gymnastics", "dumbbell", "box", "bodyweight"]
+        },
+        "fri": {
+          "date": "2026-09-18",
+          "title": "Tempo cyclist squat + strict press, 15-min AMRAP",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": ["A1. Goblet Cyclist Squat — 3 sets of 10–12 @ 31X1 tempo", "A2. Strict Press — 3 sets of 8–10, building"],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["quads"],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push"],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 15,
+              "lines": ["15 minute AMRAP:", "3 Front Squats (155/105; Rx+ Squat Cleans 185/125)", "6 Handstand Push Up", "9 Toes to Bar", "12/9 Calorie Row"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 15
+                }
+              ]
+            }
+          ],
+          "coach_notes": "We start with another week of tempo cyclist squats + strict press. That 31X1 tempo is still asking you to own three slow seconds down and the bottom position before standing with intent. If last week helped you find the right loading, this week is your chance to make those same positions stronger.\n\nThen:\n\nThe front squat is heavy enough to demand respect, but the real story today is gymnastics sustainability.\n\nSix HSPU and nine toes-to-bar are very manageable numbers...until you've encountered them six or seven times. Your best strategy may be 3/3 on the wall or 5/4 on the bar from the beginning, rather than proving you can go unbroken early and discovering several rounds later that you no longer can.\n\nAround two minutes per round is a great early target. The challenge is seeing how long you can keep that clockwork going as shoulders, grip and midline fatigue start negotiating new terms.\n\nYou don't need to win minute two. You need to still be moving in minute fourteen.",
+          "tags": ["barbell", "gymnastics", "row", "dumbbell"]
+        },
+        "sat": {
+          "date": "2026-09-19",
+          "title": "4 × (run → station → run) with 3-min rests",
+          "sections": [
+            {
+              "label": "Conditioning",
+              "est_minutes": 45,
+              "lines": ["For Time:", "500m run · 50m Sled push (Open 5/3, Pro 7/5) · 1000m run · Rest 3 min", "500m run · 80m Sandbag walking lunge (20/10 kg) · 1000m run · Rest 3 min", "500m run · 1000m Row · 1000m run · Rest 3 min", "500m run · 75 Wall Balls (14/10) · 1000m run"],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 45
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Today we're running a little experiment.\n\nFour times, you'll run 500m → complete a mostly race-volume station → run 1,000m, with three minutes of recovery before doing it all over again.\n\nThis is a chance to learn something incredibly useful for race day: what happens to your running when a station gets involved?\n\nWe want you pushing these pieces hard. The first 500m shows us what you can produce going into the station. That second 1,000m asks whether you can find your running again when your legs, lungs, or both have recently been occupied elsewhere.\n\nPay attention to how each station changes you. Heavy sled legs don't feel like post-row legs. Lunges create a different problem than wall balls. Learning how quickly you can settle back into a productive run is part of becoming a better hybrid athlete—not waiting until you feel recovered, but learning to recover while moving.\n\nYou get three minutes between pieces, so these aren't meant to be cautious little efforts.\n\nPush. Learn. Recover. Repeat.",
+          "tags": ["run", "sled", "sandbag", "row", "wall ball"]
+        }
+      }
+    },
+    "athx": {
+      "name": "ATHX",
+      "note": "Fall race-prep: practicing moving between strength, endurance and MetCon without losing the plot.",
+      "days": {
+        "tue": {
+          "date": "2026-09-15",
+          "title": "ATHX 75 — supersets + 6 × 4-min AMRAP",
+          "sections": [
+            {
+              "label": "ATHX Strength (7–8 RPE)",
+              "est_minutes": 20,
+              "lines": ["5 Building Supersets:", "5 Tempo Push Press (3-0-X-1)", "5 KB Goblet Cyclist Squat"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["upper push"],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["quads"],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "ATHX MetCon / Endurance",
+              "est_minutes": 30,
+              "lines": ["6 Rounds of 4 Min AMRAP + 1 Min Rest:", "10/8 Row Cals", "6 DB Clusters (35/20) [Pro 50/30]", "10 Ab-Mat Situps", "At the top of each round, continue where you left off"],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 30
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": ["2 Rounds:", "Box Elevated Lat Stretch (1:00)", "Thread the Needle + Thoracic Twist (30 sec / side)", "Cobra + Scorpion Flow (1:00)", "Couch Stretch (30 sec / side)"]
+            }
+          ],
+          "coach_notes": "ATHX is firmly in fall race-prep territory, practicing the very useful skill of moving between strength, endurance and MetCon without losing the plot.",
+          "tags": ["barbell", "kettlebell", "row", "dumbbell", "bodyweight"]
+        },
+        "sat": {
+          "date": "2026-09-19",
+          "title": "ATHX 90 — press/pause squat, dual pyramid, 5 × 1:30",
+          "sections": [
+            {
+              "label": "ATHX Strength (7–8 RPE)",
+              "est_minutes": 25,
+              "lines": ["Building 6 × 3 Strict Press", "Building 5 × 3 Pause Squat (2–3 sec at bottom)"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["upper push", "quads"],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "ATHX Endurance",
+              "est_minutes": 14,
+              "lines": ["14 Minute Dual Pyramid on Bike + Ski:", "Hard: Min 1 · Easy: Min 2", "Hard: Min 3, 4 · Easy: Min 5", "Hard: Min 6", "Transition: Min 7", "Hard: Min 8 · Easy: Min 9", "Hard: Min 10, 11 · Easy: Min 12", "Hard: Min 13 · Easy: Min 14"],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 14
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": ["2 Rounds:", "Thread the Needle (30 sec / side)", "Cobra Stretch w/ Thoracic Twist (1:00)", "Lunge Rocks (30 sec / side)", "Wide-Legged Forward Fold (Left, Middle, Right) (1:00)"]
+            },
+            {
+              "label": "ATHX MetCon",
+              "est_minutes": 10,
+              "lines": ["5 × 1:30 On / 0:30 Off:", "10 American KB Swings (24/16)", "8 Overhead Reverse Lunges (16/12)", "6 Ring Rows", "Continue where you left off at the top of each round"],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 10
+                }
+              ]
+            }
+          ],
+          "coach_notes": "ATHX is firmly in fall race-prep territory, practicing the very useful skill of moving between strength, endurance and MetCon without losing the plot.",
+          "tags": ["barbell", "bike", "ski", "kettlebell", "gymnastics"]
+        }
+      }
+    },
+    "strength": {
+      "name": "Strength",
+      "note": "Week 7 — heavy triples: squat Monday, bench Thursday.",
+      "days": {
+        "mon": {
+          "date": "2026-09-14",
+          "title": "Squat — heavy 3 + back-off triples",
+          "sections": [
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": ["Back or Front Squat — build to a heavy set of 3 for the day; back off to 80% × 3 × 3"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["quads"],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory Superset — 3 × 7–10",
+              "est_minutes": 20,
+              "lines": ["Behind Neck Strict Press", "Barbell Row", "DB Side Bends"],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push", "upper pull", "core"],
+                  "minutes": 20
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength rolls into Week 7 with heavy triples—squat Monday, bench Thursday.",
+          "tags": ["barbell", "dumbbell"]
+        },
+        "thu": {
+          "date": "2026-09-17",
+          "title": "Bench — heavy 3 + back-off triples",
+          "sections": [
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": ["Bench Press — build to a heavy set of 3 for the day; back off to 80% × 3 × 3"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["upper push"],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory Superset — 3 × 7–10",
+              "est_minutes": 20,
+              "lines": ["Bulgarian Split Squats", "Pullups (use bands to get 10–14 in a row)", "Situps (add weight)"],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["quads", "upper pull", "core"],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "Open Gym",
+              "est_minutes": 40,
+              "lines": ["Back or Front Squat — 5 × 5", "Bench Press — 5 × 6–10", "Barbell Row — 5 × 6–10", "Good Mornings — 4 × 6–8", "Bicep Curls — 3 × 10", "Overhead Tricep Extensions — 3 × 10"],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": ["quads"],
+                  "minutes": 12
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push", "upper pull", "posterior chain", "arms"],
+                  "minutes": 28
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength rolls into Week 7 with heavy triples—squat Monday, bench Thursday.",
+          "tags": ["barbell", "gymnastics", "bodyweight"]
+        }
+      }
+    },
+    "oly": {
+      "name": "Olympic Weightlifting",
+      "note": "Clean, push press and jerk together.",
+      "days": {
+        "wed": {
+          "date": "2026-09-16",
+          "title": "Power clean + push press + jerk, clean & jerk",
+          "sections": [
+            {
+              "label": "Olympic Weightlifting WOD",
+              "est_minutes": 60,
+              "lines": ["Power Clean + Push Press + Jerk — 5 × 1+1+1", "Clean + Jerk — 8 × 1+1", "Strict Press — 5 × 6–8", "Barbell Row — 5 × 6–8"],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": ["full body"],
+                  "minutes": 40
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper push"],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": ["upper pull"],
+                  "minutes": 10
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Oly puts the clean, push press and jerk together.",
+          "tags": ["barbell"]
+        }
+      }
+    }
+  },
+  "announcements": [
+    {
+      "title": "Halloween Throwdown — last weekend of October",
+      "detail": "In-house partner competition (pairs; women's, men's, mixed divisions), morning session. Costumes encouraged; Best Costume award. Exact date, time and registration coming.",
+      "full_text": "🎃 CFNYC HALLOWEEN THROWDOWN\n\nRemember when we said putting this in the newsletter made it legally binding? Well, we're committed now.\n\nThis Halloween season, we're throwing a CFNYC In-House Partner Competition—and we now have a few more details to share.\n\nWe're aiming for the last weekend of October, in the morning, so you can throw down with your gym friends, take some ridiculous photos, and still have plenty of time to go home, recover, and transform into a person who definitely did not spend their morning doing CrossFit.\n\nExact date + time are coming soon. But here's what we do know:\n\nTeams will be pairs of two, competing in women's, men's, or mixed divisions. The workouts will have prescribed weights and standards for each division, so grab the person whose particular brand of fitness complements yours and start forming alliances now.\n\nAnd, obviously, costumes are highly encouraged.\n\nThere will be workouts. There will be prizes. There will be bragging rights. And there will absolutely be a Best Costume award, because athletic performance matters, but so does committing aggressively to a theme.\n\nCome compete. Come cheer. Come hang out. Whether you're trying to win the whole thing or simply trying to convince your partner that your two-person costume concept is worth doing burpees in, we want you there.\n\nFor now: keep the last weekend of October open. Find your partner. Start plotting your costume.\n\nExact date, time, registration details, workouts, and everything else are coming.\n\nFitness will be judged. Costumes will be judged. Commitment to the bit will be rewarded."
+    },
+    {
+      "title": "2027 CrossFit Open dates",
+      "detail": "27.1 Feb 18 · 27.2 Feb 25 · 27.3 Mar 4. Pick a thing to work on between now and February and tell your coaches.",
+      "full_text": "👀 THE OPEN IS COMING. LET'S BUILD SOMETHING.\n\nWe know February feels approximately 400 years away. It is not.\n\nThe 2027 CrossFit Open dates are officially on the calendar:\n\n27.1 — February 18\n27.2 — February 25\n27.3 — March 4\n\nAnd this year, we want CFNYC IN.\n\nNot because we expect everyone to suddenly become a competitive CrossFit athlete. The Open is three weeks where the thing we do together all year gets a start line, a scorecard, and a whole lot more cheering.\n\nIt's also one of the best fitness check-ins we get. Do it year after year and suddenly you have actual data: Am I stronger? Is my engine better? Did the movement that stopped me last year become something I can do now? CrossFit specifically uses the Open as an annual benchmark for exactly that kind of progress.\n\nSo between now and February, pick a thing.\n\nMaybe it's your first pull-up. Double unders. Toes-to-bar. Getting stronger with a barbell. Learning to pace instead of seeing God four minutes into an AMRAP.\n\nTell your coaches. Let us help you work on it.\n\nThen, come February, we get to put all that training to use together.\n\nThree workouts. Three weeks. One very loud CFNYC.\n\nMore Open hype incoming. Consider yourselves warned.\n\nFill out the interest form via the link in the newsletter."
+    },
+    {
+      "title": "Fall race season roll call",
+      "detail": "Racing this fall (marathon, half, HYROX, ATHX, trail)? Tell your coaches or the Front Desk so the gym can show up and cheer.",
+      "full_text": "FALL RACE SEASON IS ON 🏁\n\nThe weather is about to get cooler, the training is getting suspiciously specific, and fall race season is officially upon us.\n\nMarathons. Half marathons. HYROX. ATHX. Trail races. That slightly unhinged event your friend convinced you to sign up for six months ago and you are now realizing is, in fact, happening.\n\nWe want to know what you're doing.\n\nOne of our favorite things about CFNYC is that the fitness you build here goes out into the world with you—and we want to celebrate the hell out of it. We want to know what you're training for, when you're racing, where you're racing, and yes, we would very much like the opportunity to show up with signs and yell your name at an unreasonable volume.\n\nSo if you have anything on the calendar this fall, TELL US. Tell your coaches, email the Front Desk, send us the details. Big race, first race, 47th race, something completely outside your comfort zone—we want all of it.\n\nBecause PRs are cool. Watching your gym friends do hard things out in the wild is cooler.\n\nCFNYC race season roll call: what are we training for?!"
+    }
+  ]
+}
