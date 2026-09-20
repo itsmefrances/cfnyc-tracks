@@ -1,0 +1,666 @@
+{
+  "week_of": "2026-09-21",
+  "label": "Week of Sep 21, 2026",
+  "source": {
+    "subject": "Crossfit NYC Newsletter",
+    "sender": "newsletter@crossfitnyc.com",
+    "received": "2026-09-20T17:08:51Z",
+    "gmail_message_id": "1a0bfcac407bc43f"
+  },
+  "cycle": {
+    "track": "crossfit",
+    "name": "New 6-week cycle",
+    "week": 3,
+    "of": 6,
+    "focus": [
+      "Power snatches up to sets of four",
+      "Cluster back squats change rhythm: 2-1-1-1",
+      "Strict handstand push-ups replace feet-elevated push-ups",
+      "Thursday: 50 power cleans for time"
+    ],
+    "full_text": "HAPPY SUNDAY, CFNYC ☀️\n\nFall has entered the chat. The mornings are getting a little cooler, race calendars are getting a lot busier, and September is doing that thing where everyone suddenly has approximately seventeen goals and a suspicious amount of motivation. We love to see it.\n\nInside the gym, CrossFit is heading into Week 3 of 6, and things are starting to get interesting. Power snatches are up to sets of four, cluster squats have a new rhythm, and Thursday is giving us 50 power cleans for time. Just 50. Very casual.\n\nATHX is keeping race prep spicy with heavy deadlift work, longer conditioning efforts, and plenty of practice producing power when your body would politely prefer a snack and a seat. Strength has heavy triples on deadlift and strict press, while Oly is borrowing a little cluster-set magic for the snatch. Different classes, different goals, same general theme: get stronger, move better, and keep showing up for the little things that eventually add up to big things.\n\nAnd because the gym is about more than what's written on the whiteboard, we have a few announcements you won't want to miss this week. Keep reading for what's coming up, what you can get involved in, and a little something we're planning for the community.\n\nOh, and there's a special shoutout waiting for you at the very end. Don't be the person who only reads the workouts. We know who you are. 👀\n\nNew week. New opportunities to surprise yourself and cheer on the people doing hard things next to you.\n\nLet's have a week, CFNYC."
+  },
+  "tracks": {
+    "crossfit": {
+      "name": "CrossFit",
+      "note": "",
+      "days": {
+        "mon": {
+          "date": "2026-09-21",
+          "title": "Power snatch 4×4 + 4 rounds GTOH / row",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Power Snatch — 4 sets of 4, building",
+                "A2. Strict Handstand Push Ups — 4 sets of 5–7"
+              ],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 10,
+              "lines": [
+                "4 Rounds For Time:",
+                "15 Ground to Overhead (75/55, 95/65)",
+                "15/12 Calorie Row"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Our power snatches are up to sets of four this week, and we're trading feet-elevated push-ups for strict handstand push-ups. More reps on the barbell, a new pressing challenge, and another opportunity to build strength without sacrificing good positions.\n\nThen we have four rounds of 15 ground-to-overhead + 15/12 calorie row.\n\nThis is an attack-style workout. Choose a barbell you can hang on to for that first set of 15, then see how well you can maintain your output as fatigue starts making suggestions.\n\nThe row is your only real opportunity to catch your breath, but don't mistake that for permission to take a leisurely boat ride. Push it, settle your breathing, and get back to the bar.\n\nThe goal is roughly 2–2:30 per round. Get uncomfortable early, stay composed, and make all four rounds count.\n\nA little aggression. A little restraint. A surprisingly complicated relationship with the rowing machine.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "row"
+          ]
+        },
+        "tue": {
+          "date": "2026-09-22",
+          "title": "Cluster back squat 2-1-1-1 + 9 rounds in 9 min",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": [
+                "A. Cluster Back Squat — 5 sets of 2-1-1-1, building",
+                "B. Pendlay Row — 4 sets of 10, building"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 15
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 9,
+              "lines": [
+                "9 Rounds For Time (9 minute CAP):",
+                "6 Toes to Bar (Rx+ 3 Bar Muscle Ups)",
+                "12 Air Squat",
+                "24 Double Under"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 9
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Cluster squats are back, but the rhythm is changing. We're moving from 2-2-1 to 2-1-1-1, giving you more opportunities to reset your brace and produce a strong, intentional rep as the weight builds.\n\nThen it's Pendlay rows before we get into our Tuesday specialty: short, fast, and deeply uninterested in your comfort.\n\nNine rounds for time:\n\n6 toes-to-bar (or 3 bar muscle-ups for Rx+) 12 air squats 24 double unders\n\nNine-minute cap.\n\nThat's one minute per round if you're trying to finish, and we don't expect everyone to get through all nine. That's the challenge.\n\nToday's workout rewards bodyweight efficiency: quick transitions, controlled gymnastics, and choosing a double-under variation that doesn't turn every round into a jump-rope troubleshooting session.\n\nThe goal isn't to pace this like a 30-minute workout. Push the intensity, keep the movements tidy, and see how much work you can fit into nine minutes.\n\nNine rounds. Nine minutes. A very ambitious little arrangement.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "jump rope",
+            "bodyweight"
+          ]
+        },
+        "wed": {
+          "date": "2026-09-23",
+          "title": "HYROX: three 14-min AMRAPs",
+          "sections": [
+            {
+              "label": "Part A — 14:00 AMRAP",
+              "est_minutes": 14,
+              "lines": [
+                "16 Double DB Walking Lunges @ 2×16/2×24kg",
+                "250m SkiErg",
+                "60s Farmer Hold @ 2×16/2×24kg"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 14
+                }
+              ]
+            },
+            {
+              "label": "Part B — 14:00 AMRAP",
+              "est_minutes": 14,
+              "lines": [
+                "16 Dumbbell Bench Press @ 2×20/2×35lb",
+                "25m Sled Push @ 3/5 plates",
+                "10 Double DB Deadlifts @ 2×20/2×35lb"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 14
+                }
+              ]
+            },
+            {
+              "label": "Part C — 14:00 AMRAP",
+              "est_minutes": 14,
+              "lines": [
+                "16 Wall Balls @ 14/20lb",
+                "250m Row",
+                "10 One Arm KB Sit-Ups @ 8/12kg"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 14
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Today's HYROX class comes in three 14-minute AMRAPs, each with its own particular way of making you question your choices.\n\nThe challenge here is managing local muscular fatigue. Your legs might feel ready to go while your grip is still recovering from the farmer hold. Your lungs might be fine while your shoulders have some very strong opinions about the next set of wall balls.\n\nThat's why HYROX training isn't just about having a big engine. It's about learning to distribute effort across different movements so one tired muscle group doesn't bring your entire workout to a halt.\n\nChoose loads you can move consistently, use the machines to find a sustainable rhythm, and keep your transitions purposeful.\n\nThree acts. Forty-two minutes of work. An ensemble cast of increasingly tired muscles.",
+          "tags": [
+            "dumbbell",
+            "ski",
+            "sled",
+            "wall ball",
+            "row",
+            "kettlebell"
+          ]
+        },
+        "thu": {
+          "date": "2026-09-24",
+          "title": "Snatch-grip deadlift + 50 power cleans for time",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Snatch Grip Deadlift — 4 sets of 6–8, building",
+                "A2. Pull / C2B / Bar Muscle Up Practice — 4 sets"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "skill",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 8,
+              "lines": [
+                "For Time:",
+                "50 Power Clean (115/75, 135/95)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 8
+                }
+              ]
+            }
+          ],
+          "coach_notes": "We're switching up our hinge work this week with snatch-grip deadlifts, alongside another four sets of pulling and muscle-up practice.\n\nThat wider grip changes the positions and demands of the deadlift, giving us an opportunity to build strength and control in positions that carry over to our Olympic lifting.\n\nAnd then, because apparently the programming team felt we needed a very straightforward little challenge:\n\n50 power cleans for time.\n\nThat's it. Fifty.\n\nThe interesting part is deciding how to get through them. Touch-and-go reps can be fast, but repeatedly controlling the bar back to the floor comes with a fatigue cost. A couple of bigger sets early may make sense, but steady singles can become the smarter choice as the reps accumulate.\n\nPick a weight you can move confidently, find a rhythm, and resist the temptation to turn the first ten reps into a highlight reel at the expense of the remaining forty.\n\nFifty reps. One barbell. Plenty of time to reconsider your opening strategy.",
+          "tags": [
+            "barbell",
+            "gymnastics"
+          ]
+        },
+        "fri": {
+          "date": "2026-09-25",
+          "title": "Kickstand squat / push press + single-arm DB rounds",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Goblet Kickstand Squat — 3 sets of 6–8/side, building",
+                "A2. Push Press — 3 sets of 5–7, building"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 10
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 13,
+              "lines": [
+                "5 Rounds For Time:",
+                "5 Single Arm Dumbbell Front Squat (right) (50/35)",
+                "5 Single Arm Dumbbell Push Jerk (right)",
+                "5 Single Arm Dumbbell Front Squat (left)",
+                "5 Single Arm Dumbbell Push Jerk (left)",
+                "20/16 Calorie Row"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 13
+                }
+              ]
+            }
+          ],
+          "coach_notes": "We're introducing goblet kickstand squats + push presses this week. The kickstand squat gives one leg more of the work while the other helps with balance, making it a useful way to challenge single-leg strength and control without turning every rep into a balancing act.\n\nThen we take that one-sided theme into conditioning:\n\nFive rounds of single-arm dumbbell front squats and push jerks on the right, the same on the left, followed by a 20/16 calorie row.\n\nThe dumbbell work asks you to stabilize an uneven load, which means your trunk has to work to keep you from twisting or leaning as you squat and press. Keep your positions tidy, use your legs to drive the push jerks, and give both sides the same attention.\n\nAim for roughly 2–3 minutes per round. The row should be strong and repeatable, not an opening-round declaration of war that leaves your next set of squats looking deeply suspicious.\n\nRight side. Left side. Row. Repeat. Equal opportunity suffering.",
+          "tags": [
+            "kettlebell",
+            "barbell",
+            "dumbbell",
+            "row"
+          ]
+        },
+        "sat": {
+          "date": "2026-09-26",
+          "title": "60-min partner: ski/bike cals vs. plate + sled station",
+          "sections": [
+            {
+              "label": "Conditioning",
+              "est_minutes": 60,
+              "lines": [
+                "60 min partner workout:",
+                "Partner 1: AMRAP Ski Cals (alt rounds with Bike)",
+                "Partner 2: Complete:",
+                "10 Burpees to plate",
+                "10 plate ground to overhead (45/25)",
+                "10 plate OH reverse lunge (45/25)",
+                "12.5m sled push (7/5 plates)",
+                "Score is total calories on bike and ski"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 60
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Grab a partner. Clear your calendar. We have 60 minutes of work ahead of us.\n\nOne partner accumulates calories on the SkiErg or bike while the other completes:\n\n10 burpees to a plate 10 plate ground-to-overhead 10 plate overhead reverse lunges 12.5m heavy sled push\n\nThen switch. Keep alternating, and rack up as many total bike and ski calories as possible.\n\nThe sled is meant to be heavy today, so this is not a workout where your partner gets to enjoy a perfectly predictable rest interval. Your time on the machine depends on how quickly they can make it through their station work—and vice versa.\n\nThe challenge is finding an output you can sustain across the full hour. Push hard enough to accumulate meaningful calories, but remember that every time you leave the machine, you still have burpees, overhead work, and a heavy sled waiting for you.\n\nCommunicate. Encourage each other. Make smart transitions. And maybe don't tell your partner to hurry up while they're actively fighting for their life behind the sled.\n\nSixty minutes. Two people. One shared score. Friendship has never been so measurable.",
+          "tags": [
+            "ski",
+            "bike",
+            "sled",
+            "bodyweight"
+          ]
+        }
+      }
+    },
+    "athx": {
+      "name": "ATHX",
+      "note": "Race prep: heavy deadlift work, longer conditioning efforts, producing power under fatigue.",
+      "days": {
+        "tue": {
+          "date": "2026-09-22",
+          "title": "ATHX 75 — deadlift clusters, E7MOM stations",
+          "sections": [
+            {
+              "label": "ATHX Strength (9–10 RPE)",
+              "est_minutes": 20,
+              "lines": [
+                "Building Deadlift Cluster 7 × 3 + 3:",
+                "3 Tempo Deadlift @ 3-3-X-1",
+                "— 30 sec rest —",
+                "3 Touch & Go"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "ATHX MetCon / Endurance",
+              "est_minutes": 25,
+              "lines": [
+                "E7MOM + 2:00 Rest:",
+                "Station 1: 40/30 Ski Cals · 5 Burpee to Ski Platform every 10 Cals · Max Ski Cals in remaining time",
+                "Station 2: 50 KB Swings (24/16) · 8 KB Goblet Box Step-Ups (24/20\") every 10 KB Swings · Max KB Swings in remaining time",
+                "Station 3: 40 DB Thrusters (2 × 35/20) · 10 Single-Arm DB Sit-Ups (30/15) every 10 Thrusters · Max DB Thrusters in remaining time"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": [
+                "2 Rounds:",
+                "Cat Cow (1:00)",
+                "Spiderman Stretch (30 sec / side)",
+                "Upward Facing Dog → Child's Pose Flow (1:00)",
+                "Dynamic Yogi Squat → Toe-Hold Hip Raise Flow (1:00)"
+              ]
+            }
+          ],
+          "coach_notes": "ATHX is keeping race prep spicy with heavy deadlift work, longer conditioning efforts, and plenty of practice producing power when your body would politely prefer a snack and a seat.",
+          "tags": [
+            "barbell",
+            "ski",
+            "kettlebell",
+            "dumbbell",
+            "box"
+          ]
+        },
+        "sat": {
+          "date": "2026-09-26",
+          "title": "ATHX 90 — deadlift 20s, SyncRow pyramid, 4-min EMOM ×2",
+          "sections": [
+            {
+              "label": "ATHX Strength (8–9 RPE)",
+              "est_minutes": 25,
+              "lines": [
+                "Deadlift — build to your heaviest set of 20 in 6–8 sets",
+                "Tempo Push Press (3-2-X-1) — building 5 × 3"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 15
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "ATHX Endurance",
+              "est_minutes": 15,
+              "lines": [
+                "SyncRow Pyramid — target strokes/min: 18 · 20 · 22 · 20 · 18",
+                "Each block: 0:30 Arms Only · 0:30 Legs Only · 2:00 Both"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 15
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": [
+                "2 Rounds:",
+                "Banded Lat Stretch (30 sec / side)",
+                "Overhead Tricep Stretch (30 sec / side)",
+                "Pigeon Pose (30 sec / side)",
+                "Down Dog → Frog Pose Flow (1:00)"
+              ]
+            },
+            {
+              "label": "ATHX MetCon",
+              "est_minutes": 8,
+              "lines": [
+                "4 Min EMOM × 2:",
+                "Min 1: 12 Burpees to Plate",
+                "Min 2: 12 Weighted Overhead Plate Sit-Ups (45/25)",
+                "Min 3: 10 KB Head Cutters (24/16)",
+                "Min 4: 8 Sandbag Tosses (40/30)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 8
+                }
+              ]
+            }
+          ],
+          "coach_notes": "ATHX is keeping race prep spicy with heavy deadlift work, longer conditioning efforts, and plenty of practice producing power when your body would politely prefer a snack and a seat.",
+          "tags": [
+            "barbell",
+            "row",
+            "kettlebell",
+            "sandbag",
+            "bodyweight"
+          ]
+        }
+      }
+    },
+    "strength": {
+      "name": "Strength",
+      "note": "Heavy triples: deadlift Monday, strict press Thursday.",
+      "days": {
+        "mon": {
+          "date": "2026-09-21",
+          "title": "Deadlift — heavy 3 + back-off triples",
+          "sections": [
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": [
+                "Deadlift — build to a heavy set of 3 for the day; back off to 80% × 3 × 3"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory Superset — 3 × 7–10",
+              "est_minutes": 20,
+              "lines": [
+                "Bench Press",
+                "Barbell Row",
+                "DB Side Bends"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push",
+                    "upper pull",
+                    "core"
+                  ],
+                  "minutes": 20
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength has heavy triples on deadlift and strict press, while Oly is borrowing a little cluster-set magic for the snatch.",
+          "tags": [
+            "barbell",
+            "dumbbell"
+          ]
+        },
+        "thu": {
+          "date": "2026-09-24",
+          "title": "Strict press — heavy 3 + back-off triples",
+          "sections": [
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": [
+                "Strict Press — build to a heavy set of 3 for the day; back off to 80% × 3 × 3"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory Superset — 4 × 7–10",
+              "est_minutes": 20,
+              "lines": [
+                "Romanian Deadlift",
+                "Pullups (use bands to get 7–10 in a row)",
+                "Situps (add weight)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "posterior chain",
+                    "upper pull",
+                    "core"
+                  ],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "Open Gym",
+              "est_minutes": 40,
+              "lines": [
+                "Reverse Lunges — 5 × 6–10/leg",
+                "Bench Press — 5 × 6–10",
+                "Barbell Row — 5 × 6–10",
+                "Good Mornings — 4 × 6–8",
+                "Bicep Curls — 3 × 10",
+                "Overhead Tricep Extensions — 3 × 10"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "quads",
+                    "upper push",
+                    "upper pull",
+                    "posterior chain",
+                    "arms"
+                  ],
+                  "minutes": 40
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength has heavy triples on deadlift and strict press, while Oly is borrowing a little cluster-set magic for the snatch.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "bodyweight"
+          ]
+        }
+      }
+    },
+    "oly": {
+      "name": "Olympic Weightlifting",
+      "note": "Cluster-set snatches.",
+      "days": {
+        "wed": {
+          "date": "2026-09-23",
+          "title": "Snatch cluster sets + snatch-grip deadlift",
+          "sections": [
+            {
+              "label": "Olympic Weightlifting WOD",
+              "est_minutes": 60,
+              "lines": [
+                "Snatch — cluster sets 4 × 1-1-1-1-1; rest 20–30s between reps and 3–4 minutes between sets; start w/ ~70%",
+                "Snatch Grip Deadlift — 5 × 5"
+              ],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 40
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 20
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Oly is borrowing a little cluster-set magic for the snatch.",
+          "tags": [
+            "barbell"
+          ]
+        }
+      }
+    }
+  },
+  "announcements": [
+    {
+      "title": "ATHX New York — Sat, Aug 28, 2027",
+      "detail": "ATHX's 2027 calendar puts a hometown race in New York, and ATHX has announced a partnership with CrossFit. Also Miami, Chicago, Las Vegas and more.",
+      "full_text": "⚡️ ATHX X CROSSFIT: 2027, WE SEE YOU\n\nBig news for our ATHX crew: ATHX has announced its 2027 event calendar, and NEW YORK IS ON IT. 🗽\n\nSAVE THE DATE\n\nSATURDAY, AUGUST 28, 2027\n\nATHX New York\n\nAs listed on the newly announced 2027 event calendar.\n\nIf you've been coming to ATHX at CFNYC, consider this your very early heads-up: you have a hometown race to train for. And if you've been ATHX-curious, there's plenty of time to come see what all the fuss is about.\n\nAnd the timing couldn't be better: ATHX has also announced a partnership with CrossFit, bringing two worlds our community already loves a little closer together.\n\nAs a CFNYC ATHX affiliate, we're here to help you prepare for the whole challenge: strength, endurance, and MetCon. Not just getting through each part individually, but learning how to put them together when it counts.\n\nWhether you're eyeing your first ATHX or already planning your next one, come train with us. You don't need to have a race booked to start building the fitness for it—and you certainly don't need to wait until August.\n\nThe newly announced North American calendar also includes Miami, Chicago, Las Vegas, and more, so there are plenty of opportunities to make a race weekend out of it.\n\nNew York, we have a date. CFNYC, we have a training plan. Let's get a crew together and make some noise."
+    },
+    {
+      "title": "Mock Weightlifting Meet — Fri, Sep 25, 6:30 PM",
+      "detail": "3 attempts at max snatch, 3 at max clean & jerk. Open to all members — lift or spectate. Register on Zen Planner; questions to Coach Brian.",
+      "full_text": "MOCK MEET: SIX ATTEMPTS. TWO LIFTS. ONE VERY FUN FRIDAY. 🏋️\n\nCalling all OlyWOD regulars, Barbell Club athletes, and anyone who's ever thought, \"I wonder what I could lift if I had three attempts and a room full of people cheering me on?\"\n\nWe're hosting a Mock Weightlifting Meet on Friday, September 25 at 6:30 PM!\n\nWith the Barbell Club heading to the Murder of Crows Open on Saturday, October 10, we're getting a little competition practice in beforehand. And you're invited.\n\nWe'll run this just like a weightlifting competition:\n\n• 3 attempts to find your max snatch\n\n• 3 attempts to find your max clean & jerk\n\nThat's six opportunities to put your training to the test, practice lifting under a little pressure, and experience the magic of a room full of people getting unreasonably excited about a successful lift.\n\nAnd no, you do NOT have to be on the Barbell Club team to participate. If you've been coming to OlyWOD and want to test yourself, this is your sign. Prefer to watch and cheer? We want you there, too.\n\nFriday, September 25 · 6:30 PM\n\nOpen to all members — participate or spectate!\n\nRegister in advance on Zen Planner so we can plan for attendance.\n\nQuestions? Email Coach Brian at brian@crossfitnyc.com.\n\nCome lift heavy. Come cheer loudly. Come see what you've got."
+    },
+    {
+      "title": "Halloween Throwdown — Sat, Oct 31, 11:15 AM (UWS)",
+      "detail": "In-house partner competition: teams of two (women's, men's, mixed), prescribed weights per division, Best Costume award. Registration details coming.",
+      "full_text": "🎃 CFNYC HALLOWEEN THROWDOWN: IT'S OFFICIAL!\n\nRemember when we said putting this in the newsletter made it legally binding? Well, we have a date, a time, and a location. There's no backing out now.\n\nSAVE THE DATE\n\nSATURDAY, OCTOBER 31 👻\n\n11:15 AM · CFNYC Upper West Side\n\nIn-House Partner CrossFit Competition\n\nYes, we know it's Halloween weekend. All the more reason to dress up, work out, and have a ridiculously fun morning with your gym friends before heading out to haunt the town, take the kids trick-or-treating, or make some questionable decisions at a Halloween party later that night.\n\nHere's the plan: grab a partner and compete as a women's, men's, or mixed team of two. Each workout will have prescribed weights and standards for each division, so start finding the person whose particular brand of fitness complements yours.\n\nAnd, obviously, costumes are highly encouraged.\n\nThere will be workouts. There will be prizes. There will be bragging rights. And there will absolutely be a Best Costume award, because athletic performance matters, but so does committing aggressively to a theme.\n\nCome compete. Come cheer. Come hang out. Whether you're trying to win the whole thing or simply trying to convince your partner that your two-person costume concept is worth doing burpees in, we want you there.\n\nSo mark your calendar, find your partner, and start plotting your costumes. Registration details, workouts, and all the other good stuff are coming soon.\n\nHalloween morning: we throw down. Halloween night: we haunt the town.\n\nFill out the interest form via the link in the newsletter."
+    },
+    {
+      "title": "Race weekend: HYROX DC, HYROX SLC, and an Ironman",
+      "detail": "Rodell and Jasmine PR'd at HYROX DC, Joey raced HYROX Salt Lake City, and Coach Bobby finished his first full Ironman in Maryland. High-fives owed.",
+      "full_text": "🏁 WHAT'S HAPPENING WITH YOU: RACE WEEKEND EDITION\n\nApparently, the CFNYC community looked at the race calendar this weekend and collectively decided to make it everyone's problem. And we love that for us.\n\nFirst up, Rodell and Jasmine took on HYROX DC! PRs were made, running improvements were put to the test, and all those hours of training showed up when it counted. We love seeing the work you put in at the gym turn into big moments out on the race floor. Huge congratulations to you both! 💛\n\nMeanwhile, Joey Merrill made the trek to Salt Lake City to race HYROX and introduce his brother to the very normal hobby of voluntarily running between increasingly difficult workout stations. The verdict? His brother is officially in. They're already talking about their next race together. Another successful HYROX recruitment. We love a family business. 🤝\n\nAnd finally, can we get a MASSIVE round of applause for Coach Bobby?!\n\nThis weekend, Bobby completed his FIRST FULL IRONMAN in Maryland. Not a half. The whole thing. A 2.4-mile swim, 112-mile bike ride, and a full marathon to finish, because apparently one endurance sport at a time wasn't quite enough.\n\nAnd he didn't just survive it. HE CRUSHED IT. 🏊♂️🚴♂️🏃♂️\n\nBobby, we are so proud of you. The dedication it takes to prepare for something like this is enormous, and getting to celebrate you on the other side of it is pretty damn special.\n\nIf you see Coach Bobby at the gym this week, please give him a high five, a massive congratulations, and perhaps a carbohydrate. The man has earned several.\n\nTo Rodell, Jasmine, Joey, and Bobby: congratulations on getting out there, doing hard things, and giving the rest of us even more reasons to cheer ridiculously loudly for our people.\n\nCFNYC out in the wild. You love to see it."
+    }
+  ]
+}
