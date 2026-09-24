@@ -130,7 +130,11 @@ h1,h2,h3{font-family:var(--head);text-transform:uppercase;font-weight:700;letter
 @media (max-width:1180px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width:760px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.week{grid-template-columns:1fr}}
-.day{background:var(--panel);border-top:3px solid var(--tc,var(--t-rest));min-width:0}
+.day{background:var(--panel);border-top:3px solid var(--tc,var(--t-rest));min-width:0;scroll-margin-top:12px}
+.day.today{outline:2px solid var(--black);outline-offset:-1px}
+.day.today .hd b::after{content:"Today";font-family:var(--body);font-size:9px;letter-spacing:.08em;color:#fff;background:var(--red);padding:2px 5px;margin-left:6px;vertical-align:middle}
+.day.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 4px var(--red)}100%{box-shadow:0 0 0 0 transparent}}
 .day .hd{padding:9px 10px 6px;display:flex;justify-content:space-between;align-items:baseline}
 .day .hd b{font-family:var(--head);font-size:13px;text-transform:uppercase;letter-spacing:-.02em}
 .day .hd .d{color:var(--dim);font-size:11.5px}
@@ -194,6 +198,7 @@ footer{margin-top:28px;color:var(--dim);font-size:12px;display:flex;gap:14px;fle
     <div class="logo"><div class="box">CrossFit<small>NYC</small></div><div><h1>Tracks <span>·</span> Weekly Programming</h1><div class="meta" id="sub">Loading…</div></div></div>
     <div class="tools">
       <select id="weekSel" aria-label="Week"></select>
+      <button class="btn" id="btnToday" title="Jump to today's workouts">Go to today</button>
       <button class="btn" id="btnReset" title="Reset every day to the default track (CrossFit where available)">Reset picks</button>
       <button class="btn red" id="btnCopy" title="Copy your week as plain text">Copy my week</button>
     </div>
@@ -344,7 +349,7 @@ function renderWeek(){
     const body=avail.length||customCard
       ?`<div class="cards">${customCard}${[...avail].sort((a,b)=>(b===pick)-(a===pick)).map(t=>cardHTML(t,dayOf(t,d),d)).join('')}${pick==='rest'&&mode==='mine'?`<div class="rest">Rest day</div>`:''}</div>`
       :`<div class="rest">${mode==='mine'?'Rest day':'No programming published.'}</div>`;
-    return `<div class="day" style="--tc:${pick==='rest'?'var(--t-rest)':tc(pick)}">
+    return `<div class="day${dateFor(d)===todayISO()?' today':''}" data-d="${d}" style="--tc:${pick==='rest'?'var(--t-rest)':tc(pick)}">
       <div class="hd"><b>${full}</b><span class="d">${fmtDate(dateFor(d))}</span></div>
       <div class="picklbl">Pick your class</div>
       <div class="chips">${chips}</div>
@@ -383,6 +388,19 @@ async function refresh(manual){
     sel.value=target;await loadWeek(target);if(manual)toast('Programming refreshed');
   }catch(e){console.error(e);if(manual)toast('Refresh failed — try again')}
 }
+function todayISO(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function weekContains(w,iso){const diff=(new Date(iso+'T00:00:00')-new Date(w.week_of+'T00:00:00'))/864e5;return diff>=0&&diff<7}
+async function goToday(){
+  const iso=todayISO();
+  if(!weekContains(week,iso)){
+    const w=(index?.weeks||[]).find(w=>weekContains(w,iso));
+    if(!w){toast('This week\'s programming isn\'t published yet');return}
+    $('#weekSel').value=w.file;userChoseWeek=false;await loadWeek(w.file);
+  }
+  const el=$('#week .day.today');if(!el)return;
+  el.scrollIntoView({behavior:'smooth',block:'start'});
+  el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');
+}
 async function init(){
   try{
     const {weeks}=await loadIndex();
@@ -399,6 +417,7 @@ async function init(){
       $('#modeSeg').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));renderWeek()})});
     $('#mclose').addEventListener('click',()=>$('#modal').close());
     $('#modal').addEventListener('click',e=>{if(e.target===$('#modal'))$('#modal').close()});
+    $('#btnToday').addEventListener('click',goToday);
     $('#btnReset').addEventListener('click',()=>{for(const [d] of DAYS)picks[d]=defaultPick(d);savePicks();render();toast('Picks reset')});
     $('#btnCopy').addEventListener('click',async()=>{const t=weekText();try{await navigator.clipboard.writeText(t);toast('Week copied')}catch(e){const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('Week copied')}});
     await loadWeek(pick.file);
