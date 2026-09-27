@@ -1,0 +1,711 @@
+{
+  "week_of": "2026-09-28",
+  "label": "Week of Sep 28, 2026",
+  "source": {
+    "subject": "Crossfit NYC Newsletter",
+    "sender": "newsletter@crossfitnyc.com",
+    "received": "2026-09-27T17:07:24Z",
+    "gmail_message_id": "1a0e3d5f5992e1df"
+  },
+  "cycle": {
+    "track": "crossfit",
+    "name": "New 6-week cycle",
+    "week": 4,
+    "of": 6,
+    "focus": [
+      "Past the midpoint — now we use the foundation",
+      "Power snatch doubles + strict handstand push-ups",
+      "Cluster squats 2-1-1-1, snatch-grip deadlifts, pulling practice continue",
+      "Monday intervals · Tuesday efficiency · Friday 9 rounds of thrusters / T2B / row"
+    ],
+    "full_text": "HAPPY SUNDAY, CFNYC ☀️\n\nFirst things first: we hope everyone made it through this very dramatic little nor'easter safe, dry, and with all outdoor furniture still accounted for. Nothing says welcome to fall in New York quite like going from beautiful September weather to sideways rain and wind that makes walking down the street feel suspiciously like a conditioning piece. Fortunately, we know a nice dry place where you can spend the week.\n\nWe're officially heading into Week 4 of 6, which means we've crossed that lovely little midpoint where the movements are familiar, the foundation has been laid, and now we get to actually use it. CrossFit keeps building on the work we've been doing—power snatches, cluster squats, pulling skills, unilateral strength—with some very fun conditioning sprinkled in. Monday gives us intervals (and therefore permission to actually attack the work), Tuesday rewards efficiency, and Friday has nine rounds of heavy-ish thrusters, toes-to-bar and rowing, which feels like an extremely normal way to welcome October. HYROX is putting in the grunt work this week with longer race-style efforts and plenty of opportunities to practice working hard, recovering, and doing it again. ATHX has everything from pause squats and Tabatas to a partner Echo Bike situation that may test both your fitness and your friendships. Strength is back under heavy triples, and Oly is cleaning, jerking, pausing, and generally getting very comfortable putting heavy things overhead. And that's Week 4: we're not learning the dance anymore. Now we get to dance a little harder. Come train. Keep stacking good reps. Maybe enjoy being indoors for a minute. New week. New month incoming. Let's get after it, CFNYC."
+  },
+  "tracks": {
+    "crossfit": {
+      "name": "CrossFit",
+      "note": "",
+      "days": {
+        "mon": {
+          "date": "2026-09-28",
+          "title": "Power snatch doubles + 5 rounds devil's press / row",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Power Snatch — 4 sets of 2, building",
+                "A2. Strict Handstand Push Ups — 4 sets of 5–7"
+              ],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 17,
+              "lines": [
+                "5 Rounds:",
+                "8 Alternating Single Arm Devils Press (50/35)",
+                "16/12 Calorie Row",
+                "Rest 1 minute after each round"
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 17
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Monday gives us intervals (and therefore permission to actually attack the work).\n\nCrossFit keeps building on the work we've been doing—power snatches, cluster squats, pulling skills, unilateral strength—with some very fun conditioning sprinkled in.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "dumbbell",
+            "row"
+          ]
+        },
+        "tue": {
+          "date": "2026-09-29",
+          "title": "Cluster back squat + pull-up / hang squat clean / DU rounds",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": [
+                "A. Cluster Back Squat — 5 sets of 2-1-1-1, building",
+                "B. Pendlay Row — 3 sets of 10, across",
+                "1 max effort set w/ 20% less"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 15
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 12,
+              "lines": [
+                "3 Rounds:",
+                "5 Pull Up (Rx+ Bar Muscle Up)",
+                "5 Hang Squat Clean (115/75, 135/95)",
+                "25 Double Under",
+                "Rest 1 minute",
+                "3 Rounds:",
+                "5 Pull Up (Rx+ C2B)",
+                "5 Hang Squat Clean (115/75, 135/95)",
+                "25 Double Unders"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 12
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Tuesday rewards efficiency.\n\nCrossFit keeps building on the work we've been doing—power snatches, cluster squats, pulling skills, unilateral strength—with some very fun conditioning sprinkled in.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "jump rope"
+          ]
+        },
+        "wed": {
+          "date": "2026-09-30",
+          "title": "HYROX: four E4MOM × 3 blocks",
+          "sections": [
+            {
+              "label": "Part A — E4MOM × 3",
+              "est_minutes": 12,
+              "lines": [
+                "400/500m Row",
+                "16 Dumbbell Bench Press @ 2×20/2×35lb"
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 12
+                }
+              ]
+            },
+            {
+              "label": "Part B — E4MOM × 3",
+              "est_minutes": 12,
+              "lines": [
+                "25m Sled Push/Pull @ 3/5 plates",
+                "16 Burpee Broad Jumps"
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 12
+                }
+              ]
+            },
+            {
+              "label": "Part C — E4MOM × 3",
+              "est_minutes": 12,
+              "lines": [
+                "400/500m SkiErg",
+                "16 Box Get Overs @ 30\"/40\""
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 12
+                }
+              ]
+            },
+            {
+              "label": "Part D — E4MOM × 3",
+              "est_minutes": 12,
+              "lines": [
+                "2:00 Farmer Hold @ 2×16/2×24kg",
+                "16 Wall Balls @ 14/20lb"
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 12
+                }
+              ]
+            }
+          ],
+          "coach_notes": "HYROX is putting in the grunt work this week with longer race-style efforts and plenty of opportunities to practice working hard, recovering, and doing it again.",
+          "tags": [
+            "row",
+            "dumbbell",
+            "sled",
+            "ski",
+            "box",
+            "kettlebell",
+            "wall ball"
+          ]
+        },
+        "thu": {
+          "date": "2026-10-01",
+          "title": "Snatch-grip deadlift + 4 rounds swings / lunges / BBJO",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Snatch Grip Deadlift — 4 sets of 6–8, building",
+                "A2. Pull / C2B / Bar Muscle Up Practice — 4 sets"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "skill",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 16,
+              "lines": [
+                "4 Rounds For Time:",
+                "30 AKBS (24/16, 28/20)",
+                "20 Alternating Goblet Reverse Lunge",
+                "10 Burpee Box Jump Over (24/20)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 16
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit keeps building on the work we've been doing—power snatches, cluster squats, pulling skills, unilateral strength—with some very fun conditioning sprinkled in.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "kettlebell",
+            "box"
+          ]
+        },
+        "fri": {
+          "date": "2026-10-02",
+          "title": "Kickstand squat / push press + 9 rounds thruster / T2B / row",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Goblet Kickstand Squat — 3 sets of 6–8/side, building",
+                "A2. Push Press — 3 sets of 5–7, building"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 10
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 12,
+              "lines": [
+                "9 Rounds For Time:",
+                "3 Thruster (135/95, 155/105)",
+                "6 Toes to Bar",
+                "9/7 Calorie Row"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 12
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Friday has nine rounds of heavy-ish thrusters, toes-to-bar and rowing, which feels like an extremely normal way to welcome October.\n\nCrossFit keeps building on the work we've been doing—power snatches, cluster squats, pulling skills, unilateral strength—with some very fun conditioning sprinkled in.",
+          "tags": [
+            "kettlebell",
+            "barbell",
+            "gymnastics",
+            "row"
+          ]
+        },
+        "sat": {
+          "date": "2026-10-03",
+          "title": "4 rounds: 1000m run, wall balls, headcutters, lunges, burpees, sled",
+          "sections": [
+            {
+              "label": "Conditioning",
+              "est_minutes": 45,
+              "lines": [
+                "4 Rounds For Time:",
+                "1000m Run",
+                "30 Wall Balls (14/10)",
+                "20 Headcutters (16/12kg)",
+                "20 Alt Goblet Forward Lunges (in place) (16/12kg)",
+                "15 Burpees",
+                "50m Sled Push/Pull (use same weight for both)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 45
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit keeps building on the work we've been doing—power snatches, cluster squats, pulling skills, unilateral strength—with some very fun conditioning sprinkled in.",
+          "tags": [
+            "run",
+            "wall ball",
+            "kettlebell",
+            "bodyweight",
+            "sled"
+          ]
+        }
+      }
+    },
+    "athx": {
+      "name": "ATHX",
+      "note": "Pause squats and Tabatas Tuesday; box squats and a partner Echo Bike Saturday.",
+      "days": {
+        "tue": {
+          "date": "2026-09-29",
+          "title": "ATHX 75 — pause front squats, 4 Tabatas",
+          "sections": [
+            {
+              "label": "ATHX Strength (6–7 RPE)",
+              "est_minutes": 20,
+              "lines": [
+                "6 Building Supersets:",
+                "A1. 5 Pause Front Squats (2 sec @ bottom)",
+                "A2. 8 Kneeling DB See-Saw Press"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "ATHX MetCon / Endurance",
+              "est_minutes": 22,
+              "lines": [
+                "4 Tabata Rounds + 2:00 Rest:",
+                "Tabata 1: :20 Ski / :10 Rest · :20 Air Squat / :10 Rest × 4",
+                "Rest / Transition 2:00",
+                "Tabata 2: :20 Row / :10 Rest · :20 Burpee / :10 Rest × 4",
+                "Rest / Transition 2:00",
+                "Tabata 3: :20 Ski / :10 Rest · :20 Air Squat / :10 Rest × 4",
+                "Rest / Transition 2:00",
+                "Tabata 4: :20 Row / :10 Rest · :20 Burpee / :10 Rest × 4"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 22
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": [
+                "2 Rounds:",
+                "Lying Supine Knee Hug (Left, Right, Both)",
+                "Down Dog + Scorpion Flow",
+                "Thread the Needle + Thoracic Twist",
+                "Pigeon Pose"
+              ]
+            }
+          ],
+          "coach_notes": "ATHX has everything from pause squats and Tabatas to a partner Echo Bike situation that may test both your fitness and your friendships.",
+          "tags": [
+            "barbell",
+            "dumbbell",
+            "ski",
+            "row",
+            "bodyweight"
+          ]
+        },
+        "sat": {
+          "date": "2026-10-03",
+          "title": "ATHX 90 — box squats, partner Echo Bike, DB Down Shift",
+          "sections": [
+            {
+              "label": "ATHX Strength (7–8 RPE)",
+              "est_minutes": 25,
+              "lines": [
+                "6 Building Supersets:",
+                "A1. 5 Box Squats",
+                "A2. 8 Gorilla Rows",
+                "3 Back-Off Sets @ 70–80%:",
+                "B1. 3 Back Squats"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 17
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "ATHX Endurance",
+              "est_minutes": 20,
+              "lines": [
+                "Partner Echo Bike:",
+                "100 / 90 / 80 Cals [Pro: 120 / 100 / 90]",
+                "KB Farmer Hold for resting partner (2 × 24/16)",
+                "Switch when Farmer Hold breaks"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": [
+                "2 Rounds:",
+                "Banded Shoulder Stretch (30 sec / side)",
+                "Banded Lat Stretch (30 sec / side)",
+                "Banded Seated Forward Fold (1:00)",
+                "Couch Stretch (30 sec / side)"
+              ]
+            },
+            {
+              "label": "ATHX MetCon",
+              "est_minutes": 10,
+              "lines": [
+                "10 Min AMRAP — \"DB Down Shift\" (substitute load for bodyweight as the workout progresses):",
+                "6 DB Elevated Push-Ups",
+                "6 DB Renegade Rows / 12 Shoulder Taps",
+                "4 DB Deadlifts / 8 Good Mornings",
+                "4 DB Front Squats / 8 Air Squats",
+                "2 DB Devil's Press / 4 Burpees",
+                "@ 2:00 Devil's Press → 4 Burpees",
+                "@ 4:00 Front Squat → 8 Air Squats",
+                "@ 6:00 Deadlift → 8 Good Mornings",
+                "@ 8:00 Renegade Row → 12 Shoulder Taps"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 10
+                }
+              ]
+            }
+          ],
+          "coach_notes": "ATHX has everything from pause squats and Tabatas to a partner Echo Bike situation that may test both your fitness and your friendships.",
+          "tags": [
+            "barbell",
+            "dumbbell",
+            "bike",
+            "kettlebell",
+            "bodyweight"
+          ]
+        }
+      }
+    },
+    "strength": {
+      "name": "Strength",
+      "note": "Heavy triples: squat Monday, bench Thursday.",
+      "days": {
+        "mon": {
+          "date": "2026-09-28",
+          "title": "Squat — heavy 3 + back-off triples",
+          "sections": [
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": [
+                "Back or Front Squat — build to a heavy set of 3 for the day; back off to 80% × 3 × 3"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory Superset — 3 × 7–10",
+              "est_minutes": 20,
+              "lines": [
+                "Behind Neck Strict Press",
+                "Barbell Row",
+                "DB Side Bends"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push",
+                    "upper pull",
+                    "core"
+                  ],
+                  "minutes": 20
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength is back under heavy triples.",
+          "tags": [
+            "barbell",
+            "dumbbell"
+          ]
+        },
+        "thu": {
+          "date": "2026-10-01",
+          "title": "Bench — heavy 3 + back-off triples",
+          "sections": [
+            {
+              "label": "Main Lift",
+              "est_minutes": 25,
+              "lines": [
+                "Bench Press — build to a heavy set of 3 for the day; back off to 80% × 3 × 3"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "Successory Superset — 3 × 7–10",
+              "est_minutes": 20,
+              "lines": [
+                "Bulgarian Split Squats",
+                "Pullups (use bands to get 10–14 in a row)",
+                "Situps (add weight)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "quads",
+                    "upper pull",
+                    "core"
+                  ],
+                  "minutes": 20
+                }
+              ]
+            },
+            {
+              "label": "Open Gym",
+              "est_minutes": 40,
+              "lines": [
+                "Reverse Lunges — 5 × 6–10/leg",
+                "Bench Press — 5 × 6–10",
+                "Barbell Row — 5 × 6–10",
+                "Good Mornings — 4 × 6–8",
+                "Bicep Curls — 3 × 10",
+                "Overhead Tricep Extensions — 3 × 10"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "quads",
+                    "upper push",
+                    "upper pull",
+                    "posterior chain",
+                    "arms"
+                  ],
+                  "minutes": 40
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength is back under heavy triples.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "bodyweight"
+          ]
+        }
+      }
+    },
+    "oly": {
+      "name": "Olympic Weightlifting",
+      "note": "Clean, pause jerk and jerk.",
+      "days": {
+        "wed": {
+          "date": "2026-09-30",
+          "title": "Clean + pause jerk + jerk, clean & jerk",
+          "sections": [
+            {
+              "label": "Olympic Weightlifting WOD",
+              "est_minutes": 60,
+              "lines": [
+                "Clean + Pause Jerk + Jerk — 6 × 1+1+1",
+                "Clean + Jerk — 6 × 1+1",
+                "Strict Press — 5 × 6–8",
+                "Barbell Row — 5 × 6–8"
+              ],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 40
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 10
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Oly is cleaning, jerking, pausing, and generally getting very comfortable putting heavy things overhead.",
+          "tags": [
+            "barbell"
+          ]
+        }
+      }
+    }
+  },
+  "announcements": [
+    {
+      "title": "Halloween Throwdown — Sat, Oct 31, 11:15 AM (UWS)",
+      "detail": "In-house partner competition, open to all members: teams of two (women's, men's, mixed), prescribed weights per division, Best Costume award. Registration details coming.",
+      "full_text": "🎃 CFNYC HALLOWEEN THROWDOWN: IT'S OFFICIAL!\n\nRemember when we said putting this in the newsletter made it legally binding? Well, we have a date, a time, and a location. There's no backing out now.\n\nSAVE THE DATE and open to ALL MEMBERS!!!\n\nSATURDAY, OCTOBER 31 👻\n\n11:15 AM · CFNYC Upper West Side\n\nIn-House Partner CrossFit Competition\n\nYes, we know it's Halloween weekend. All the more reason to dress up, work out, and have a ridiculously fun morning with your gym friends before heading out to haunt the town, take the kids trick-or-treating, or make some questionable decisions at a Halloween party later that night.\n\nHere's the plan: grab a partner and compete as a women's, men's, or mixed team of two. Each workout will have prescribed weights and standards for each division, so start finding the person whose particular brand of fitness complements yours.\n\nAnd, obviously, costumes are highly encouraged.\n\nThere will be workouts. There will be prizes. There will be bragging rights. And there will absolutely be a Best Costume award, because athletic performance matters, but so does committing aggressively to a theme.\n\nCome compete. Come cheer. Come hang out. Whether you're trying to win the whole thing or simply trying to convince your partner that your two-person costume concept is worth doing burpees in, we want you there.\n\nSo mark your calendar, find your partner, and start plotting your costumes. Registration details, workouts, and all the other good stuff are coming soon.\n\nHalloween morning: we throw down. Halloween night: we haunt the town.\n\nFill out the interest form via the link in the newsletter."
+    },
+    {
+      "title": "ATHX New York — Sat, Aug 28, 2027",
+      "detail": "ATHX's 2027 calendar puts a hometown race in New York, and ATHX has announced a partnership with CrossFit. Also Miami, Chicago, Las Vegas and more.",
+      "full_text": "⚡️ ATHX X CROSSFIT: 2027, WE SEE YOU\n\nBig news for our ATHX crew: ATHX has announced its 2027 event calendar, and NEW YORK IS ON IT. 🗽\n\nSAVE THE DATE\n\nSATURDAY, AUGUST 28, 2027\n\nATHX New York\n\nAs listed on the newly announced 2027 event calendar.\n\nIf you've been coming to ATHX at CFNYC, consider this your very early heads-up: you have a hometown race to train for. And if you've been ATHX-curious, there's plenty of time to come see what all the fuss is about.\n\nAnd the timing couldn't be better: ATHX has also announced a partnership with CrossFit, bringing two worlds our community already loves a little closer together.\n\nAs a CFNYC ATHX affiliate, we're here to help you prepare for the whole challenge: strength, endurance, and MetCon. Not just getting through each part individually, but learning how to put them together when it counts.\n\nWhether you're eyeing your first ATHX or already planning your next one, come train with us. You don't need to have a race booked to start building the fitness for it—and you certainly don't need to wait until August.\n\nThe newly announced North American calendar also includes Miami, Chicago, Las Vegas, and more, so there are plenty of opportunities to make a race weekend out of it.\n\nNew York, we have a date. CFNYC, we have a training plan. Let's get a crew together and make some noise."
+    },
+    {
+      "title": "Community: Dads With Pride playdate — Sun, Oct 4, 12–2 PM",
+      "detail": "New NYC community for gay dads, their kids, and anyone who wants to support them. Matthew Sapolin Playground, 270 W 70th St. Drop in anytime; RSVP if you're coming.",
+      "full_text": "COMMUNITY CORNER: DADS WITH PRIDE\n\nWe love when members of our community are building community outside the gym, too—so we wanted to share this very sweet one.\n\nDads With Pride is a new NYC community for gay dads, their kids, those considering fatherhood, and anyone who wants to support them.\n\nOnce a month, they take over a Manhattan playground for a good old-fashioned playdate: kids get to be kids while dads meet other dads, swap stories and advice, and build a little more community along the way.\n\nThe dads bring the kids and conversation. Dads With Pride brings the coffee and donuts. Frankly, an excellent division of labor.\n\nTheir next meetup is:\n\nSunday, October 4 | 12–2 PM\nMatthew Sapolin Playground\n270 W 70th St, between Amsterdam & West End\nDrop in anytime!\n\nIf this sounds like something for you—or someone you know—come hang out, meet some new people, and help a new NYC community grow.\n\nPlease RSVP if you're planning to join. You can also follow @dads.with.pride on Instagram or sign up for emails about future meetups via the link in the newsletter."
+    }
+  ]
+}
