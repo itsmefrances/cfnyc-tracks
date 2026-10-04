@@ -1,22 +1,9 @@
 name: Sync newsletter → data
 
 on:
-  schedule:
-    # Newsletter usually lands 12:06 pm New York time on Sundays (occasionally 12:36–1:41 pm; once 4:36 pm).
-    # Runs at 12:10, 12:15, 12:30, 1:00 pm and 4:00 pm New York. GitHub cron is UTC and has no DST,
-    # so each time is listed twice (EDT = UTC-4, EST = UTC-5); the script is idempotent, extra fires are no-ops.
-    # --- EDT (Mar–Nov) ---
-    - cron: "10 16 * * 0"   # 12:10 pm
-    - cron: "15 16 * * 0"   # 12:15 pm
-    - cron: "30 16 * * 0"   # 12:30 pm
-    - cron: "0 17 * * 0"    #  1:00 pm
-    - cron: "0 20 * * 0"    #  4:00 pm
-    # --- EST (Nov–Mar) ---
-    - cron: "10 17 * * 0"   # 12:10 pm
-    - cron: "15 17 * * 0"   # 12:15 pm
-    - cron: "30 17 * * 0"   # 12:30 pm
-    - cron: "0 18 * * 0"    #  1:00 pm
-    - cron: "0 21 * * 0"    #  4:00 pm
+  # Schedule disabled 2026-10-04: the weekly sync now runs through Claude's scheduled task
+  # (see README). To use this workflow instead, add the three repo secrets and restore the
+  # `schedule:` block (Sundays 16:10,16:15,16:30,17:00,20:00 UTC in summer; +1h in winter).
   workflow_dispatch:
     inputs:
       dry_run:
