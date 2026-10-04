@@ -1,0 +1,732 @@
+{
+  "week_of": "2026-10-05",
+  "label": "Week of Oct 5, 2026",
+  "source": {
+    "subject": "Crossfit NYC Newsletter",
+    "sender": "newsletter@crossfitnyc.com",
+    "received": "2026-10-04T16:06:07Z",
+    "gmail_message_id": "1a107aa5d511cd16"
+  },
+  "cycle": {
+    "track": "crossfit",
+    "name": "New 6-week cycle",
+    "week": 5,
+    "of": 6,
+    "focus": [
+      "Power snatch doubles continue",
+      "New cluster squat scheme: 3-2",
+      "Sumo deadlifts enter the chat",
+      "Friday: Cindy (20-min AMRAP) — standards are hot"
+    ],
+    "full_text": "HAPPY SUNDAY, CFNYC ☀️\n\nOctober is officially here, Week 5 of 6 is on deck, and somehow the year has reached the point where leaving the gym after an evening class means walking outside into darkness. New York fall, we meet again.\n\nInside the gym, things are moving right along. CrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy. Twenty minutes. Three movements. A very straightforward opportunity to discover how creative people can get with an air squat standard. Standards are hot. We said what we said. ATHX keeps building the hybrid engine with strength, intervals and some very precise pacing work—and if all that training has you itching to put it to use, six North American ATHX events are officially live, with a special rate available right now. More on that below.\n\nMeanwhile, Strength kicks off a brand-new power-focused block, pairing heavy strength with explosive movements so we're not just producing force—we're learning to produce it fast. OlyWOD has plenty of snatching on the menu, because everybody has a job. And this Saturday, some of that training gets to leave the gym: Caitlin Ormsbee, Beth Terranova and Coach Brian are heading to Brooklyn to represent CFNYC at the NYC Grand Prix at Murder of Crows. If you're free, go make some noise for our people.\n\nWeek 5. October. Plenty to do. Let's have a week, CFNYC"
+  },
+  "tracks": {
+    "crossfit": {
+      "name": "CrossFit",
+      "note": "",
+      "days": {
+        "mon": {
+          "date": "2026-10-05",
+          "title": "Power snatch doubles + E3M × 5 deadlift / snatch / row",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Power Snatch — 4 sets of 2, building",
+                "A2. Push Ups — 4 sets of 1–2 RIR"
+              ],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 15,
+              "lines": [
+                "Every 3 minutes for 5 Rounds:",
+                "10 Deadlifts (95/65, 135/95)",
+                "5 Power Snatches",
+                "15/12 Calorie Row"
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 15
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy.",
+          "tags": [
+            "barbell",
+            "bodyweight",
+            "row"
+          ]
+        },
+        "tue": {
+          "date": "2026-10-06",
+          "title": "Cluster back squat 3-2 + 2 rounds of 20s",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 25,
+              "lines": [
+                "A. Cluster Back Squat — 5 sets of 3-2, building",
+                "B. Pendlay Row — 4 sets of 5, building"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 15
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 12,
+              "lines": [
+                "2 Rounds:",
+                "20 Back Squat (115/75, 155/105)",
+                "20 Toes to Bar (Rx+ 10 Bar Muscle Up)",
+                "20 Burpees Over Bar"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 12
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "bodyweight"
+          ]
+        },
+        "wed": {
+          "date": "2026-10-07",
+          "title": "HYROX: 3 rounds × 5 stations × 3:00",
+          "sections": [
+            {
+              "label": "Conditioning",
+              "est_minutes": 45,
+              "lines": [
+                "3 Rounds — 3:00 per station:",
+                "1. Sled Pull @ 2/4 plates",
+                "2. Wall Balls @ 14/20lb",
+                "3. Row",
+                "4. Burpee Broad Jumps",
+                "5. SkiErg"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 45
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy.",
+          "tags": [
+            "sled",
+            "wall ball",
+            "row",
+            "bodyweight",
+            "ski"
+          ]
+        },
+        "thu": {
+          "date": "2026-10-08",
+          "title": "Sumo deadlift + 5 rounds DB snatch / step-up / DU",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Sumo Deadlift — 4 sets of 6–8, building",
+                "A2. Pull / C2B / Bar Muscle Up Practice — 4 sets"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "skill",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 18,
+              "lines": [
+                "5 Rounds For Time:",
+                "20 Dumbbell Snatch (50/35)",
+                "20 Dumbbell Box Step Up (24/20)",
+                "40 Double Under"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 18
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy.",
+          "tags": [
+            "barbell",
+            "gymnastics",
+            "dumbbell",
+            "box",
+            "jump rope"
+          ]
+        },
+        "fri": {
+          "date": "2026-10-09",
+          "title": "Dual KB squat / push jerk + \"Cindy\"",
+          "sections": [
+            {
+              "label": "Strength",
+              "est_minutes": 20,
+              "lines": [
+                "A1. Dual Kettlebell Squat — 3 sets of 8–10, building",
+                "A2. Push Jerk — 3 sets of 3–5, building"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "quads"
+                  ],
+                  "minutes": 10
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 10
+                }
+              ]
+            },
+            {
+              "label": "Conditioning",
+              "est_minutes": 20,
+              "lines": [
+                "\"Cindy\" — 20 minute AMRAP:",
+                "5 Pull Ups",
+                "10 Push Ups",
+                "15 Air Squats"
+              ],
+              "stimulus": [
+                {
+                  "quality": "threshold",
+                  "minutes": 20
+                }
+              ]
+            }
+          ],
+          "coach_notes": "On Friday, the return of a classic: Cindy. Twenty minutes. Three movements. A very straightforward opportunity to discover how creative people can get with an air squat standard. Standards are hot. We said what we said.\n\nCrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy.",
+          "tags": [
+            "kettlebell",
+            "barbell",
+            "gymnastics",
+            "bodyweight"
+          ]
+        },
+        "sat": {
+          "date": "2026-10-10",
+          "title": "For time: 5 run blocks with ski, sled, bike, row + stations",
+          "sections": [
+            {
+              "label": "Conditioning",
+              "est_minutes": 50,
+              "lines": [
+                "For Time:",
+                "1. 500m Run · Ski 500/400m · 20m Burpee Broad Jumps",
+                "2. 1000m Run · 50m Sled Push (5/3)",
+                "3. 1500m Run · 50 Butterfly Situps · 50 Pushups",
+                "4. 1000m Run · 50/40 Cal Bike · 60m Sandbag Walking Lunges",
+                "5. 500m Run · 500/400m Row · 50 Wall Balls"
+              ],
+              "stimulus": [
+                {
+                  "quality": "aerobic",
+                  "minutes": 50
+                }
+              ]
+            }
+          ],
+          "coach_notes": "CrossFit heads into Week 5 with power snatches, a new cluster squat scheme, sumo deadlifts entering the chat, and on Friday, the return of a classic: Cindy.",
+          "tags": [
+            "run",
+            "ski",
+            "sled",
+            "bodyweight",
+            "bike",
+            "sandbag",
+            "row",
+            "wall ball"
+          ]
+        }
+      }
+    },
+    "athx": {
+      "name": "ATHX",
+      "note": "Hybrid engine: strength, intervals and precise pacing work.",
+      "days": {
+        "tue": {
+          "date": "2026-10-06",
+          "title": "ATHX 75 — heavy 10 strict press, E2MOM stations",
+          "sections": [
+            {
+              "label": "ATHX Strength (6–7 RPE)",
+              "est_minutes": 20,
+              "lines": [
+                "Building Superset:",
+                "A1. Strict Press — work up to a heavy set of 10 in 6–8 sets",
+                "A2. 10 KB Gorilla Rows (5 / arm)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 12
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 8
+                }
+              ]
+            },
+            {
+              "label": "ATHX MetCon / Endurance",
+              "est_minutes": 30,
+              "lines": [
+                "E2MOM × 3:",
+                "Min 0–2: Accumulate 60–80 sec Sandbag Hold (30/20)",
+                "Min 2–4: 15–20 Box Jumps (24/20\")",
+                "Min 4–6: 20 DB Reverse Lunges (2 × 35/20)",
+                "Min 6–8: 12–15 Devil's Press (2 × 35/20)",
+                "Min 8–10: Rest"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 30
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": [
+                "2 Rounds:",
+                "Banded Shoulder Stretch (30 sec / side)",
+                "Standing Quad Stretch (30 sec / side)",
+                "Seated Thoracic Twist (30 sec / side)",
+                "Child's Pose (1:00)"
+              ]
+            }
+          ],
+          "coach_notes": "ATHX keeps building the hybrid engine with strength, intervals and some very precise pacing work—and if all that training has you itching to put it to use, six North American ATHX events are officially live, with a special rate available right now.",
+          "tags": [
+            "barbell",
+            "kettlebell",
+            "sandbag",
+            "box",
+            "dumbbell"
+          ]
+        },
+        "sat": {
+          "date": "2026-10-10",
+          "title": "ATHX 90 — giant sets, precision partner row sprints",
+          "sections": [
+            {
+              "label": "ATHX Strength (6–7 RPE)",
+              "est_minutes": 25,
+              "lines": [
+                "5 Across Giant Sets:",
+                "A1. 6 Strict Press",
+                "A2. 8 DB RDL",
+                "A3. 10 DB Bulgarian Split Squats (5 / leg)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push",
+                    "posterior chain",
+                    "quads"
+                  ],
+                  "minutes": 25
+                }
+              ]
+            },
+            {
+              "label": "ATHX Endurance",
+              "est_minutes": 15,
+              "lines": [
+                "Precision Partner Row Sprints:",
+                "Min 0–5: 750 / 500m",
+                "Min 5–10: 500 / 250m",
+                "Min 10–15: 250 / 100m",
+                "1 Burpee for each meter off target (over or under) at partner switch (max 5 burpees)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "vo2",
+                  "minutes": 15
+                }
+              ]
+            },
+            {
+              "label": "ATHX Flow (Recovery)",
+              "est_minutes": 8,
+              "lines": [
+                "2 Rounds:",
+                "Cat / Cows",
+                "Thread the Needle w/ Thoracic Twist",
+                "Lunge Rocks",
+                "Wide-Legged Forward Fold (Middle, Left, Right)"
+              ]
+            },
+            {
+              "label": "ATHX MetCon",
+              "est_minutes": 8,
+              "lines": [
+                "E2MOM × 4:",
+                "Station 1: 6 Man Makers (2 × 35/20) · 12 DB Reverse Lunges (2 × 35/20)",
+                "Station 2: 12 Shoulder-to-Overheads (2 × 35/20) · 10 DB Box Step-Ups (2 × 35/20)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hiit",
+                  "minutes": 8
+                }
+              ]
+            }
+          ],
+          "coach_notes": "ATHX keeps building the hybrid engine with strength, intervals and some very precise pacing work—and if all that training has you itching to put it to use, six North American ATHX events are officially live, with a special rate available right now.",
+          "tags": [
+            "barbell",
+            "dumbbell",
+            "row",
+            "box"
+          ]
+        }
+      }
+    },
+    "strength": {
+      "name": "Strength",
+      "note": "New power-focused block: heavy strength paired with explosive movements (contrast supersets).",
+      "days": {
+        "mon": {
+          "date": "2026-10-05",
+          "title": "Power block: tempo bench contrast supersets",
+          "sections": [
+            {
+              "label": "Warm-up — 4 sets",
+              "est_minutes": 10,
+              "lines": [
+                "5 Tempo Bench Press — increasing weight (4s down, no pause, up fast)",
+                "5–10 Scap Pullups or Pullups",
+                "5/Partner Medball Chest Passes"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 5
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull"
+                  ],
+                  "minutes": 5
+                }
+              ]
+            },
+            {
+              "label": "Contrast Superset — 4 sets",
+              "est_minutes": 25,
+              "lines": [
+                "3–5 Bench Press @ 70–80% 1RM (tempo 4s down, no pause, up fast)",
+                "3–5 Plyo Pushups (scale to knees, hands on box, or band assisted)",
+                "5 Supine MedBall Chest Pass (think hot potato)",
+                "30s between exercises, 3–4 min rest between sets"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 13
+                },
+                {
+                  "quality": "power",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 12
+                }
+              ]
+            },
+            {
+              "label": "Successory — 2 × 15–20",
+              "est_minutes": 15,
+              "lines": [
+                "DB/KB Row (per arm)",
+                "Bulgarian Split Squat (per leg)",
+                "Bicep Curls"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper pull",
+                    "quads",
+                    "arms"
+                  ],
+                  "minutes": 15
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength kicks off a brand-new power-focused block, pairing heavy strength with explosive movements so we're not just producing force—we're learning to produce it fast.\n\nContrast Superset: 4 sets, 30s between exercises, 3-4min rest between sets. For logistics, work in groups, have one person perform the entire complex and then the next person follows. Each superset should take ~3min to complete. We want to achieve as close to full recovery as possible between sets.\n\nWarmup: 5 Tempo Bench Press - increasing weight (4s down, no pause, up fast). After, continue increasing weight normally on Bench Press to find working weight for the day. Plyo Pushups: scale to knees or hands on box or band assisted. Supine MedBall Chest Pass: think hot potato.",
+          "tags": [
+            "barbell",
+            "dumbbell",
+            "kettlebell",
+            "bodyweight"
+          ]
+        },
+        "thu": {
+          "date": "2026-10-08",
+          "title": "Power block: RDL / KB swing / broad jump contrast supersets",
+          "sections": [
+            {
+              "label": "Warm-up — 3 sets",
+              "est_minutes": 10,
+              "lines": [
+                "5 Good Morning (4–5s down, no pause, up explosively)",
+                "5 Behind the Neck Press",
+                "3–5 Consecutive Broad Jump (half effort)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 4
+                },
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push"
+                  ],
+                  "minutes": 3
+                },
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 3
+                }
+              ]
+            },
+            {
+              "label": "Contrast Superset — 5 sets",
+              "est_minutes": 25,
+              "lines": [
+                "5 Romanian Deadlift (4–5s down, no pause, up explosively)",
+                "5 Russian KB Swing (emphasize explosive leg extension)",
+                "3 Standing Broad Jump (max distance each jump)",
+                "30s between exercises, 3–4 min rest between sets"
+              ],
+              "stimulus": [
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 10
+                },
+                {
+                  "quality": "power",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 8
+                },
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 7
+                }
+              ]
+            },
+            {
+              "label": "Successory — 2 × 15–20",
+              "est_minutes": 15,
+              "lines": [
+                "Strict Press",
+                "Overhead Tricep Extensions",
+                "Russian Twists (per side)"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push",
+                    "arms",
+                    "core"
+                  ],
+                  "minutes": 15
+                }
+              ]
+            },
+            {
+              "label": "Open Gym (optional bodybuilding)",
+              "est_minutes": 40,
+              "lines": [
+                "DB Shoulder Press — 3 × 8–12 / arm",
+                "Single Arm Row — 3 × 8–12 / arm",
+                "Bulgarian Split Squats — 3 × 8–12 / leg",
+                "Weighted Situps — 3 × 8–12",
+                "Bicep Curls — 3 × 10",
+                "Tricep Extensions — 3 × 10"
+              ],
+              "stimulus": [
+                {
+                  "quality": "hypertrophy",
+                  "regions": [
+                    "upper push",
+                    "upper pull",
+                    "quads",
+                    "core",
+                    "arms"
+                  ],
+                  "minutes": 40
+                }
+              ]
+            }
+          ],
+          "coach_notes": "Strength kicks off a brand-new power-focused block, pairing heavy strength with explosive movements so we're not just producing force—we're learning to produce it fast.\n\nContrast Superset: 5 sets, 30s between exercises, 3-4min rest between sets. For logistics, work in pairs or triplets, have one person perform the entire complex and then the next person follows. Each superset should take ~3min to complete. We want to achieve as close to full recovery as possible between sets.\n\nWarmup: 5 Good Morning (4-5s down, no pause, up explosively), 5 Behind the Neck Press, 3-5 Consecutive Broad Jump (half effort to warmup).",
+          "tags": [
+            "barbell",
+            "kettlebell",
+            "dumbbell",
+            "bodyweight"
+          ]
+        }
+      }
+    },
+    "oly": {
+      "name": "Olympic Weightlifting",
+      "note": "Plenty of snatching.",
+      "days": {
+        "wed": {
+          "date": "2026-10-07",
+          "title": "Power snatch + snatch, snatch doubles and singles, snatch pulls",
+          "sections": [
+            {
+              "label": "Olympic Weightlifting WOD",
+              "est_minutes": 60,
+              "lines": [
+                "Power Snatch + Snatch — 5 × 1+1",
+                "Snatch — 5 × 2",
+                "Snatch — 5 × 1",
+                "Snatch Pull — 5 × 3"
+              ],
+              "stimulus": [
+                {
+                  "quality": "power",
+                  "regions": [
+                    "full body"
+                  ],
+                  "minutes": 45
+                },
+                {
+                  "quality": "strength",
+                  "regions": [
+                    "posterior chain"
+                  ],
+                  "minutes": 15
+                }
+              ]
+            }
+          ],
+          "coach_notes": "OlyWOD has plenty of snatching on the menu, because everybody has a job.",
+          "tags": [
+            "barbell"
+          ]
+        }
+      }
+    }
+  },
+  "announcements": [
+    {
+      "title": "CFNYC Barbell at the NYC Grand Prix — Sat, Oct 10",
+      "detail": "Caitlin Ormsbee + Beth Terranova lift at 11:00 AM, Coach Brian at 1:30 PM. Murder of Crows Barbell, 1010 Dean St, Brooklyn. Livestreamed too.",
+      "full_text": "CFNYC BARBELL TAKES BROOKLYN\n\nThis Saturday, three of our own are stepping onto the competition platform, and we need the CFNYC cheering section ready. Caitlin Ormsbee, Beth Terranova and Coach Brian are representing the CFNYC Barbell Team at the 2026 NYC Grand Prix, hosted by Murder of Crows Barbell in Brooklyn on Saturday, October 10.\n\nIf you've ever taken OlyWOD, trained alongside these three, been coached by Brian, or simply enjoy watching very strong people put heavy barbells over their heads, come cheer them on.\n\nYOUR CFNYC LINEUP\n\n11:00 AM — Women's Session 1: Caitlin Ormsbee + Beth Terranova\n\n1:30 PM — Men's Session 2: Coach Brian\n\nMurder of Crows Barbell, 1010 Dean Street, Brooklyn, NY 11238\n\nThe NYC Grand Prix is a full-day Olympic weightlifting competition, which means our athletes will get three attempts at the snatch and three attempts at the clean & jerk to put all those hours of training to work. Murder of Crows has the event running Saturday from 9 AM–5 PM. And this is exactly why we love competition: eventually all the quiet work—the technique days, missed lifts, percentages, accessories, showing up when you're tired—gets distilled down to six attempts on a platform. So if you're free Saturday, make the trip to Brooklyn and get loud for our people. Weightlifting meets are incredibly fun to watch, and having your gym behind you when you walk onto the platform hits a little different.\n\nCAN'T MAKE IT TO BROOKLYN? We've got you. The competition will also be livestreamed, so you can cheer from home, brunch, the subway, or wherever Saturday finds you. Watch the Murder of Crows livestream via the link in the newsletter.\n\nCaitlin. Beth. Brian. We are already proud of you. Now go lift some heavy things. CFNYC Barbell takes Brooklyn. Let's make some noise."
+    },
+    {
+      "title": "Halloween Throwdown — Sat, Oct 31, 11:15 AM (UWS)",
+      "detail": "In-house partner competition, both locations, same-sex or mixed teams, costumes judged. To register, reply to the newsletter email with both partners' names.",
+      "full_text": "🎃 THE CFNYC HALLOWEEN THROWDOWN 👻\n\nWHEN: SATURDAY, OCTOBER 31 AT 11:15 AM.\n\nWHERE: CFNYC UPPER WEST SIDE.\n\nPARTNERS. COSTUMES. FITNESS. A LITTLE CHAOS.\n\nWe are throwing an in-house partner CrossFit competition, and before you decide this sounds too serious for you: it absolutely is not. This is open to everyone from both CFNYC locations. Grab your gym bestie, your favorite workout partner, the person who talks you into doing one more round, or someone whose strengths conveniently cover your weaknesses. Teams can be same-sex or mixed, everything is fair game. 👀\n\nAnd because it is Halloween… costumes are highly encouraged. And yes, they will be judged. So choose wisely. Athletic performance is temporary. Being remembered as the team that absolutely committed to the bit is forever.\n\nCome to compete. Come to move. Come to dress like an idiot with your friend. Come for the fitness, come for the fun. Whether you're trying to win the whole thing or simply want an excuse to spend Halloween morning doing something ridiculous with your CFNYC people, we want you there.\n\nWANT IN? First: we owe you an apology for the wonky registration link last week. Technology: 1. Us: 0. So we're making this very simple. Reply directly to this newsletter email with both partners' names, and we'll get you on the list. That's it. No mysterious links. No scavenger hunt. Just hit reply. More details, workout information, standards, and all the other good stuff will roll out as October goes on. For now: find your partner. Start plotting your costume.\n\nSAVE THE DATE\n\n📅 Saturday, October 31 at 11:15 AM\n📍 CFNYC Upper West Side\n👯 Partner competition — same-sex + mixed teams\n🎃 Costumes encouraged (and judged!)\n💛 Open to all CFNYC members — both locations\n\nWe are so excited for this one. Halloween morning: we throw down. Halloween night: we haunt the town."
+    },
+    {
+      "title": "ATHX 2027 registration is live — New York, Aug 28, 2027",
+      "detail": "Six North American events open now with a special early rate. ATHX New York is Sat, Aug 28, 2027 at the Javits Center: Lite / ATHX / Pro divisions, individual and pairs.",
+      "full_text": "ATHX 2027 IS LIVE — AND NEW YORK, WE HAVE A DATE\n\nAll those Tuesday and Saturday ATHX classes? Here's your chance to put them to work. ATHX has started rolling out its 2027 North American race calendar, and six events are currently live for registration—with a special rate available right now. And, most importantly for us:\n\nATHX NEW YORK — SATURDAY, AUGUST 28, 2027\n\nJavits Center. Yes. A hometown race.\n\nIf you haven't raced ATHX yet, the format is a 2.5-hour continuous functional fitness competition built around three distinct tests: Strength, Endurance and MetCon X, with recovery built between them. In other words, you need to be strong, you need an engine, and you need to be able to use both once you're tired. Sound familiar? There are ATHX Lite, ATHX and ATHX Pro divisions, plus individual and pairs options, making this a pretty approachable first competition and something experienced hybrid athletes can properly sink their teeth into.\n\nWhich is also your friendly reminder that CFNYC has ATHX programming every week. You do not need to already be \"an ATHX athlete\" to come train with us. If this race has been on your radar—or you just want to get stronger, build your engine and become annoyingly capable at doing both at once—come take a class. And if August 28 suddenly looks interesting on your calendar… you've got plenty of time to train.\n\nSix North American events are live now, and ATHX says there's currently a special registration rate available—so if you know you want in, this may be the moment to commit. Hometown race. Eight-ish months to train. Who's in?\n\nSee the 2027 ATHX events & register via the link in the newsletter."
+    }
+  ]
+}
