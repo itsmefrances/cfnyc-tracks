@@ -6,22 +6,24 @@ Live: https://itsmefrances.github.io/cfnyc-tracks/
 
 ## How it works
 
-- `index.html` — self-contained static dashboard. Loads `data/index.json`, then the selected week file. Picks (which track on which day) are saved per week in the browser's `localStorage`.
+- `index.html` — self-contained static dashboard. Loads `data/index.json`, then the selected week file. Picks (which track on which day) are saved per week in the browser's `localStorage`. Data is re-fetched (cache-busted) every time the page is opened or re-focused.
 - `data/index.json` — list of available weeks (the page sorts them).
 - `data/weeks/YYYY-MM-DD.json` — one file per week, keyed by the Monday of that week. Schema in `docs/UPDATING.md`.
 
 ## Weekly update (automated)
 
-Every Sunday around 12:00 pm ET the CrossFit NYC newsletter (`newsletter@crossfitnyc.com`) lands in Gmail. The GitHub Actions workflow `.github/workflows/sync.yml` runs at ~12:45 pm ET (with later retries the same day):
+Every Sunday around 12:06 pm ET the CrossFit NYC newsletter (`newsletter@crossfitnyc.com`) lands in Gmail. A Claude scheduled task ("CFNYC Tracks — Sunday sync") runs hourly from 12:15 pm to 4:15 pm ET on Sundays:
 
-1. `scripts/sync_newsletter.py` fetches the newest newsletter over Gmail IMAP.
-2. Parses it into the week schema with the Claude API (`scripts/PARSE_PROMPT.md`).
-3. Validates dates/structure, writes `data/weeks/<monday>.json`, appends to `data/index.json`, commits to `main`.
+1. Checks `data/index.json` for next Monday's week; exits if it is already published.
+2. Reads the newsletter from Gmail and parses it into the week schema (`scripts/PARSE_PROMPT.md`, `docs/UPDATING.md`).
+3. Writes `data/weeks/<monday>.json`, appends to `data/index.json`, and commits both to `main` through the Claude GitHub connector (the **Claude Github MCP Connector** GitHub App must be installed on the account with read/write access to code).
 4. GitHub Pages redeploys.
 
 The run is idempotent: if the week file already exists it exits without changes.
 
-### One-time setup (repo → Settings → Secrets and variables → Actions)
+### Alternative: GitHub Actions (optional)
+
+`.github/workflows/sync.yml` + `scripts/sync_newsletter.py` do the same job on GitHub's runners (Gmail IMAP → Claude API → commit). The schedule is disabled by default; to use it, add the secrets below and re-enable the `schedule:` block.
 
 | Name | Type | Value |
 |---|---|---|
@@ -30,6 +32,4 @@ The run is idempotent: if the week file already exists it exits without changes.
 | `ANTHROPIC_API_KEY` | secret | Anthropic API key |
 | `CLAUDE_MODEL` | variable (optional) | model id; defaults to `claude-sonnet-4-5` |
 
-Then run the workflow once by hand (Actions → "Sync newsletter → data" → Run workflow) with **dry_run** checked to confirm parsing before the first scheduled run.
-
-Manual update without Actions: follow `docs/UPDATING.md`.
+Manual update: follow `docs/UPDATING.md`.
